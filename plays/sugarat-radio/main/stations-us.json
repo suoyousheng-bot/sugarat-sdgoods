@@ -1,0 +1,33 @@
+[
+  {
+    "name": "KEXP 90.3",
+    "url_resolved": "https://kexp.streamguys1.com/kexp160.aac",
+    "codec": "AAC",
+    "countrycode": "US",
+    "state": "Washington",
+    "tags": "Seattle,independent,music",
+    "bitrate": 160,
+    "homepage": "https://www.kexp.org/",
+    "source": "https://www.kexp.org/mobile/kexp-livestreams/"
+  },
+  {
+    "name": "Radio Paradise Main",
+    "url_resolved": "https://stream.radioparadise.com/mp3-192",
+    "codec": "MP3",
+    "countrycode": "US",
+    "tags": "eclectic",
+    "bitrate": 192,
+    "homepage": "https://radioparadise.com/",
+    "source": "https://radioparadise.com/listen/stream-links"
+  },
+  {
+    "name": "Radio Paradise Mellow",
+    "url_resolved": "https://stream.radioparadise.com/mellow-192",
+    "codec": "MP3",
+    "countrycode": "US",
+    "tags": "mellow",
+    "bitrate": 192,
+    "homepage": "https://radioparadise.com/",
+    "source": "https://radioparadise.com/listen/stream-links"
+  }
+]

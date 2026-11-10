@@ -18,7 +18,7 @@ def main():
             if path.name.startswith(".env") or path.suffix in (".bin", ".pyc"):
                 raise ValueError(f"Local data does not belong in the kit root: {path}")
             files.append(path)
-    for name in ("agents", "assets", "boards", "licenses", "references", "scripts"):
+    for name in ("agents", "assets", "boards", "licenses", "references", "scripts", "plays"):
         for path in (ROOT / name).rglob("*"):
             if path.is_symlink():
                 raise ValueError(f"Release symlink: {path}")

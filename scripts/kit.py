@@ -78,12 +78,64 @@ def verify(root):
         if not path.is_file() or digest(path.read_bytes()) != checksum:
             raise ValueError(f"Resource missing or SHA-256 mismatch: {name}")
         tracked.add(name)
-    for path in (root / "assets").rglob("*"):
-        if path.is_symlink() or (path.is_file() and path.relative_to(root).as_posix() not in tracked):
-            raise ValueError(f"Unlisted asset: {path.relative_to(root)}")
+    for directory in ("assets", "plays"):
+        for path in (root / directory).rglob("*"):
+            if "__pycache__" in path.parts:
+                continue
+            if path.is_symlink() or (path.is_file() and path.relative_to(root).as_posix() not in tracked):
+                raise ValueError(f"Unlisted resource: {path.relative_to(root)}")
     lock = json_file(root / "resources.lock.json")
     template_files(root, lock)
+    play_records(root, lock)
     return lock, len(tracked)
+
+
+def play_records(root, lock):
+    """Read indexed plays and reject mismatched IDs, versions or hardware."""
+    index = json_file(child(root, lock["plays"]))
+    if index["schemaVersion"] != 1:
+        raise ValueError("Unsupported play index version")
+    records = {}
+    for play_id, entry in index["plays"].items():
+        source = child(root, entry["sourceDirectory"])
+        manifest = child(root, entry["manifest"])
+        if not source.is_dir() or manifest != source / "play.json":
+            raise ValueError(f"Invalid play directory or manifest: {play_id}")
+        record = json_file(manifest)
+        if (record["id"] != play_id or record["version"] != entry["version"]
+                or record["productId"] != entry["productId"]
+                or record["productId"] != lock["productId"]
+                or record["target"] != lock["sdk"]["target"]):
+            raise ValueError(f"Play identity, version or hardware mismatch: {play_id}")
+        for name in (record["entry"], record["playGuide"], record["validation"]["report"],
+                     record["build"]["partitionTable"], "README.md", "LICENSE", "NOTICE"):
+            if not child(source, name).is_file():
+                raise ValueError(f"Play file missing: {play_id}/{name}")
+        records[play_id] = {**entry, **record}
+    directories = {path.name for path in (root / "plays").iterdir() if path.is_dir()}
+    if directories != set(records):
+        raise ValueError("Play index does not match source directories")
+    return records
+
+
+def select_play(root, play_id):
+    """Verify the kit before returning one stable play's source and instructions."""
+    lock, _ = verify(root)
+    records = play_records(root, lock)
+    if play_id not in records:
+        raise ValueError(f"Unknown play: {play_id}; run the plays command")
+    return records[play_id]
+
+
+def play_prompt(root, play_id, repository, ref, task):
+    """Pin a source play and its hardware checks in a pasteable development request."""
+    record = select_play(root, play_id)
+    request = (f"以玩法 {play_id}（{record['version']}，{record['productId']}）为基础，"
+               f"先运行 python3 scripts/kit.py check 和 python3 scripts/kit.py plays --id {play_id}，"
+               f"从 {record['sourceDirectory']} 读取 play.json、PLAY.md、README.md 和 VALIDATION.md，"
+               "在新目录复制完整玩法源码后修改并构建。烧录前重新检查实际设备分区与镜像大小，"
+               "不得沿用其他设备的 0x310000 地址。我的需求：" + task)
+    return prompt(repository, ref, request)
 
 
 def dependencies(catalog, ids):
@@ -231,6 +283,13 @@ def main():
     commands.add_parser("check", help="Verify packaged sources and SHA-256 checksums")
     listing = commands.add_parser("components", help="List components, or read one integration record")
     listing.add_argument("--id")
+    plays = commands.add_parser("plays", help="List source plays or read one fixed play record")
+    plays.add_argument("--id")
+    remix = commands.add_parser("play-prompt", help="Generate a version-pinned source-play request")
+    remix.add_argument("--id", required=True)
+    remix.add_argument("--repo", required=True)
+    remix.add_argument("--ref", required=True)
+    remix.add_argument("--task", required=True)
     for command in ("init", "add"):
         sub = commands.add_parser(command, help="Create a new firmware project" if command == "init" else "Add source components without replacing customized files")
         sub.add_argument("--directory", type=Path, required=True)
@@ -243,12 +302,21 @@ def main():
     share.add_argument("--task", required=True)
     args = parser.parse_args()
     try:
+        if args.command == "play-prompt":
+            print(play_prompt(ROOT, args.id, args.repo, args.ref, args.task))
+            return 0
         if args.command == "prompt":
             print(prompt(args.repo, args.ref, args.task))
             return 0
         if args.command == "check":
             lock, count = verify(ROOT)
             result = {"status": "verified", "files": count, "kitVersion": lock["kitVersion"], "deviceAccess": False}
+        elif args.command == "plays":
+            if args.id:
+                result = select_play(ROOT, args.id)
+            else:
+                lock, _ = verify(ROOT)
+                result = play_records(ROOT, lock)
         elif args.command == "components":
             lock, _ = verify(ROOT)
             if args.id:

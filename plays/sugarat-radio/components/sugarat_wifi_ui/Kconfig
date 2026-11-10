@@ -1,0 +1,5 @@
+menu "Sugarat Wi-Fi setup"
+config SUGARAT_WIFI_UI
+    bool "Enable round-screen Wi-Fi setup"
+    default y
+endmenu

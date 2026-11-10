@@ -1,0 +1,19 @@
+# Modified for Sugarat Radio by Deotaland, 2026: US channel policy.
+menu "Sugarat Wi-Fi provisioning"
+
+config SUGARAT_WIFI_US_CHANNELS
+    bool "Use US channels 1-11"
+    default y
+    help
+        Fix the US country policy before the first scan or reconnect.
+
+config SUGARAT_WIFI_MAX_TX_POWER_DBM
+    int "Maximum Wi-Fi transmit power (dBm)"
+    range 2 20
+    default 20
+    help
+        Limit radio transmit power before scans and saved-network reconnects.
+        Select a value verified on the target board and power supply. The
+        Wi-Fi driver maps this limit to its supported power levels.
+
+endmenu

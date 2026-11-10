@@ -105,6 +105,35 @@ class KitTests(unittest.TestCase):
             kit.template_files(root, {"template": {"manifest": "manifest.json", "archive": "unsafe.tar.gz"}})
         self.assertFalse((root.parent / "escape.c").exists())
 
+    def test_play_lookup_and_prompt_pin_source_hardware_and_release(self):
+        record = kit.select_play(kit.ROOT, "sugarat-radio")
+        self.assertEqual(record["sourceDirectory"], "plays/sugarat-radio")
+        self.assertEqual(record["productId"], "sdgoods-esp32s3-round")
+        self.assertFalse(record["validation"]["deviceVerified"])
+        output = kit.play_prompt(kit.ROOT, "sugarat-radio", "https://github.com/example/badge-kit", "v0.2.0", "Change the skin")
+        for value in ("/blob/v0.2.0/AGENTS.md", "plays --id sugarat-radio", "plays/sugarat-radio", "Change the skin"):
+            self.assertIn(value, output)
+        with self.assertRaisesRegex(ValueError, "Unknown play"):
+            kit.select_play(kit.ROOT, "renamed-radio")
+
+    def test_play_files_and_hardware_must_match_the_release(self):
+        root = self.directory / "kit"
+        shutil.copytree(kit.ROOT, root, ignore=shutil.ignore_patterns("__pycache__", ".git"))
+        path = root / "plays/sugarat-radio/main/main.c"
+        path.write_bytes(path.read_bytes() + b"\n/* changed */\n")
+        with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
+            kit.verify(root)
+        manifest = root / "plays/sugarat-radio/play.json"
+        record = json.loads(manifest.read_text())
+        record["productId"] = "other-board"
+        manifest.write_text(json.dumps(record))
+        with self.assertRaisesRegex(ValueError, "hardware mismatch"):
+            kit.play_records(root, kit.json_file(root / "resources.lock.json"))
+        with self.assertRaisesRegex(ValueError, "Invalid resource path"):
+            lock = kit.json_file(root / "resources.lock.json")
+            lock["plays"] = "../plays.json"
+            kit.play_records(root, lock)
+
     def test_handoff_contains_matching_fixed_entry_and_one_line_request(self):
         output = kit.prompt("https://github.com/example/badge-kit.git", "v0.1.0", "番茄钟\n中文界面")
         self.assertIn("https://github.com/example/badge-kit/blob/v0.1.0/AGENTS.md", output)

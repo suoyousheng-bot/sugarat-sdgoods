@@ -16,3 +16,5 @@
 保留每个文件原有的版权、许可及修改声明。基础模板及上游许可原样保留，模板内的说明可能描述其上游分发方式；本包实际包含本地 LVGL 源码，并在模板说明中记录了 Sugarat 修改。
 
 SDGOODS 名称在此用于描述来源和兼容硬件，商标要求见 [原始 TRADEMARK.md](licenses/sdgoods/TRADEMARK.md)。本包不新增商标授权，也不授予额外的素材权利；上游 NOTICE 的开机动画素材提示继续适用。模板采用 `sdgoods_boot_skip.c`，未包含原始开机 GIF 数据。
+
+电台完整源码位于 [plays/sugarat-radio](plays/sugarat-radio/README.md)，来源及原始声明见其中的 upstream.json、LICENSE、NOTICE、LICENSING.md、TRADEMARK.md 和 licenses；根目录 MIT 许可不替代这些声明。

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "kitVersion": "0.1.0",
+  "kitVersion": "0.2.0",
   "productId": "sdgoods-esp32s3-round",
-  "snapshotDate": "2026-11-09",
+  "snapshotDate": "2026-11-10",
   "board": "boards/sdgoods-esp32s3-round.json",
   "template": {
     "archive": "assets/templates/sdgoods-esp32s3-basic-v1.tar.gz",
@@ -279,5 +279,6 @@
     "template": "packages/experimental/hardware-studio/src/product-templates",
     "components": "packages/experimental/hardware-studio/firmware-components",
     "board": "packages/experimental/hardware-studio/src/sdgoods-product.ts"
-  }
+  },
+  "plays": "plays.json"
 }

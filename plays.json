@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "plays": {
+    "sugarat-radio": {
+      "version": "0.1.0",
+      "productId": "sdgoods-esp32s3-round",
+      "sourceDirectory": "plays/sugarat-radio",
+      "manifest": "plays/sugarat-radio/play.json"
+    }
+  }
+}

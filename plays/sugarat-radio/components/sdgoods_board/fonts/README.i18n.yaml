@@ -1,0 +1,10 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/plays/sugarat-radio/components/sdgoods_board/fonts/README.md
+/:
+  en: 6d0baddc0cb341f8
+  zh: cc46ac5eacaaffeb
+/badge-font-subsets:
+  en: 3606091a2afce532
+  zh: 5b2fad966b53f96b

@@ -15,6 +15,14 @@ description: 为 SDGOODS ESP32-S3 360×360 圆形徽章开发或接入 ESP-IDF �
 4. 阅读 [开发说明](references/development.md)。新项目使用 `scripts/kit.py init`；已有项目先检查，按需使用 `add`。脚本不覆盖不同内容的文件，也不自动接入应用入口。
 5. 按需求阅读 [组件目录](references/components.md)，选择一个 UI 风格，优先复用匹配的完整案例。通过 `components --id <id>` 查看依赖、集成方法和验证范围，再读取该组件的 README、头文件和示例。不要一次加载所有组件源码。
 
+## 从已有玩法做同款
+
+用户指定玩法或社区 ID 时，先运行 `python3 scripts/kit.py plays`，再用 `python3 scripts/kit.py plays --id <id>` 读取版本、硬件、源码目录及验证范围；玩法索引见 [plays.json](plays.json)。显示名称可以修改，ID 保持不变。不要按名称猜测源码，也不要用基础模板替换完整玩法。
+
+Sugarat 电台的 ID 为 `sugarat-radio`。校验通过后，读取该条目中的 `play.json`、`PLAY.md`、`README.md` 和 `VALIDATION.md`，将完整源码复制到新的工程目录再修改；已有工程先由用户需求决定如何接入。构建命令从资源包根目录执行。镜像历史大小及工厂分区容量只用于参考；设备的实际分区、可写容量和启动布局需要本次重新检查，不能复用历史设备的 `0x310000`。
+
+需要交给另一个 Agent 时，运行 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo <repository-url> --ref <release-tag-or-commit> --task <application-request>`。仓库、版本和 ID 一起固定；使用发布 tag 或提交，不跟随 `main`。此命令只生成提示词，不执行下载、构建或设备操作。
+
 ## 实现与验证
 
 - 使用 Watch 或 Game 的现有控件、图标与字体；同一应用选择一个风格。现有完整应用案例依赖 Watch。把主要文字和触摸区域放在 (60,60) 起、240×240 的安全矩形内。新增汉字先检查字体覆盖。

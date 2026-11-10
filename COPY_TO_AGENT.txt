@@ -1,1 +1,1 @@
-请先阅读 https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.1.0/AGENTS.md，获取同一版本的完整资源包，按其中的 Skill 为我的 SDGOODS ESP32-S3 圆形徽章开发：按我接下来描述的需求实现应用；先检查项目和环境，保留已有代码，设备重启或覆盖固件前取得我的授权，并分别报告编译、烧录和真机验证结果。
+请先阅读 https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.2.0/AGENTS.md，获取同一版本的完整资源包，按其中的 Skill 为我的 SDGOODS ESP32-S3 圆形徽章开发：按我接下来描述的需求实现应用；先检查项目和环境，保留已有代码，设备重启或覆盖固件前取得我的授权，并分别报告编译、烧录和真机验证结果。

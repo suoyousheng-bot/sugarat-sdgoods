@@ -1,0 +1,8 @@
+# Standalone Sugarat Radio; deployment must inspect the actual device layout.
+# Name, Type, SubType, Offset, Size, Flags
+nvs, data, nvs, 0x9000, 0x6000,
+phy_init, data, phy, 0xF000, 0x1000,
+factory, app, factory, 0x10000, 0xFE0000,
+pt_bak, data, undefined, 0xFF0000, 0x1000,
+otadata, data, ota, 0xFF1000, 0x2000,
+appdata, data, fat, 0x1000000, 0x1000000,
