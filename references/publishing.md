@@ -4,7 +4,7 @@
 
 ## 发布内容
 
-保留 AGENTS.md、SKILL.md、README 双语文件、COPY_TO_AGENT.txt、agents、boards、references、scripts、assets、resources.lock.json、checksums.sha256、LICENSE、NOTICE.md、VALIDATION.md、licenses、plays、plays.json 和 `.gitignore`。模板压缩包内是源码，不能省略；它的配套 JSON 清单也必须保留。完整 SDK 不在包中，官方固定版本的安装入口见 [环境说明](environment.md)。
+保留 AGENTS.md、SKILL.md、README 双语文件、COPY_TO_AGENT.txt、agents、boards、references、scripts、assets、resources.lock.json、checksums.sha256、LICENSE、NOTICE.md、VALIDATION.md、licenses、plays、plays.json、media 和 `.gitignore`。模板压缩包内是源码，不能省略；它的配套 JSON 清单也必须保留。完整 SDK 不在包中，官方固定版本的安装入口见 [环境说明](environment.md)。
 
 ## 本地检查
 

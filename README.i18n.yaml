@@ -3,29 +3,41 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/README.md
 /:
-  en: 71c073b097b3f65f
-  zh: 720dbe76caa5ddc3
+  en: 33b5a41671c831d1
+  zh: 06f753de2f8ffc77
 /sugarat-sdgoods-development-kit:
-  en: 3b7c08005082901f
-  zh: c7da33982b05d415
+  en: 71f529e326c3f7b6
+  zh: a5e10bca1e540d82
 /sugarat-sdgoods-development-kit/summary:
-  en: 8b13ad3657877033
-  zh: 6c77c681cf67f72a
+  en: f9e0c3f611664d11
+  zh: 4315bd0edf37a443
 /sugarat-sdgoods-development-kit/contents:
-  en: d215e9fff3711f14
-  zh: 2220ba1f202ca1eb
+  en: 00cb17b5d1279067
+  zh: f5a2f8f5818085b2
 /sugarat-sdgoods-development-kit/give-this-kit-to-an-agent:
   en: 09882e6363382f91
   zh: 10752ef3efe118c8
 /sugarat-sdgoods-development-kit/use-the-sources-locally:
-  en: f0fcad03fea488ce
-  zh: 0f0e2d2efb5002ea
-/sugarat-sdgoods-development-kit/resources-and-verification:
-  en: f8ad98f16a10efb9
-  zh: 8bbb194b932c5d36
+  en: cfda5459f859af60
+  zh: 0b6e1f06dceea8de
+/sugarat-sdgoods-development-kit/architecture:
+  en: d1193e1a2aed440c
+  zh: 435c646c8298200c
+/sugarat-sdgoods-development-kit/components:
+  en: c0e106c2429f08d3
+  zh: 7ecf011ae9a17669
+/sugarat-sdgoods-development-kit/pixel-characters:
+  en: 028c13211779a022
+  zh: 18f376a32612743a
+/sugarat-sdgoods-development-kit/ui-themes:
+  en: ba9512d55ebf2111
+  zh: 24ff671a6c3fdd4c
 /sugarat-sdgoods-development-kit/source-plays:
-  en: 9d28dece3b11e4c1
-  zh: db18fcda2d537fec
+  en: 06f2d7da45329d90
+  zh: 49db88f7ebb6778e
+/sugarat-sdgoods-development-kit/resources-and-verification:
+  en: b655edfc071abe82
+  zh: 31dd3b0f718a7caf
 /sugarat-sdgoods-development-kit/publishing:
   en: f3a58a7de376d52c
   zh: 649f7f0765b03716
