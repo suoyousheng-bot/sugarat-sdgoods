@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-case-time/components/sugarat_time/README.md
+/time-and-productivity-cases:
+  en: 0d7bf3a4204f8bfc
+  zh: 2efe492a9bdee126
+/time-and-productivity-cases/choose-the-case-and-language:
+  en: f0b59f44055a037d
+  zh: a99fad8867619427
+/time-and-productivity-cases/integrate:
+  en: d378bf52f84f7fda
+  zh: a8047585ac24ba9a
+/time-and-productivity-cases/verification:
+  en: ee3ca012849c6c86
+  zh: e7ea785dd1060f78

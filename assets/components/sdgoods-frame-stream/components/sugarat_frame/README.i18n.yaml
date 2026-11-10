@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-frame-stream/components/sugarat_frame/README.md
+/sdgoods-direct-frame-stream:
+  en: cb058ec170f50ee3
+  zh: 6f237898c52de10a
+/sdgoods-direct-frame-stream/when-the-panel-may-be-written-directly:
+  en: dc9cb84691c34ba4
+  zh: 09d6f2ed7ee8c52f
+/sdgoods-direct-frame-stream/pacing:
+  en: 61bcf0bb6f2c38f1
+  zh: bb0897ccdf2ec790
+/sdgoods-direct-frame-stream/rendering:
+  en: 0731435c44932f48
+  zh: fe82c50806ce9f30
+/sdgoods-direct-frame-stream/memory-and-limits:
+  en: b1a8fed9b28e46e9
+  zh: f2ea804efe6d1031

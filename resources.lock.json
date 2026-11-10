@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "kitVersion": "0.1.0",
+  "productId": "sdgoods-esp32s3-round",
+  "snapshotDate": "2026-11-09",
+  "board": "boards/sdgoods-esp32s3-round.json",
+  "template": {
+    "archive": "assets/templates/sdgoods-esp32s3-basic-v1.tar.gz",
+    "manifest": "assets/templates/sdgoods-esp32s3-basic-v1.json"
+  },
+  "sdk": {
+    "version": "5.5.4",
+    "target": "esp32s3",
+    "source": "https://github.com/espressif/esp-idf",
+    "documentation": "https://docs.espressif.com/projects/esp-idf/en/v5.5.4/esp32s3/get-started/index.html",
+    "bundled": false
+  },
+  "components": {
+    "sdgoods-case-control": {
+      "version": "1.0.0",
+      "scope": "Device-control application cases / 设备控制案例: independent lamp/fan switches, brightness/volume sliders, reading/night/away scenes and a five-button remote. Chinese/English resources; standalone screens omit gallery arrows. All controls are explicitly labeled local simulations; no device transport is supplied.",
+      "dependencies": [
+        "sdgoods-ui-watch"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root. Read components/sugarat_control/README.md and include/control_app.h. Add sugarat_control to main REQUIRES. Call control_app_open with explicit locale, scene and gallery_navigation=false for a standalone case. Choose CONTROL_SCENE_SWITCHES, LEVELS, SCENES or REMOTE and CONTROL_LOCALE_ZH/EN from the explicit user language, otherwise the reference language. Bind control_app_set_paused to shell pause/resume and delete after loading another screen. Preserve existing entry points and BSP ownership. All values are RAM-only simulations; sliders do not control the badge backlight or speaker, and remote buttons send no commands. Actual device control needs a separately specified transport and acknowledgement behavior; never report a simulated value as device confirmation.",
+      "verification": "Preview appearance accepted by the user; device flashing and physical acceptance were explicitly skipped. ESP-IDF 5.5.4 compilation and LVGL 8.3.11 native pointer checks passed. Tests cover both languages, four standalone scenes, 32 KiB LVGL heap, round-screen controls, slider limits, scene values, manual overrides, pause/resume, independent instances, complete disposal, one remote command per held release and cancellation outside buttons. No physical display, touch, power or external-device actuation is verified. Validate every new hardware integration independently.",
+      "sourceDirectory": "assets/components/sdgoods-case-control",
+      "componentNames": [
+        "sugarat_control"
+      ]
+    },
+    "sdgoods-case-data": {
+      "version": "1.0.0",
+      "scope": "Data and dashboard application cases / 数据与仪表案例: single-value temperature gauge, temperature/humidity/battery overview, 48-record history with missing-data gaps and upper-threshold alerts with hysteresis and acknowledgement. Chinese/English resources; standalone screens omit gallery arrows. Reuse for sensor dashboards, environment displays and device-status panels.",
+      "dependencies": [
+        "sdgoods-ui-watch"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root. Read components/sugarat_data/README.md and include/sugarat_data.h. Add sugarat_data to main REQUIRES. Call sd_open with explicit monotonic now_ms, locale, scene, source label, limits, positive refresh_ms and gallery_navigation=false for a standalone case. Choose SD_SCENE_GAUGE, OVERVIEW, HISTORY or ALARM and SD_LOCALE_ZH/EN from the explicit user language, otherwise the reference language. Choose SD_SOURCE_EXTERNAL for actual telemetry; sd_open always starts empty, including in demo-label mode. Marshal complete decoded samples onto the LVGL thread and call sd_publish; report provider loss with sd_disconnect. Expired/offline/invalid data hide current readings and retain alarms until a valid recovery. Bind sd_set_paused to shell visibility and stop provider work before screen disposal. Preserve existing entry points and BSP ownership. Sensor acquisition is caller-owned; installation starts no sensors, networking or demonstration.",
+      "verification": "Preview appearance accepted by the user; device flashing and physical acceptance were explicitly skipped. ESP-IDF 5.5.4 firmware compilation and actual LVGL 8.3.11 offscreen rendering passed. Headless checks cover both languages, 32 KiB LVGL heap, round-screen bounds, text overlap and glyph coverage, navigation, pause/resume, complete disposal, validated inputs, expiry, bounded history, hysteresis, acknowledgement and rearming. No physical display, touch, power or real-sensor behavior is verified. Every hardware integration needs its own validation. RAM-only history; temperature in tenths of Celsius and humidity/battery in whole percentages; upper temperature alarm only.",
+      "sourceDirectory": "assets/components/sdgoods-case-data",
+      "componentNames": [
+        "sugarat_data"
+      ]
+    },
+    "sdgoods-case-media": {
+      "version": "1.0.0",
+      "scope": "Music and media application cases / 音乐与媒体案例: local player, album-cover view and playback controls with three original PCM tracks, Chinese/English resources, track-name headings and no standalone gallery arrows. Reuse for local music, album displays and media remotes.",
+      "dependencies": [
+        "sdgoods-ui-watch",
+        "sdgoods-audio"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root. Read components/sugarat_media/README.md and include/sugarat_media.h. Add sugarat_media to main REQUIRES, call media_open with explicit backend, three durations, locale, scene, unmute volume, silent_preview and gallery_navigation=false for standalone use. Match Chinese/English to the explicit user language, otherwise the reference language. Reuse examples/media_clock.c for visibly silent native preview or examples/media_device.c for actual PCM; providers and buffers outlive screens. Generate original media_tracks.c/h with tools/generate-audio.py --output into an application-owned directory; compile them with the chosen backend. Device mode replaces BSP audio initialization with media_device_init, adds sugarat_audio to main REQUIRES and applies its documented BSP volume guard; never initialize both I2S owners. Bind media_set_paused to shell visibility, preserve existing application entry points and stop before screen disposal. No autoplay or automatic resume.",
+      "verification": "User-accepted on the SDGOODS round badge with ESP-IDF 5.5.4 and LVGL 8.3.11 after app-only Flash write, independent digest verification and audio-owner startup observation. Native checks cover both languages, three scenes, 32 KiB LVGL heap, round targets, seek, repeat, mute and external volume restoration, disposal and serialized replacement. Transport checks cover stale completion and start/stop deadlines. Host preview is silent; every new integration still needs physical input and audible-quality verification. Three original eight-second 16 kHz mono 16-bit tracks peak below 7000. No decoder, network or microphone capture.",
+      "sourceDirectory": "assets/components/sdgoods-case-media",
+      "componentNames": [
+        "sugarat_media"
+      ]
+    },
+    "sdgoods-case-companion": {
+      "version": "1.0.0",
+      "scope": "Character and companion application cases / 角色与陪伴案例: interactive pet, eight-mood badge and push-to-talk state demo with 20 selectable IP characters. Chinese/English resources; IP-name heading, no avatar circle and no standalone gallery arrows. Reuse for mascots, desktop pets, emotion badges and assistant state displays.",
+      "dependencies": [
+        "sdgoods-ui-watch"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Use scripts/kit.py add to install under the ESP-IDF project root. Read components/sugarat_companion/README.md and include/sugarat_companion.h. Add sugarat_companion to main REQUIRES. Call sc_open with explicit sc_config_t: scene, locale, character, monotonic now_ms, positive reaction/thinking/speaking timings, voice mode and gallery_navigation=false for a standalone case. Choose SC_SCENE_PET, MOODS or VOICE. Match SC_LOCALE_ZH/EN to the explicit user language, otherwise the reference language. Keep the accepted unframed character and IP-name heading. Demo mode is visibly labeled and performs no recording or networking. External mode starts offline, requires on_voice, and takes actual provider states through sc_set_voice_state on the LVGL thread. Bind sc_set_paused to shell pause/resume, then delete the screen after loading another screen. Preserve the BSP and existing application entry points.",
+      "verification": "User-accepted on an SDGOODS round badge with ESP-IDF 5.5.4 and LVGL 8.3.11, including the unframed IP-name layout. Flash write, independent digest and startup observation passed before acceptance. Host checks cover both languages, all 20 characters and eight moods, 32 KiB LVGL heap, round-screen targets, press cancellation, provider state ownership and complete disposal. No audio, network, account or persistent storage is supplied; real voice needs an explicit provider. Each new integration still needs its own device verification.",
+      "sourceDirectory": "assets/components/sdgoods-case-companion",
+      "componentNames": [
+        "sugarat_companion"
+      ]
+    },
+    "sdgoods-case-time": {
+      "version": "1.0.0",
+      "scope": "Time and productivity application cases / 时间与效率案例: Pomodoro focus/rest, configurable countdown, lap stopwatch and manual clock. Chinese and English resources; standalone screens omit gallery arrows. Reuse for focus, study, kitchen timers and elapsed-time tools.",
+      "dependencies": [
+        "sdgoods-ui-watch"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Use scripts/kit.py add to install under the ESP-IDF project root. Read components/sugarat_time/README.md and include/time_app.h. Add sugarat_time to main REQUIRES. Call time_app_open with an explicit time_app_config_t: now_ms, locale, tool and gallery_navigation=false for a standalone case. Choose TIME_TOOL_FOCUS, COUNTDOWN, STOPWATCH or CLOCK. Select TIME_LOCALE_ZH for Chinese requests/references or TIME_LOCALE_EN for English; explicit user language takes precedence. Preserve existing application entry points and BSP ownership. Load the returned screen on the LVGL thread and delete it when finished. Reuse the time_model accounting rather than implementing another timer. The gallery_navigation=true option is only for a four-tool test overview, never an implicit addition to an independent case.",
+      "verification": "Based on the user-accepted Sugarat Time application on an SDGOODS round badge with ESP-IDF 5.5.4 and LVGL 8.3.11. The device write and independent digest check passed before user acceptance. Host tests cover both languages, 32 KiB LVGL heap, round-screen control bounds, background completion and screen disposal. New integrations still need compilation and device acceptance. RAM-only settings; manual clock; visual completion without sound or wake alarms. No device access occurs during source installation.",
+      "sourceDirectory": "assets/components/sdgoods-case-time",
+      "componentNames": [
+        "sugarat_time"
+      ]
+    },
+    "wifi-provisioning": {
+      "version": "1.0.0",
+      "scope": "ESP-IDF Wi-Fi scan/join, saved successful credentials, bounded reconnects and an open setup hotspot with an English/Chinese web page. English by default; users select scanned networks rather than entering SSIDs.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_wifi/README.md. After NVS initialization, pass sugarat_wifi_default_config() to sugarat_wifi_create. One instance owns the driver/default netifs. Set config.on_event for typed worker-thread events; never call LVGL from that callback. SUGARAT_WIFI_EVENT_CONNECTED means DHCP, credentials saved and setup hotspot/DNS/HTTP closed, with no success hold timer. STORAGE_FAILED and PORTAL_FAILED do not emit CONNECTED. A synchronized last_connected notification supports late consumers. Scan results supply the network id and generation; users enter only the password. Add sugarat_wifi to REQUIRES. Configure transmit power through Kconfig using board measurements. Preserve previous saved credentials on failed replacement. NVS encryption is an explicit deployment choice.",
+      "verification": "ESP-IDF 5.5.4; ESP32-S3 uses 2.4 GHz. Verify both setup paths, wrong-password recovery, DHCP, restart persistence, immediate hotspot closure and event ordering on hardware. Captive DNS/HTTP is supplied; iOS popup dismissal remains OS-owned and ordinary Safari tabs cannot be forced closed. Hidden SSIDs, enterprise/WEP and raw 64-digit PSKs are unsupported. A local IP does not establish Internet access.",
+      "sourceDirectory": "assets/components/wifi-provisioning",
+      "componentNames": [
+        "sugarat_wifi"
+      ]
+    },
+    "sdgoods-wifi-ui": {
+      "version": "1.0.1",
+      "scope": "LVGL 8.3 round-screen Wi-Fi setup: device scan/paged network choices/grouped password keyboard and phone hotspot instructions, with an English-default English/Chinese switch.",
+      "dependencies": [
+        "wifi-provisioning"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Read components/sugarat_wifi_ui/README.md and examples/setup_flow.c before writing setup screens. Add sugarat_wifi_ui to main REQUIRES. On the LVGL thread, obtain sugarat_wifi_ui_default_config(), set on_connected and user_data, then call sugarat_wifi_ui_create_with_config and load the returned screen. on_connected runs on the LVGL thread after credentials are saved and the setup hotspot is closed; it may load the application screen and delete setup_screen. Current success is replayed once on the first timer tick; set notify_current_connection=false when reopening settings. A live saved connection enables the built-in home back arrow to return to the application through the same callback, even for an already-delivered connection sequence; do not deduplicate explicit return requests. An open setup hotspot is closed before return; failed or busy closure keeps settings available. Keep this callback wired on both startup and settings reentry. The example implements this complete flow with a placeholder home. Delete all dependent screens before destroying Wi-Fi. The 240x240 safe rectangle is at (60,60); extend licensed glyph coverage for uncommon SSIDs. Native previews need their own radio implementation.",
+      "verification": "Compile against the SDGOODS template with LVGL 8.3.11. Verify startup-to-app navigation, settings reentry and return to the existing app without reconnecting, hotspot closure before return, and failure handling, plus real display, touch, password keyboard, language switch, pagination and hotspot instructions independently from compilation. The component does not alter board pin assignments, partitions, reset policy or the application entry point.",
+      "sourceDirectory": "assets/components/sdgoods-wifi-ui",
+      "componentNames": [
+        "sugarat_wifi_ui"
+      ]
+    },
+    "sdgoods-imu": {
+      "version": "1.0.0",
+      "scope": "QMI8658 motion sensor on the SDGOODS round badge: 100 Hz filtered acceleration and bias-corrected gyro in the screen frame, tilt angles, orientation, and shake, flip, pickup, still and step events.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_imu/README.md. Add sugarat_imu to main REQUIRES. Call sugarat_imu_start(&config) after sdgoods_touch_init() and sdgoods_hw_info_init(); it reuses the touch driver I2C port and owns the QMI8658 configuration, so do not use sdgoods_hw_gyro() scaling while it runs. Read values with sugarat_imu_get_state(); the frame is +X screen right, +Y screen top, +Z out of the screen, and the default axis_map {2, -1, 3} matches this board. config.on_event runs on the IMU task; copy events or post them with sdgoods_lvgl_post(), never call LVGL there. Do not add another QMI8658 driver or shorten its I2C timeout or back-off: flash writes stall the shared bus.",
+      "verification": "ESP-IDF 5.5.4. Hardware acceptance covered 100 Hz sampling, tilt direction, orientation, shake, flip, pickup and step counting on an SDGOODS round badge. Retune thresholds for non-badge uses; step counts are estimates. Verify motion behavior of each new application on the device. The component installs no UI and does not alter pins, partitions or the application entry point.",
+      "sourceDirectory": "assets/components/sdgoods-imu",
+      "componentNames": [
+        "sugarat_imu"
+      ]
+    },
+    "sdgoods-battery": {
+      "version": "1.0.0",
+      "scope": "SDGOODS round-badge battery monitor: filtered voltage, curve-based percentage, OK/LOW/CRITICAL levels with hysteresis, voltage trend and USB host detection.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_battery/README.md. Add sugarat_battery to main REQUIRES. Call sugarat_battery_start(&config) after sdgoods_hw_info_init(), which owns ADC1; never create another ADC unit. Read sugarat_battery_get_state() or use config.on_event, which runs on the battery task; copy events or post them with sdgoods_lvgl_post(), never call LVGL there. Supply a measured curve for a specific cell; a custom curve must stay valid while the component runs.",
+      "verification": "ESP-IDF 5.5.4. Hardware acceptance covered voltage, percentage, level, trend and USB host detection on an SDGOODS round badge. Percentages are estimates from a generic Li-ion rest curve; load and charging shift them. The board has no documented charge-status pin, and usb_connected reports a USB data host, not a charger.",
+      "sourceDirectory": "assets/components/sdgoods-battery",
+      "componentNames": [
+        "sugarat_battery"
+      ]
+    },
+    "sdgoods-audio": {
+      "version": "1.1.0",
+      "scope": "SDGOODS round-badge speaker and microphone: tones, sweeps, 16 kHz PCM and WAV playback, PSRAM recording with cleanup, recording playback, a microphone level meter, and voice streaming with a continuous microphone callback and a jitter-buffered playback queue, with pop-free amplifier control and control-center volume.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_audio/README.md. Add sugarat_audio to main REQUIRES and replace the template sdgoods_audio_init() call with sugarat_audio_init(&config) after LVGL and touch initialization; both claim the only two I2S ports, so never call both. sdgoods_audio_get_volume/set_volume and sdgoods_audio_bgm_stop remain safe; BSP background music, recording and playback do not work while this component runs. The foundation BSP volume setter switches the amplifier off while BSP music is idle, so volume changes during playback pop; apply the one-line BSP guard in the README for pop-free changes. Requests replace the current operation; keep PCM and WAV buffers valid until completion. For voice, call sugarat_audio_stream_start() from a worker task, receive 16 kHz microphone blocks in on_mic and queue reply samples with sugarat_audio_stream_write() from one task, writing the unaccepted remainder later. config.on_event and on_mic run on audio tasks; copy events or post them with sdgoods_lvgl_post(), never call LVGL there. Stop audio when the control center opens or the application pauses unless the BSP guard is applied.",
+      "verification": "ESP-IDF 5.5.4. Hardware acceptance covered tones, sweeps, volume changes, the microphone level meter, recording, recording playback and WAV playback on an SDGOODS round badge. Streaming was verified in the IP Agent application: replies up to 17 s played without gaps or noise. The amplifier is designed for about a quarter of full scale: limit streamed speech peaks to about 9000 or it crackles. Only 16 kHz 16-bit PCM is accepted; there is no decoder or resampler. Verify loudness and audio quality of each new application on the device.",
+      "sourceDirectory": "assets/components/sdgoods-audio",
+      "componentNames": [
+        "sugarat_audio"
+      ]
+    },
+    "sdgoods-frame-stream": {
+      "version": "1.0.0",
+      "scope": "Smooth continuous animation on the SDGOODS round badge: fixed-grid frame pacing with fps statistics, a two-core work queue, double-buffered internal-RAM strips sent straight to the panel, and a bilinear rotating-disc renderer with anti-aliased edges, spindle hole and backdrop.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_frame/README.md. Add sugarat_frame to main REQUIRES. Requires the SDGOODS template BSP with the panel completion yield and sdgoods_lvgl_fast_loop(); add both to an older project BSP as the README describes. After sdgoods_lvgl_init(), call sugarat_frame_workers_start() and sugarat_frame_stream_create(). Drive frames from one lv_timer with a 1 ms period through sugarat_frame_pacer_due()/finish(), derive motion from esp_timer_get_time(), call sdgoods_lvgl_fast_loop(true) while animating and false otherwise, and hold the LVGL refresh timer at a short period while the screen is visible. Call sugarat_frame_stream_send() only while sugarat_frame_lvgl_layers_clear() is true, no finger is pressed, the app shell has not paused the app, and an LVGL frame drew the static backdrop; otherwise, or after an error, render the frame into the LVGL image. Call sugarat_frame_parallel()/rotate() from the LVGL task only.",
+      "verification": "ESP-IDF 5.5.4, LVGL 8.3.11. Extracted from the Spotify player, where a full 360x360 rotation ran at an even 30 fps (24 ms average, 30 ms longest frame) on an SDGOODS round badge. The component compiles against the template and its pure-C headers pass test/host_test.c; the component as packaged has not run on hardware. Log the frame statistics and verify the frame rate, the absence of artifacts over LVGL overlays and the touch behavior of each new application on the device.",
+      "sourceDirectory": "assets/components/sdgoods-frame-stream",
+      "componentNames": [
+        "sugarat_frame"
+      ]
+    },
+    "sdgoods-ui-watch": {
+      "version": "1.0.0",
+      "scope": "watchOS-style LVGL 8.3 UI component library for the SDGOODS 360x360 round badge: pages, cards, lists, buttons, toggles, sliders, steppers, rollers, alerts, toasts, notifications, stats, gauges, charts, clocks, timers, media controls, voice-assistant button, chat bubbles, app grid, status bar, activity rings, 71 icons and anti-aliased Chinese fonts, with 22 example screens.",
+      "dependencies": [
+        "sdgoods-pixel-characters"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Use it, or sdgoods-ui-game, for every SDGOODS application screen; pick one style per application. Install under the ESP-IDF project root (normally firmware). Read components/sugarat_watch/README.md, include/sugarat_watch.h and examples/sw_gallery.c before writing UI, start from the closest gallery screen and compose screens from sw_ components; do not style raw LVGL widgets, draw icons, add fonts or write replacement components. Add sugarat_watch, and sugarat_pixel for characters, to main REQUIRES. Call sw_init() after LVGL starts and every sw_ function on the LVGL thread. Tag tappable parts with sw_set_action() and read sw_event_action() in one bubbled LV_EVENT_CLICKED handler; value widgets send LV_EVENT_VALUE_CHANGED. Keep text and tap targets inside the 240x240 safe rectangle at (60,60). Keep one application screen alive and delete the previous screen after loading the next. Run tools/make_fonts.py --sources on the application when its strings use characters outside the bundled set.",
+      "verification": "ESP-IDF 5.5.4, LVGL 8.3.11. The component and its gallery compile without warnings in the SDGOODS template and take about 0.62 MB of flash. All 22 gallery screens were rendered on a host LVGL build with the device 32 KB LVGL heap and reviewed visually; the heaviest screen peaked at 21.6 KB. The component has not yet run on the device. Verify touch targets, scrolling, text coverage and memory of each new application on the device.",
+      "sourceDirectory": "assets/components/sdgoods-ui-watch",
+      "componentNames": [
+        "sugarat_watch"
+      ]
+    },
+    "sdgoods-ui-game": {
+      "version": "1.0.0",
+      "scope": "Retro pixel-game LVGL 8.3 UI component library for the SDGOODS 360x360 round badge with the same API as sdgoods-ui-watch (sg_ prefix): pixel boxes, pages, lists, controls, feedback, data, time, media, voice and launcher components, plus HP bars, hearts, RPG dialog with portrait, menu, coin counter, level, inventory, achievement banner and title screen, 71 pixel icons and 1-bit pixel Chinese fonts, with 28 example screens.",
+      "dependencies": [
+        "sdgoods-pixel-characters"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Use it, or sdgoods-ui-watch, for every SDGOODS application screen; pick one style per application. Install under the ESP-IDF project root (normally firmware). Read components/sugarat_game/README.md, include/sugarat_game.h and examples/sg_gallery.c before writing UI, start from the closest gallery screen and compose screens from sg_ components; do not style raw LVGL widgets, draw icons, add fonts or write replacement components. Use sg_box() for custom pixel panels. Add sugarat_game, and sugarat_pixel for characters, to main REQUIRES. Call sg_init() after LVGL starts and every sg_ function on the LVGL thread. Tag tappable parts with sg_set_action() and read sg_event_action() in one bubbled LV_EVENT_CLICKED handler; value widgets send LV_EVENT_VALUE_CHANGED. Keep text and tap targets inside the 240x240 safe rectangle at (60,60). Keep one application screen alive and delete the previous screen after loading the next. Run tools/make_fonts.py --sources on the application when its strings use characters outside the bundled set.",
+      "verification": "ESP-IDF 5.5.4, LVGL 8.3.11. The component and its gallery compile without warnings in the SDGOODS template and take about 0.19 MB of flash. All 28 gallery screens were rendered on a host LVGL build with the device 32 KB LVGL heap and reviewed visually; the 71-icon test screen peaked at 25.2 KB. The component has not yet run on the device. Verify touch targets, scrolling, text coverage and memory of each new application on the device.",
+      "sourceDirectory": "assets/components/sdgoods-ui-game",
+      "componentNames": [
+        "sugarat_game"
+      ]
+    },
+    "sdgoods-pixel-characters": {
+      "version": "1.0.0",
+      "scope": "20 animated 32x32 pixel characters (people, animals, fantasy, including the Sugarat mascots Cubey and Chippy) with idle, happy, surprised, sad, sleep, love, talk and wink moods for LVGL 8.3 on the SDGOODS round badge.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware); sdgoods-ui-watch and sdgoods-ui-game install it. Read components/sugarat_pixel/README.md. Add sugarat_pixel to main REQUIRES. Create characters with sp_avatar(parent, id, scale, mood) on the LVGL thread and change them with sp_avatar_set_mood() and sp_avatar_set_char(); use SP_MOOD_TALK while speech plays. Place avatars in sw_avatar_frame(), sg_avatar_frame() or sg_dialog_portrait(). Do not draw characters or embed sprite images; add new characters in tools/make_chars.py. Avatars use their LVGL user data, so tag a parent with sw_set_action()/sg_set_action() instead.",
+      "verification": "ESP-IDF 5.5.4, LVGL 8.3.11. The component compiles without warnings in the SDGOODS template and takes about 95 KB of flash. Every character and mood was rendered on a host LVGL build and reviewed visually; the component has not yet run on the device. Verify animation smoothness on the device.",
+      "sourceDirectory": "assets/components/sdgoods-pixel-characters",
+      "componentNames": [
+        "sugarat_pixel"
+      ]
+    },
+    "https-client": {
+      "version": "1.0.0",
+      "scope": "Bounded HTTPS requests over esp_http_client with certificate-bundle verification, HTTPS-only URLs, unfollowed redirects, one request at a time, a PSRAM response body with a size limit, Retry-After and doubling backoff, and logs without paths, headers or bodies.",
+      "dependencies": [],
+      "targets": [
+        "esp-idf"
+      ],
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_https/README.md. Add sugarat_https to main REQUIRES; keep CONFIG_MBEDTLS_CERTIFICATE_BUNDLE enabled. Call sugarat_https_perform() from a worker task after the network connected, never from the LVGL task or an event callback. ESP_OK means an HTTP status arrived; check response.status, then free the response with sugarat_https_response_free(). Pace each service with sugarat_https_backoff_record()/ready(). Clear caller-owned credential buffers after the request; never compile tokens or passwords into firmware.",
+      "verification": "ESP-IDF 5.5.4. Extracted from the Spotify player, whose HTTPS requests ran on an SDGOODS round badge. The component compiles and the backoff header passes test/host_test.c; the component as packaged has not run on hardware. Verify each service's requests, TLS memory headroom and error handling on the device. Bodies are buffered up to the limit; there is no streaming, cancellation or OAuth refresh.",
+      "sourceDirectory": "assets/components/https-client",
+      "componentNames": [
+        "sugarat_https"
+      ]
+    },
+    "deotaland-agent-link": {
+      "version": "1.0.0",
+      "scope": "Deotaland Agent Link device client for the SDGOODS round badge: activation code, device sign-in and heartbeat, realtime-voice conversations, and push-to-talk voice chat over Opus with pre-roll, queued speech during reconnection, automatic reconnection and a server-endpointing fallback.",
+      "dependencies": [
+        "https-client",
+        "sdgoods-audio"
+      ],
+      "targets": [
+        "esp-idf"
+      ],
+      "productId": "sdgoods-esp32s3-round",
+      "integration": "Install under the ESP-IDF project root (normally firmware). Read components/sugarat_agent_link/README.md. Add sugarat_agent_link to main REQUIRES. Ask the human for the Deotaland product id and the chip registered for it, then set CONFIG_SUGARAT_AGENT_LINK_PRODUCT_ID and CONFIG_SUGARAT_AGENT_LINK_CHIP_TYPE in sdkconfig.defaults; the build fails while the product id is 0, and a mismatched chip makes activation fail with SUGARAT_AGENT_CLOUD_REJECTED. Move TLS, Wi-Fi and task stacks to PSRAM as the README lists. After nvs_flash_init() and sugarat_audio_init(), call sugarat_agent_cloud_start() and sugarat_agent_voice_init(); report Wi-Fi with sugarat_agent_cloud_set_network(). Show the activation code while the phase is SUGARAT_AGENT_CLOUD_CODE. Open a chat when the phase is ONLINE and voice_supported is true, and call sugarat_agent_voice_talk() on press and release. Voice and status functions are safe from the LVGL task; the cloud request functions block and must run on a worker task. Never log or compile device keys, connect tokens or grant URLs.",
+      "verification": "ESP-IDF 5.5.4. Verified in the IP Agent application on an SDGOODS round badge against a Deotaland product registered as ESP32-C3, which required reporting esp32-c3: activation, binding, a new conversation per chat, push-to-talk, interruption and replies up to 17 s without noise, with about 48 KiB of internal heap free while connected. Verify activation, binding and voice for each new product and device. There is no OTA, text chat, wake word, echo cancellation or full-duplex reply.",
+      "sourceDirectory": "assets/components/deotaland-agent-link",
+      "componentNames": [
+        "sugarat_agent_link"
+      ]
+    }
+  },
+  "sourceOrigins": {
+    "template": "packages/experimental/hardware-studio/src/product-templates",
+    "components": "packages/experimental/hardware-studio/firmware-components",
+    "board": "packages/experimental/hardware-studio/src/sdgoods-product.ts"
+  }
+}

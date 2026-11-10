@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-audio/components/sugarat_audio/README.md
+/sdgoods-audio:
+  en: 6135b7311ea6ce87
+  zh: a768a7202432a527
+/sdgoods-audio/operations:
+  en: f58a5993548e49d4
+  zh: 3c93e29e02b7f18e
+/sdgoods-audio/streaming:
+  en: fa63eceb99a62407
+  zh: fbca2408ea54df28
+/sdgoods-audio/verification-limits:
+  en: 144e2dab8c245740
+  zh: ee8375cde2a89af7

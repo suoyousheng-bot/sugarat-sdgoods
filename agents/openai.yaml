@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sugarat SDGOODS 硬件开发"
+  short_description: "使用官方基础模板、主题和组件开发 SDGOODS ESP32-S3 圆形徽章"
+  default_prompt: "使用 $sugarat-sdgoods 为我的 SDGOODS 圆形徽章开发应用，先检查项目、硬件资料和开发环境。"

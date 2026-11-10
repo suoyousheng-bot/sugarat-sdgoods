@@ -1,0 +1,23 @@
+menu "Deotaland Agent Link"
+
+config SUGARAT_AGENT_LINK_BASE_URL
+    string "Platform origin"
+    default "https://bot.deotaland.cn"
+    help
+        HTTPS origin of the Deotaland device gateway, without a trailing slash.
+
+config SUGARAT_AGENT_LINK_PRODUCT_ID
+    int "Platform product id"
+    default 0
+    help
+        Product id registered on the Deotaland platform for this device. The device sends it
+        only when it requests an activation code. The build fails while it is 0.
+
+config SUGARAT_AGENT_LINK_CHIP_TYPE
+    string "Reported chip type"
+    default "esp32-s3"
+    help
+        Chip type sent with the activation request. The platform rejects activation with
+        chipTypeMismatch unless this equals the chip registered for the product.
+
+endmenu

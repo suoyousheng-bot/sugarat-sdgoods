@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/deotaland-agent-link/components/sugarat_agent_link/README.md
+/deotaland-agent-link:
+  en: 83b3b55651436531
+  zh: 90e58857b7944380
+/deotaland-agent-link/configuration:
+  en: b4fb16f8867796bd
+  zh: 0af1836a3a3c42f6
+/deotaland-agent-link/activation-and-sign-in:
+  en: 2d67bc1cc5c73e53
+  zh: 0c13d08dc9d53a01
+/deotaland-agent-link/voice-chat:
+  en: 6435ea2c5ab639e9
+  zh: fcba494d11c61b9c
+/deotaland-agent-link/audio-quality:
+  en: ca57549bb6dc9227
+  zh: c84b0ac917d7ad57
+/deotaland-agent-link/secrets:
+  en: 88696efadac3eaa3
+  zh: 81bc95788a180f60
+/deotaland-agent-link/known-limitations:
+  en: 9382b51a69e55094
+  zh: c8043ba307627c60

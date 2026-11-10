@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/README.md
+/:
+  en: 71c073b097b3f65f
+  zh: 720dbe76caa5ddc3
+/sugarat-sdgoods-development-kit:
+  en: 3b7c08005082901f
+  zh: c7da33982b05d415
+/sugarat-sdgoods-development-kit/summary:
+  en: 8b13ad3657877033
+  zh: 6c77c681cf67f72a
+/sugarat-sdgoods-development-kit/contents:
+  en: b1401380c0760b11
+  zh: 646da761eb9a024e
+/sugarat-sdgoods-development-kit/give-this-kit-to-an-agent:
+  en: 93f6a6d57cffd68a
+  zh: e0e670d4c6485e69
+/sugarat-sdgoods-development-kit/use-the-sources-locally:
+  en: f0fcad03fea488ce
+  zh: 0f0e2d2efb5002ea
+/sugarat-sdgoods-development-kit/resources-and-verification:
+  en: 24feb9e63d8c6042
+  zh: d88949fc4bfd7ebb
+/sugarat-sdgoods-development-kit/publishing:
+  en: ce74d2d01ae5be9f
+  zh: 92972d832f65cff9
+/sugarat-sdgoods-development-kit/dev-note:
+  en: b75c8458928b72b9
+  zh: 003ba4e17b4b5269

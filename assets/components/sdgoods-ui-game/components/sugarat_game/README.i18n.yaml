@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-ui-game/components/sugarat_game/README.md
+/sdgoods-game-ui-components:
+  en: 50b469f95a3b88a0
+  zh: 1fc4e6106c4e30df
+/sdgoods-game-ui-components/choosing-a-style:
+  en: 0c7d12e28b7e1ed6
+  zh: 4ac00a72ca79be5e
+/sdgoods-game-ui-components/building-a-screen:
+  en: ddf593d397f83459
+  zh: a9fdaf610e24d87e
+/sdgoods-game-ui-components/taps-and-values:
+  en: 0059fc9e92a48dfa
+  zh: 19adec1db90fff5a
+/sdgoods-game-ui-components/component-catalog:
+  en: 920160bdf3f2a627
+  zh: 3c5565121ef22613
+/sdgoods-game-ui-components/gallery-examples:
+  en: e76a02c0fb90d200
+  zh: 26ab6df63221f7f8
+/sdgoods-game-ui-components/text-and-fonts:
+  en: ab8975bc98ce8b37
+  zh: 44bd44feda0ce6fc
+/sdgoods-game-ui-components/memory-and-performance:
+  en: 9b23a851b6827bed
+  zh: 42fe4c5dac3c4c6c
+/sdgoods-game-ui-components/licenses-and-verification:
+  en: 42e4471d266109af
+  zh: 332c0f92c4c762c1

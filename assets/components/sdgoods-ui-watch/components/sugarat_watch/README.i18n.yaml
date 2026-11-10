@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-ui-watch/components/sugarat_watch/README.md
+/sdgoods-watch-ui-components:
+  en: 621ab856822bb8dc
+  zh: a6311e0b88076b8d
+/sdgoods-watch-ui-components/choosing-a-style:
+  en: c36507e2cddc64fc
+  zh: 1c3de3e951e2b415
+/sdgoods-watch-ui-components/building-a-screen:
+  en: 589e0daca75ff3c5
+  zh: 08c04da89d71eec0
+/sdgoods-watch-ui-components/taps-and-values:
+  en: 9f595e60b00624df
+  zh: 0e390eaf914e48ea
+/sdgoods-watch-ui-components/component-catalog:
+  en: b8af80d455edd59d
+  zh: d1a207596c79b26a
+/sdgoods-watch-ui-components/gallery-examples:
+  en: 4ce3fb499481007d
+  zh: 8243ef18afc05fea
+/sdgoods-watch-ui-components/text-and-fonts:
+  en: 5cc6b9f613216bbc
+  zh: 86c0261a9d471062
+/sdgoods-watch-ui-components/memory-and-performance:
+  en: 37fcd0ecb5e48489
+  zh: 9f47f2284ce80a45
+/sdgoods-watch-ui-components/licenses-and-verification:
+  en: 3e893de00d712247
+  zh: 91c9aefd29763d8b

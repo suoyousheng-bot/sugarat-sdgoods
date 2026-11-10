@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+build*/
+sdkconfig
+sdkconfig.old
+managed_components/
+firmware-backups/
+*.bin

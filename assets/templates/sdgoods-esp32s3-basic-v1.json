@@ -1,0 +1,2444 @@
+{
+  "schemaVersion": 1,
+  "id": "sdgoods-esp32s3-basic-v1",
+  "version": 1,
+  "productId": "sdgoods-esp32s3-round",
+  "source": "https://github.com/SDGOODS/SDGOODS-ESP32S3",
+  "lvgl": "8.3.11",
+  "idf": "5.5.4",
+  "archiveBytes": 3851515,
+  "archiveSha256": "380586da2da9264bcc6d2321017843c3e39f46f150ad2d2557c11d3057e222d6",
+  "unpackedBytes": 16227400,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 56,
+      "sha256": "b20a1c19fef65edc58fe8e7de79249e7d8d37cd093bf8c50209ddaaa59f77b9d"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 247,
+      "sha256": "11d3586df26e7ee7cb79c13654e7823aa4cc052f4e4cc2967ee409085418ba24"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 12720,
+      "sha256": "b790712831144257231ff5b3e56bf94b744e96337b0a383a1eb1b44e7a9aacd8"
+    },
+    {
+      "path": "LICENSING.md",
+      "bytes": 3450,
+      "sha256": "8a8b2587d12b3be1ce8f309288fea3fb9c51eda661dbaa8ad0a5fd07ab9d4225"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 4473,
+      "sha256": "7378d590be85976b67f7f6525455f6bfba2d9035ccd4ca5d5481167283ed8632"
+    },
+    {
+      "path": "SUGARAT_TEMPLATE.md",
+      "bytes": 2612,
+      "sha256": "9b7eaa41ea43656b363dfcc8b12a06ef9f245985eb99b277d544546e214a4127"
+    },
+    {
+      "path": "TRADEMARK.md",
+      "bytes": 3197,
+      "sha256": "9b8e3422c599fa7c2c3d6a36731d06a86a4b289144a26e14cc93f216c202f0c6"
+    },
+    {
+      "path": "components/jpegenc/CMakeLists.txt",
+      "bytes": 855,
+      "sha256": "9b08ca5c06467b52cc981e2c9596274bbe1b5c74fffe7481df1d9855aa1ea09c"
+    },
+    {
+      "path": "components/jpegenc/JPEGENC.cpp",
+      "bytes": 3196,
+      "sha256": "929c3fad3d18be2675ef1e9182eaaaffd71e9adad14e7383aeba40fab1cb6807"
+    },
+    {
+      "path": "components/jpegenc/JPEGENC.h",
+      "bytes": 7886,
+      "sha256": "e48963e57adf97ff0e98be78a0cdba901d7b10738d6ba8b7e9dea7b2017c997d"
+    },
+    {
+      "path": "components/jpegenc/jpegenc.inl",
+      "bytes": 104241,
+      "sha256": "073a033585a57fb3b8ca52372b9834b0a14a0c9218138eb01e98cfdc4eec1dbd"
+    },
+    {
+      "path": "components/lvgl/CMakeLists.txt",
+      "bytes": 520,
+      "sha256": "edd80227a3af0a883d2f8bd096c03d0916f78f0ab20f8f021dd9e2a14d68a2cf"
+    },
+    {
+      "path": "components/lvgl/Kconfig",
+      "bytes": 43558,
+      "sha256": "4cdca66dc802ab92bf0e14f0b19ac4634729447986f426d37a84ef41717c0cb5"
+    },
+    {
+      "path": "components/lvgl/LICENCE.txt",
+      "bytes": 1072,
+      "sha256": "6a916130a36e83a79bb0dca6c6a7bfe60a67af7d118605e2b7b23bd5ad5c4eb0"
+    },
+    {
+      "path": "components/lvgl/demos/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "components/lvgl/env_support/cmake/custom.cmake",
+      "bytes": 2920,
+      "sha256": "183b55746a4558404a95181977627f6a7ff3c0adb0c828720cb773c1acfb0fad"
+    },
+    {
+      "path": "components/lvgl/env_support/cmake/esp.cmake",
+      "bytes": 2013,
+      "sha256": "1b0d7169af1b69424d549b3c8791df521f1344f5361ad348cf354e80e2cbb935"
+    },
+    {
+      "path": "components/lvgl/env_support/cmake/micropython.cmake",
+      "bytes": 962,
+      "sha256": "68eb94bcf0f556de945e99b723e976f2879ee3f11843057798bb10341731292c"
+    },
+    {
+      "path": "components/lvgl/env_support/cmake/zephyr.cmake",
+      "bytes": 347,
+      "sha256": "54b8a3270e33d588417ab91f2dc1346d29e224bf9eab4c3523afd735487b8678"
+    },
+    {
+      "path": "components/lvgl/examples/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "components/lvgl/idf_component.yml",
+      "bytes": 221,
+      "sha256": "5a5df0e102be74a9d4a14edd52a4f3e7edc5d6701586a696f151629def002e4c"
+    },
+    {
+      "path": "components/lvgl/lv_conf_template.h",
+      "bytes": 26546,
+      "sha256": "fce1a88a9346c8a024651ae4c7c37deb2bcbfd402f46baccc94894e768dbd2b4"
+    },
+    {
+      "path": "components/lvgl/lvgl.h",
+      "bytes": 2813,
+      "sha256": "98c536dba790e1a30424fc95163147bf7005c5ffd0f637906c339890893872a3"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_core.mk",
+      "bytes": 494,
+      "sha256": "4e484856a86a70f8cf62c61e5c2b94cf97f5a1296e23466b5fa227a495270674"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_disp.c",
+      "bytes": 15648,
+      "sha256": "64779f1d024f3c0aaa9374859ce9228869ff8931c828d31d454919f215624124"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_disp.h",
+      "bytes": 7601,
+      "sha256": "4cdf3acd468375d0f1f918b2a3d50cb820265655ed7ef67ffa066c3dfd778e31"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_event.c",
+      "bytes": 14827,
+      "sha256": "826e48a359a50c5bd4e9e3d8f53375c7392eefd7667083dd6e85a1f7a445c63f"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_event.h",
+      "bytes": 15643,
+      "sha256": "b906f6141ce601c07ac5cd1cab65c1d2fe28192cc12782c4362aff939d2a7550"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_group.c",
+      "bytes": 13875,
+      "sha256": "eb3a038897cde40f0ff519017f02a25ea355c776516c6507fe8368c474f27033"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_group.h",
+      "bytes": 7840,
+      "sha256": "faff4b13effd63da9ca857ffcb6c7f82ed3f52b81656e3017a1347344e48f8a9"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_indev.c",
+      "bytes": 44600,
+      "sha256": "45a169a6d8af02bbac25eb2249c5fdff1d67d64d2af7609882c2fb6cbdab19f6"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_indev.h",
+      "bytes": 5189,
+      "sha256": "10aac9ffdf5105b8e699f2e6e4edc604fd176409a52a499377adc85e5e6f3382"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_indev_scroll.c",
+      "bytes": 27757,
+      "sha256": "7bbb7d490576592a46821930dcad3bfdbc6edb93c246e1d85e63877152317f72"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_indev_scroll.h",
+      "bytes": 1544,
+      "sha256": "3b552db89aeeed85dd2cbdaafcc66f040459063465f07dad745f9fb89aba861f"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj.c",
+      "bytes": 32062,
+      "sha256": "f959f1026ed406fd9786f6d29f58b8d0a94ba69458041bc41327dd27fc226775"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj.h",
+      "bytes": 14463,
+      "sha256": "e6a1d2db3413021e873eec763b006c737fe805a7ee7a4ff25d91abd622c43bfa"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_class.c",
+      "bytes": 5859,
+      "sha256": "f56368d1f291d78871eee167f1ee1900ab2882693de09ee3f50caafaeedf1f77"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_class.h",
+      "bytes": 2554,
+      "sha256": "7fe17ea5a2b949a66825a1b8165c2f863046b03eaae67d1b8667466fee342c5b"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_draw.c",
+      "bytes": 14454,
+      "sha256": "025c755e75cbf3b4968b9b4687d96cdf9d99de0336883dbf20f238ad144524cf"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_draw.h",
+      "bytes": 7451,
+      "sha256": "d9b69e183af16ab8b9a26f85ead4147f961fbf15988e117658f84fd7002befe1"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_pos.c",
+      "bytes": 38145,
+      "sha256": "23e9c2a2f9d89f6aa640f2ad3f9fe87e082f3a49ae1baf577a93a0e6f8bfea73"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_pos.h",
+      "bytes": 18917,
+      "sha256": "57edddf04ad0fb8517dbe86ef6349501399ae26012c2297fa144fd5cc62fbdf6"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_scroll.c",
+      "bytes": 27672,
+      "sha256": "4f30bdab4c2cdef8b1dd0dce3531663d8f8f5f175a589f12c074d263fb350498"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_scroll.h",
+      "bytes": 11105,
+      "sha256": "d4e210944ace64c883535482eda66ca2071d9e3804f445232f8ebefa2ee798e0"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_style.c",
+      "bytes": 31827,
+      "sha256": "8c7143d4a1f245203e759f6477f1c1d68d10f9752c0dd38836dc24cd304fb4cc"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_style.h",
+      "bytes": 9505,
+      "sha256": "6dbfdb378fd6379ab5ad567aac0970a7615a1f79e8121953e9d182e83d58122b"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_style_gen.c",
+      "bytes": 20921,
+      "sha256": "8ddda9268506e10d2b2436cb53b66455ee54132679f063511f056a3993dccc49"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_style_gen.h",
+      "bytes": 29855,
+      "sha256": "9317c91f8072eef12b10c2383148ca108667d83a4ee6f98d37dedc8216e9dc64"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_tree.c",
+      "bytes": 12259,
+      "sha256": "a689efc2e5d592d98146d183aae408de3d1e6f423ee7533d17c20a1139cf4202"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_obj_tree.h",
+      "bytes": 5025,
+      "sha256": "930140c278836e36c14aef8b83e54a02eac78c8503ec2dbc0db546c8b66baf4b"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_refr.c",
+      "bytes": 46188,
+      "sha256": "1509818f43df2f721c06f4a7b591469e434cb524186595460006fe1bd9470c47"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_refr.h",
+      "bytes": 2678,
+      "sha256": "e5bce21ae5175f5c2ed622039aac59a594531878b28be17381f55d535079eebd"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_theme.c",
+      "bytes": 2948,
+      "sha256": "90877775a9f5f6d3eaf65fba6b75e0c18628e952dfc00c3e79ebaf6526ce4983"
+    },
+    {
+      "path": "components/lvgl/src/core/lv_theme.h",
+      "bytes": 2962,
+      "sha256": "951f83d283f01c6f4c2bf1cf6f2aa30f16c068d63dcf5aee5b6c93cb5903764a"
+    },
+    {
+      "path": "components/lvgl/src/draw/arm2d/lv_draw_arm2d.mk",
+      "bytes": 204,
+      "sha256": "7c5ab95a37ecfbaca3587ea7b3d85bb52656889350eabc9fc689de5c868f08f2"
+    },
+    {
+      "path": "components/lvgl/src/draw/arm2d/lv_gpu_arm2d.c",
+      "bytes": 71521,
+      "sha256": "5f6b43d15d78e7fbb783d6ab7261dc3d3ca00bd782ed0cb115c095962f67bd61"
+    },
+    {
+      "path": "components/lvgl/src/draw/arm2d/lv_gpu_arm2d.h",
+      "bytes": 917,
+      "sha256": "1917c286c862969f7d7f9e0542e2374b6584997d419af37e6ce15b90b0a12b00"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw.c",
+      "bytes": 886,
+      "sha256": "b61110a739d1cb98aaa78cb414cece155880c22c79f95ae8810d10420ffeb7f0"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw.h",
+      "bytes": 7622,
+      "sha256": "166be2cf9e87842cafd140476973ee90e6dc8fe05c28b47374c4fe2e1a68ab69"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw.mk",
+      "bytes": 905,
+      "sha256": "97094df8a8d22a6bab92827269eb5fb149be99b9fb9d9d919961e2102729f78c"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_arc.c",
+      "bytes": 5977,
+      "sha256": "112e6f8081cb993fc1dfa505de08b00e802f12e0c3bdd04ac382af14ffbf31ce"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_arc.h",
+      "bytes": 2507,
+      "sha256": "95fd2ed8a5c143e5691de5ad92928ea3fce6ee229fcdd298b140bbddcd7c9c7d"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_img.c",
+      "bytes": 11586,
+      "sha256": "0a67e4fd09aabb0ca3900df7999e68d0176bb27e8c3da0cad78f10516552bb7f"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_img.h",
+      "bytes": 2570,
+      "sha256": "ece6ef266440426ce364f71cfe608d6f0c3b0489587be0833a162c8bfac9abc5"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_label.c",
+      "bytes": 13521,
+      "sha256": "ef4fcf560629e3b8453a54014d311cc30426db03e8857f3bbee16aad5e23b8ed"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_label.h",
+      "bytes": 2852,
+      "sha256": "0349692fc5035bda6ec893e8820b6c2792a0cf34d05dc61ff361f1c1de7c3c9a"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_layer.c",
+      "bytes": 2722,
+      "sha256": "3cc437da7f49dd716f3ca6ef8d2d9e692bd470a41b0679a1cd6f75af42e0adbf"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_layer.h",
+      "bytes": 2446,
+      "sha256": "bbc802d79ff87752b7548b05b82b8c4b77ad1797459baac4c965731bb0881b8c"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_line.c",
+      "bytes": 1210,
+      "sha256": "0555f0036c21e63a2c1d30d680292d0b4cfe3a560c8d2dc71185ee33cf60addf"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_line.h",
+      "bytes": 1565,
+      "sha256": "8ca57dd4afe43112da04ed915cb992abb49fdbc64218fdf7055d1b90e1e7171d"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_mask.c",
+      "bytes": 55500,
+      "sha256": "3899e11ec511a27bfe6a5accb5c1b38c904ac0f75343c52e45dfa678c46f98c9"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_mask.h",
+      "bytes": 13018,
+      "sha256": "d39d2b82e48e5cb04ad60f2fafb3389bfd3ea3617c166eef7304230c1ab8f364"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_rect.c",
+      "bytes": 1836,
+      "sha256": "6bcb01c108b62424ad50fbcb8d8630050f03941b76a5f0b75b2e72d8d7181c66"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_rect.h",
+      "bytes": 2245,
+      "sha256": "582fc9dff735439adb2705b5f323d7104d65f2b63a7097617c4eeca84c39a8a5"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_transform.c",
+      "bytes": 1264,
+      "sha256": "bd70591780047c78b7d75af7259bab21f73ccf8960ffa502c512757b62530222"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_transform.h",
+      "bytes": 933,
+      "sha256": "a2b61654d8f6ce4916317cd11689fdfcb726d632625eca4d87de008f9a8ebf07"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_triangle.c",
+      "bytes": 1112,
+      "sha256": "526b6c8a3ed0f16aa6169fbc8e34697e1f7670b553dfa4cdf89eaff6321991b8"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_draw_triangle.h",
+      "bytes": 850,
+      "sha256": "8b15091f30b4ea62220dd08a60487a1ce688cd58573a51d07a353192f75cbe7c"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_buf.c",
+      "bytes": 14018,
+      "sha256": "bc4cab4c289d97bf578ac7aaf7ecb0a84d08bcdcf80a8a1327b5a0ef1e287c78"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_buf.h",
+      "bytes": 9491,
+      "sha256": "8c5ad9c669ed42604e2912a00cd0dfd2848fb1ba31dc0f2d9521fc3a9b0c6a68"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_cache.c",
+      "bytes": 6911,
+      "sha256": "da4c953ba6433401ba12f4518cb91cdac27ab8e76df03595f0a2d7a0a116f5e6"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_cache.h",
+      "bytes": 2370,
+      "sha256": "62a6f7c9ca83e9150b9395f6e2a8462ba1fd82f4918f7b1eafe4e0f09bc28601"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_decoder.c",
+      "bytes": 26391,
+      "sha256": "087629fcae9af0daf03047f409898758fae38042f2f0334843339fd9056443ff"
+    },
+    {
+      "path": "components/lvgl/src/draw/lv_img_decoder.h",
+      "bytes": 9953,
+      "sha256": "de286d66e79e0f5d5c1efc91d5d14819325f6d2a22e132ed1374b214b1cdd581"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/lv_draw_nxp.mk",
+      "bytes": 326,
+      "sha256": "824549fdabaad7c63dcceb97d10d4e3b8e19dc657d5cf64810e34f0bec93c9bf"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_draw_nxp_pxp.mk",
+      "bytes": 294,
+      "sha256": "e06b6830dec86dfec06f99fd2bceb5cfbb82fb489d34e89b0a047d02b9a0d3d0"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_draw_pxp.c",
+      "bytes": 9723,
+      "sha256": "eb418004e1247b21b29e535897ccf70eb027fb5d001d40b3a7931c626a8c5538"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h",
+      "bytes": 2021,
+      "sha256": "caef182d78db2f3219197d386c33e9ce410ce0bf4a2c8f9d2447f178c76520c0"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_draw_pxp_blend.c",
+      "bytes": 23527,
+      "sha256": "bbafb88bfbf4730cb35fd833a8598b8fd8db03efe2621ce199fda9ac7d8df87d"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_draw_pxp_blend.h",
+      "bytes": 4790,
+      "sha256": "bde413bd13f5ffb9e3ff226e1b87f1e574b252bab9056dab215b599c2706b87c"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp.c",
+      "bytes": 3799,
+      "sha256": "157ed890201853ddbde8d611280293ed5d5f2b16010e8f728349e4750eb706cd"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp.h",
+      "bytes": 4390,
+      "sha256": "1d638aa07ab4dca33a8bfd0bdf7fbbd843174944a5349389a9b91d9a7a93c04c"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp_osa.c",
+      "bytes": 4398,
+      "sha256": "4ed51828655c801a098453c3de5f085a26d98eeda29a169eb4018e0a9f761efb"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp_osa.h",
+      "bytes": 2123,
+      "sha256": "d493a8215852cc899ca7fbf26d0e4fc1384fa35d2eff9ac85713677d2c7bafe9"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_nxp_vglite.mk",
+      "bytes": 397,
+      "sha256": "589f252d5dd2b8e97b10195270ebe81da7d3b039b5bde660207ef6bceb29bc5f"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite.c",
+      "bytes": 20926,
+      "sha256": "c26ecfef1105ccf03eb9f69557455468377389ada90359bdc90836170bbddec5"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite.h",
+      "bytes": 2050,
+      "sha256": "fde2d0e0f7e83018cbe07e61a348864a32a65bd23d701740ef641a40b841168e"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_arc.c",
+      "bytes": 23437,
+      "sha256": "5c14bc721d48a5675548d7981064015a27ac0e641c1d0cdbd2a303b567bb9cb9"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_arc.h",
+      "bytes": 2568,
+      "sha256": "6ffea805e831e8b31dcca753b88f95849ac2e18c9e0079144e34cfc9de45bd4e"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_blend.c",
+      "bytes": 24247,
+      "sha256": "753fbcacb9e2f19294a88959b37c5990df0c6205dc5cc81787bec23410045e01"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_blend.h",
+      "bytes": 6272,
+      "sha256": "8757114959fef3c6c47962d889ba69659c51f2ea7ca509109ba0e2fb1d73bd72"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_line.c",
+      "bytes": 5028,
+      "sha256": "9c82647d4ee5557bcb45dac96ea3e193dfdde28700dfe222a47566869f171f62"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_line.h",
+      "bytes": 2506,
+      "sha256": "c6c3f43efd17f8c00d9350af0eb78eaba16a5034b8b9e9ea3d2691c370616393"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_rect.c",
+      "bytes": 16753,
+      "sha256": "2084afc5008e8821dcd8b328716b4975525e0fb5d88256cbb6258f6398f74723"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_draw_vglite_rect.h",
+      "bytes": 3138,
+      "sha256": "70ec9222e213e6c3303d8a456d59f52bac127f961edf671a4f673616ab188c98"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_vglite_buf.c",
+      "bytes": 4048,
+      "sha256": "a172ea6652490c7d4cd8500c8f224b0e09dbc0ee8594d9cd4ad25dbd584f179b"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_vglite_buf.h",
+      "bytes": 3590,
+      "sha256": "fc86e0009a477ba7af173c2ee5655bc2214930beb6adc35b29db392b1fd12281"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_vglite_utils.c",
+      "bytes": 4733,
+      "sha256": "0415846f33045d96bb1bb7346a9ac3c35370642483eaf1d98c32651a94a254d2"
+    },
+    {
+      "path": "components/lvgl/src/draw/nxp/vglite/lv_vglite_utils.h",
+      "bytes": 5980,
+      "sha256": "c9757af0519527af57e924f717ffb2af4fcbcd3863b49dbae02fb67bff7e3ab2"
+    },
+    {
+      "path": "components/lvgl/src/draw/renesas/lv_draw_renesas.mk",
+      "bytes": 245,
+      "sha256": "988d3dcc8b0391514bf4c60d3bd6d3e46df0b00d86c6ab330463e83c523bdfbd"
+    },
+    {
+      "path": "components/lvgl/src/draw/renesas/lv_gpu_d2_draw_label.c",
+      "bytes": 9085,
+      "sha256": "e478b9326ce307778215d4846135e2a1201249da1e1d5a9ed3ff537c6ef46073"
+    },
+    {
+      "path": "components/lvgl/src/draw/renesas/lv_gpu_d2_ra6m3.c",
+      "bytes": 23649,
+      "sha256": "33c4a74e2698cfd1fc82e2517320a989d997645a2f03090fa4ef451cd8d28d66"
+    },
+    {
+      "path": "components/lvgl/src/draw/renesas/lv_gpu_d2_ra6m3.h",
+      "bytes": 1210,
+      "sha256": "ccde417f7ec80b19029b4e86708fda5a1f6ebd4c68a86bfb175f8fe52e88a963"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/README.md",
+      "bytes": 1164,
+      "sha256": "6c93e541d5ebebf572ae9c5098d53a84573b84393e583b2096d391d6311da2f5"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl.c",
+      "bytes": 3587,
+      "sha256": "c06595a02889829d71dfd0383dea0bc934ce3b612df3ef5da3a76613bab7faf1"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl.h",
+      "bytes": 1792,
+      "sha256": "cda99ef7e511dee4d56a2aa932f21542b5629fa54801ea5948b2ba8e419ad9eb"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl.mk",
+      "bytes": 583,
+      "sha256": "f67fdd79df2e2af986b0fcfb207b56bd4f0028c7fc9a6d2063cd2559548ab764"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_arc.c",
+      "bytes": 8567,
+      "sha256": "6bfb826e996f0e29ef4de370c23683cc92ed7760abf59476c43cdf529f23af84"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_bg.c",
+      "bytes": 2998,
+      "sha256": "7c209e0e25ee7b9dc9c9b4b15dc7c9ffc6e1b5140b07dd6791c48fc654d65233"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_composite.c",
+      "bytes": 11196,
+      "sha256": "4b33ec3af09371d7283f226fbce6bd4b3f94b77822f867d73256ba1d93731b0a"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_composite.h",
+      "bytes": 2526,
+      "sha256": "e9d1b425008fddadbcf22bf2def52be1a1a87eaae4ce4651ed88ea3d831997e3"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_img.c",
+      "bytes": 20182,
+      "sha256": "369e9fc1cbbfa4a9ca7588af2080ba6366bad24b2c61b506cad9faec1dff5765"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_img.h",
+      "bytes": 1967,
+      "sha256": "173d9c90516a79af985dd10f7f44c67405db7cf1b48b275c4dd6a165882895b3"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_label.c",
+      "bytes": 6113,
+      "sha256": "2bc642b4fc5f6ce8e4d14d2d9d526350af86c748747d7ca876ffe65dcf72c1a1"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_layer.c",
+      "bytes": 5039,
+      "sha256": "2500563005524688a233a017ab6ddb33f564dcd5e24ea0d226fb6170afd3907d"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_layer.h",
+      "bytes": 1402,
+      "sha256": "7f3bd4fe6ed337bbec597d771579d792bd1740d14b28cdd2a5067825e3ae2a6c"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_line.c",
+      "bytes": 5936,
+      "sha256": "3a3855045b758b717cfaf6578a26dc365ab45edfafd87a2c7da95109f23144bd"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_mask.c",
+      "bytes": 2362,
+      "sha256": "506d2c0eaf5dd3ff2405bf9bcf3f4388f71b47d66f1441395040ec33aa6330f1"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_mask.h",
+      "bytes": 990,
+      "sha256": "9f8b35c39bd20328e76e7d139f4de7c6df957164464a2eace63068fdbf3fc3d2"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_polygon.c",
+      "bytes": 4409,
+      "sha256": "96e743fb63c24664245e076abf04be8c3cc7e7b91f066f6df73ec7ce28caf318"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_priv.h",
+      "bytes": 1261,
+      "sha256": "c7098e0462b62002ac807324ce7e4c969b0e5c1bdab3a5eda06b3145aaa00084"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_rect.c",
+      "bytes": 42122,
+      "sha256": "8a6b15cffd554d73c8616ba41cc942002f88606daa85325fbeeb1bf08a48f1f8"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_rect.h",
+      "bytes": 2441,
+      "sha256": "43575c29be3c48f52f885e07a2e8f8fb621786d3283d592f356fc888af534315"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_stack_blur.c",
+      "bytes": 8235,
+      "sha256": "2a865efd7ff84e79a4e49162a9f6deab4f27faab385a16db77a2f5d25236cecd"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_stack_blur.h",
+      "bytes": 765,
+      "sha256": "75cf293a98eb520407a6d99286a54c2e6e7511dba4666a92705f9d4a3f4874e9"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_texture_cache.c",
+      "bytes": 5635,
+      "sha256": "49dd3a2de85ca3fb03a8d497cb6b2c4d87518bf8d1036c548c2c1811db12b30f"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_texture_cache.h",
+      "bytes": 3071,
+      "sha256": "97c0d1837dd645aee9b923dcd1809574720221230afe7a41547d462469e33bf6"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_utils.c",
+      "bytes": 4958,
+      "sha256": "346a34d5ab88d28e0c01635e727f317d0640307cb090f2b3c472e2e1c45c6190"
+    },
+    {
+      "path": "components/lvgl/src/draw/sdl/lv_draw_sdl_utils.h",
+      "bytes": 1550,
+      "sha256": "d6db836508504bec734855ec540ff40d4f7f0e8b20accc3ddfba76b3b3fd3512"
+    },
+    {
+      "path": "components/lvgl/src/draw/stm32_dma2d/lv_draw_stm32_dma2d.mk",
+      "bytes": 228,
+      "sha256": "71fd7b90bd1aaa27e3fe709f8c279e5a0011f94a0d9ebd70a8b472c9734aed05"
+    },
+    {
+      "path": "components/lvgl/src/draw/stm32_dma2d/lv_gpu_stm32_dma2d.c",
+      "bytes": 37712,
+      "sha256": "b2a7d551863831c6cc0cdbe3348b2fdb10a506abe352913ca8e7e692eeb7f174"
+    },
+    {
+      "path": "components/lvgl/src/draw/stm32_dma2d/lv_gpu_stm32_dma2d.h",
+      "bytes": 1454,
+      "sha256": "06ff991cdd2858639124a56889345c2bae405c65c998cf5e7d779094b721b3a9"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw.c",
+      "bytes": 3118,
+      "sha256": "0b01c44ecde76b2666c58031ebe7608c52deb8ee479e908fd601491d086227e5"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw.h",
+      "bytes": 3824,
+      "sha256": "901dc548560ba4b9cc1863af72047f60589f1b49db28401e13e5fc637c049b93"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw.mk",
+      "bytes": 506,
+      "sha256": "e48edb802420ea352ded29e9aaaaa2fa5d8d4e02c5bacd024902551b711e2708"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_arc.c",
+      "bytes": 21108,
+      "sha256": "a7c089db1ba7be5a79953cfb9b4ef7964ef8e4165ca378a77d547d0da247bc74"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_blend.c",
+      "bytes": 38350,
+      "sha256": "6630ad12948872c59fab86d98a391fefa04365c3e9675ebbf0caf15ffd3d5aa0"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_blend.h",
+      "bytes": 2129,
+      "sha256": "e6a2b8d2d4d34f71f0f20490169b17bb10c70769ac2e503402b2dcf29b1c037c"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_dither.c",
+      "bytes": 9543,
+      "sha256": "453689745ec5e2f4b6cd0ecb936f2dda443a11f512612df73882982f2d91575b"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_dither.h",
+      "bytes": 2034,
+      "sha256": "a2be96cb54779722213cb8d4db541adf1ef3fa2219e9f3c0a83db038dc6ed6de"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_gradient.c",
+      "bytes": 10908,
+      "sha256": "a506df24438293755394a0b397c0fc52b3a37ae376dbb5e405b8a788e3289764"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_gradient.h",
+      "bytes": 3608,
+      "sha256": "b56c4c25009727d76a4b6dff6d8225cd4d6a8e201501471e7b636234b4a9c51c"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_img.c",
+      "bytes": 11343,
+      "sha256": "9051e64b0712db151d468f582b52f26096c943adff5c51846c7ca844ab1fb460"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_layer.c",
+      "bytes": 5644,
+      "sha256": "b84134d097aab0a5d48c4b2b3a07529ec00d69e54ccace072b20725e81116873"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_letter.c",
+      "bytes": 21080,
+      "sha256": "cfbce658c8e656615725b3398a14986da1f4cd8d894ee1fc5eb186b11dcc240d"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_line.c",
+      "bytes": 15595,
+      "sha256": "c4e149084abe7d313e19c53f639f9b6055d75c12cfaacfb4a0064a970a41f269"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_polygon.c",
+      "bytes": 6165,
+      "sha256": "d5f82e860983c33fd1fa85f8fc5748f3dd860170cee105a57e1e28360e84600f"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_rect.c",
+      "bytes": 53735,
+      "sha256": "68d4b15a204bd1728fdb7db80b438d893dce5a0635d94845fbf6b0aa292d5a11"
+    },
+    {
+      "path": "components/lvgl/src/draw/sw/lv_draw_sw_transform.c",
+      "bytes": 17650,
+      "sha256": "50ebe91083f174e751890e2633d321a8dc2fce8ff5fbebdee5140f26b747bdda"
+    },
+    {
+      "path": "components/lvgl/src/draw/swm341_dma2d/lv_draw_swm341_dma2d.mk",
+      "bytes": 232,
+      "sha256": "331ff1ff6500ed0f9c0df14a6574504d7585146327a601269a65e4f28e0ce832"
+    },
+    {
+      "path": "components/lvgl/src/draw/swm341_dma2d/lv_gpu_swm341_dma2d.c",
+      "bytes": 8355,
+      "sha256": "cfe9306e76e11bd74edf189c9422c5bf71c5ff90d8216acff669070d11ceb00d"
+    },
+    {
+      "path": "components/lvgl/src/draw/swm341_dma2d/lv_gpu_swm341_dma2d.h",
+      "bytes": 1371,
+      "sha256": "19c718c6c3fc9efa2d445976a76dbecffd8867fbe126298c7d3f150c5d098177"
+    },
+    {
+      "path": "components/lvgl/src/extra/README.md",
+      "bytes": 1999,
+      "sha256": "4a401c00ee7950ceca84a781799cbc3d31a79cf4646c7bdf03e8d389f1ac52ff"
+    },
+    {
+      "path": "components/lvgl/src/extra/layouts/flex/lv_flex.c",
+      "bytes": 22078,
+      "sha256": "11bd327e13597d97f1af31f1b105100e925a9fcfaeb33e512ed2c75a6fab308b"
+    },
+    {
+      "path": "components/lvgl/src/extra/layouts/flex/lv_flex.h",
+      "bytes": 5333,
+      "sha256": "defd8f8803a7817942ad59b83dca2371d659316e275cf0b6c5fc31df6ae72db6"
+    },
+    {
+      "path": "components/lvgl/src/extra/layouts/grid/lv_grid.c",
+      "bytes": 25299,
+      "sha256": "f8c1e2d467e3bb77f5e15b9329c8814162d6d89787d9c0ee3babf2c87025a871"
+    },
+    {
+      "path": "components/lvgl/src/extra/layouts/grid/lv_grid.h",
+      "bytes": 7185,
+      "sha256": "1ed694b99f753795e9a590b6446440ececbc7b04a69f9513b8eedccbd1ad8428"
+    },
+    {
+      "path": "components/lvgl/src/extra/layouts/lv_layouts.h",
+      "bytes": 708,
+      "sha256": "40ddc25a10a4bed4109f56135b56b68feccc177a78342bf7f8fee0aaa5b3c804"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/bmp/lv_bmp.c",
+      "bytes": 7620,
+      "sha256": "bfbb967b8ff661dcdd27251f6d42943bd02475a29663e99bcc74a6be21fc04e6"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/bmp/lv_bmp.h",
+      "bytes": 604,
+      "sha256": "8356654bae055bea9ab4b8ef0408aa93bcae4423fc585029dd2ff50a887e2154"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.c",
+      "bytes": 25804,
+      "sha256": "41be65484d85f87053c0c31e51082973e99e51dc39b210637547b66377a05d26"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h",
+      "bytes": 2268,
+      "sha256": "a0e6972d63deefb35ff309dbfebc27a6a12c3329c19c9f5f9f4968f78bf7d149"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/freetype/arial.ttf",
+      "bytes": 311636,
+      "sha256": "82afb35eda3a52edb10106bcc04af93646384421ded538d38792c1444d816022"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/freetype/lv_freetype.c",
+      "bytes": 20144,
+      "sha256": "d6787432256d425bd2d2db12ab64b364deaa37d965bb89026435ecb07abea971"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/freetype/lv_freetype.h",
+      "bytes": 2110,
+      "sha256": "b3426c118996f1567abc652c1f2ce4d9ac225415c6dbc2eab0115afd8a6386e8"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.c",
+      "bytes": 8569,
+      "sha256": "b9ce0ee2c0ff22c8dec159c805d44a44929b42ab251eba30ad429719780134bf"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fs_littlefs.c",
+      "bytes": 10406,
+      "sha256": "e414048fd02add6714a5f7872de3d2c0c94db2bb5a9f152960c558fbc2546a18"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fs_posix.c",
+      "bytes": 9501,
+      "sha256": "07824f65131541bb04e6a0a2b9e37824ac3f515b7db873be2b31fd38661e9e6e"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.c",
+      "bytes": 9991,
+      "sha256": "ecd2347a73650b3bc144734dabc8e3d037cf80134853b14bd0f70c472343b8ea"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fs_win32.c",
+      "bytes": 13916,
+      "sha256": "c9d088f495841cd52861ad563867723761b8375986e1ffbf192a274c6587d321"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/fsdrv/lv_fsdrv.h",
+      "bytes": 949,
+      "sha256": "7cb90afe7cfceb610c6579faffa3f49ab7353b8975e5a181af894deb50fd879f"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/gif/gifdec.c",
+      "bytes": 22043,
+      "sha256": "5c9efef7f650147414012b8f95d16d55375c0375294d161d8805d6ad5f490479"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/gif/gifdec.h",
+      "bytes": 1636,
+      "sha256": "7d2a997c55650a7b6b65f11dcfcd3be0695c959cd45aebdb4749199fa442f4d0"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/gif/lv_gif.c",
+      "bytes": 4703,
+      "sha256": "0fb045292e8b74b64be4b2e27c36ac215926c20f4bccb6400c91b12544f30785"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/gif/lv_gif.h",
+      "bytes": 910,
+      "sha256": "3a03cc3b17e8874b7cc76054e8bc7d6d7f6ac89df02ee85db800cd6dc9463a91"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/lv_libs.h",
+      "bytes": 791,
+      "sha256": "4659754ae011ea460e2198fc3a5d1245a082e12450da170916a466953d240c8e"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/png/lodepng.c",
+      "bytes": 263650,
+      "sha256": "30e81965693f904bf02ffc8a4f000632d8d59bffec0c88e52090ad85534daf2f"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/png/lodepng.h",
+      "bytes": 95629,
+      "sha256": "35d980fde4725566bda493e9e358588b96e27ad17b768b2b4f8c3345c0e2dd24"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/png/lv_png.c",
+      "bytes": 9289,
+      "sha256": "9526fde96d995d4748ba67119c947a97173b6c086ef83049e9438f38fc80deca"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/png/lv_png.h",
+      "bytes": 659,
+      "sha256": "b1462d8d3733e56f6a5563fbad4bec3eeedd2fec8c8307361cb1b79a32d1245e"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/qrcode/lv_qrcode.c",
+      "bytes": 6368,
+      "sha256": "0072fc8659d08b305621c41eafdb619cf3ebedb741a61826e8720fc61f091e71"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/qrcode/lv_qrcode.h",
+      "bytes": 1529,
+      "sha256": "0691418fc476fd815dac61f2194d6a9cce9db95b6fa0d57828e4319884d263a5"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/qrcode/qrcodegen.c",
+      "bytes": 40955,
+      "sha256": "9f1f23b8f800784740da16b9fff08ad0b75072dedb00caed2ae0d4475419cd34"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/qrcode/qrcodegen.h",
+      "bytes": 14451,
+      "sha256": "aae0f724eda6c4dec74804b66f35d03d256f25e19cdb1411db94398754dd466c"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/rlottie/lv_rlottie.c",
+      "bytes": 8984,
+      "sha256": "f222fd9c248699d8fa3a1a5147b50650482c7369af14ead7190cbdc836d393ab"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/rlottie/lv_rlottie.h",
+      "bytes": 1762,
+      "sha256": "97411dd1108d2cd293d024338497ea8fb48841131ddcfb56ec16d424831ecfe6"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/sjpg/lv_sjpg.c",
+      "bytes": 33092,
+      "sha256": "38ac78e34755c284a540b41874bfdb320adab84bcadd2683b390443e2f02fefa"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/sjpg/lv_sjpg.h",
+      "bytes": 568,
+      "sha256": "b0806c7f350bca0a313f40b23ef48557086ab634ae4ec68b487f013f23c5da49"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/sjpg/tjpgd.c",
+      "bytes": 43134,
+      "sha256": "a7f81e1292919d2055afad873afd878a6114fc73ee54feafbea2498045cbe30a"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/sjpg/tjpgd.h",
+      "bytes": 3345,
+      "sha256": "4ca94b17864633b93cf21b1ab7585b484f5979ba4a6299cff7fa64f7322e9a77"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/sjpg/tjpgdcnf.h",
+      "bytes": 845,
+      "sha256": "59d5a581fd37b195eef562cc0599ee2d253b146dbef0b3cbccf897b7c560775b"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/tiny_ttf/lv_tiny_ttf.c",
+      "bytes": 9856,
+      "sha256": "71eebe2086b00575e1a69df44860e50665d02c6ef61baffcc7f4f5b511920f30"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/tiny_ttf/lv_tiny_ttf.h",
+      "bytes": 1681,
+      "sha256": "ea35337ac50f6d4d818f1975e7ada8c13f76eb1d9003ea748dffb7d9406db8f4"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/tiny_ttf/stb_rect_pack.h",
+      "bytes": 21139,
+      "sha256": "98c2f56eb77cb7c730454c911921c8fc9e55134774c6170ea6e9673263fa2184"
+    },
+    {
+      "path": "components/lvgl/src/extra/libs/tiny_ttf/stb_truetype_htcw.h",
+      "bytes": 226889,
+      "sha256": "cf830b1a82af430b2ba780640615ff57eb0763e6a43332925bc961147a0c6735"
+    },
+    {
+      "path": "components/lvgl/src/extra/lv_extra.c",
+      "bytes": 1489,
+      "sha256": "63a0105ee636b067024c6e087d32775afc8f25422ae2a5a52b92387f7c7ae29a"
+    },
+    {
+      "path": "components/lvgl/src/extra/lv_extra.h",
+      "bytes": 730,
+      "sha256": "080683f4a3a538f42f61d4cb8725f4d9515ed08a7d1314c3be63dbad355dede4"
+    },
+    {
+      "path": "components/lvgl/src/extra/lv_extra.mk",
+      "bytes": 77,
+      "sha256": "3dcaa09e7af31a8214f6a13158bf3d6f6169beaf32478d021598d4ecb9cc8876"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/fragment/README.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/fragment/lv_fragment.c",
+      "bytes": 3972,
+      "sha256": "74122af380487b3010bae82057e191324b379ad87372ecb594e228e57801967a"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/fragment/lv_fragment.h",
+      "bytes": 9351,
+      "sha256": "71d03ad89f4b244ee23ec9eb46428b6711c52b142ef7dbd1419869d19a47951a"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/fragment/lv_fragment_manager.c",
+      "bytes": 8463,
+      "sha256": "e95d08e3e0a9433153d22d959d8f66bc8fa9e48cb438af1ea0ca980412608fd3"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/gridnav/lv_gridnav.c",
+      "bytes": 13625,
+      "sha256": "eeff92c5f0f79263954ac5397a67521f66372369e431981b16c874c15e6433a1"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/gridnav/lv_gridnav.h",
+      "bytes": 2943,
+      "sha256": "02b71a9d23ee3b01382b879310fbfff4bdfa8db27fb97548b7eaa7acbae14a26"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/ime/lv_ime_pinyin.c",
+      "bytes": 39438,
+      "sha256": "e8a000364115c79450b315d24d5b89dd95383ec2420cb132f2d2d39a4be96985"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/ime/lv_ime_pinyin.h",
+      "bytes": 3763,
+      "sha256": "3f80e68a3485b08fdd66b779c988767d2810992d0b618556a6529df5d67ec294"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/imgfont/lv_imgfont.c",
+      "bytes": 3242,
+      "sha256": "5aa882a7043fbe4e3415bffbd1ccf284544eb76aee16381d03308bd52223180c"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/imgfont/lv_imgfont.h",
+      "bytes": 1271,
+      "sha256": "902b04d0fad3a2caa8b0b60bf4827afa1ae3712273f38b696fbc3384318601d6"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/lv_others.h",
+      "bytes": 730,
+      "sha256": "c522dadef814b8b6ce02f36bd8bd0a4bbeff54dc2b5f88f7ed4700289a4a7e9f"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/monkey/lv_monkey.c",
+      "bytes": 4805,
+      "sha256": "33ba8f015b70d65d9220b2bde913870567b097077cd34c14801d3e6429c48308"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/monkey/lv_monkey.h",
+      "bytes": 2407,
+      "sha256": "9d43c46ed15f4d867da5ba4b1896a245e33701d3190aa801d673ee7c077dedea"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/msg/lv_msg.c",
+      "bytes": 4163,
+      "sha256": "e0ba67531a7b62b093f2f7a7921301b89ba59086aef9a89b6ada05bc0b2352b7"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/msg/lv_msg.h",
+      "bytes": 4218,
+      "sha256": "3c227d6004650ef7effe436073294dbc9df3c3db9a2c460c2b1d7f3e3af7ea6d"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/snapshot/lv_snapshot.c",
+      "bytes": 5668,
+      "sha256": "4707d03e7bd78d58134143b1183ab0efd51712698b48e211bf9e00e4d291da28"
+    },
+    {
+      "path": "components/lvgl/src/extra/others/snapshot/lv_snapshot.h",
+      "bytes": 2022,
+      "sha256": "baf03068e2eb3016b41d2e6e1f87750865473553d19c8e9f293b3d3bda56c998"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/basic/lv_theme_basic.c",
+      "bytes": 13261,
+      "sha256": "d32abf10a164c13f9e3610f26024d9b7cbbeb73468726f3855e0c7b3ddd94d76"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/basic/lv_theme_basic.h",
+      "bytes": 934,
+      "sha256": "22324fd976d2f7cdce7eaf013d6aecd3b64411880d3fec06de5141fac9156ab2"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/default/lv_theme_default.c",
+      "bytes": 49296,
+      "sha256": "615e6c961814a7aa93fd45333a9c1eac9d921e3eff3a73344755495d2fdc8d50"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/default/lv_theme_default.h",
+      "bytes": 1326,
+      "sha256": "0a37f03ce292fb41a6d9494ac08533fe96c92d896990bb5d924b1f1fae645a76"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/lv_themes.h",
+      "bytes": 617,
+      "sha256": "816cc45e064bc5b828b1f97a2be8b04558c7b2fd44bd243b6b9a29cc74bc3ec3"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/mono/lv_theme_mono.c",
+      "bytes": 18632,
+      "sha256": "a0346d163a48f28e66be72e118c05fe9cd9f692ec01190740005443e4882d24e"
+    },
+    {
+      "path": "components/lvgl/src/extra/themes/mono/lv_theme_mono.h",
+      "bytes": 1079,
+      "sha256": "a60ad7fe77b385c303c97b99a2b88c54624cac82e73bf59ad337a3a3f0f730bc"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/animimg/lv_animimg.c",
+      "bytes": 3439,
+      "sha256": "1868187f621163969c5c508d5b08a92f17cacaf25460208d29540ceaad39be98"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/animimg/lv_animimg.h",
+      "bytes": 2128,
+      "sha256": "f41fd2d0913bb7843b8b0d1cdf640257b2a54f7d4dd593e8fa0a551d3efbb32d"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar.c",
+      "bytes": 12553,
+      "sha256": "3c5a838d4a2dcfe5050e87ce5d3c01378768d833cd6f8c74d77c6ef4bfafa99d"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar.h",
+      "bytes": 4685,
+      "sha256": "3712e3e3cbf79775d7bde60c68221f1be529c943ecf70a35f7108d0504735a18"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c",
+      "bytes": 4219,
+      "sha256": "44f67da3a84e8521d893768c853cb8ccd02ccd32893171bdd50f0c74d66451d1"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h",
+      "bytes": 976,
+      "sha256": "bd131ba8a4660c2a07b87342625beb09c183f3f8e5956dea849ccc60113cf0dd"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c",
+      "bytes": 4544,
+      "sha256": "fdeb86557a32d0cd02542932c012e28d613c7ed7a731e5870e9aa8a3c59bfd27"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h",
+      "bytes": 997,
+      "sha256": "ec7826b7a5b32e14bc88d7f5a73d7f0860b883f5fcf6c9bd40fd4816aefdf3cf"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/chart/lv_chart.c",
+      "bytes": 62412,
+      "sha256": "fa5ae5065bd7ccc2244367e7c4e4e7b7b9ee1b9f57c4409b2cf32dd2aaacc80b"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/chart/lv_chart.h",
+      "bytes": 15785,
+      "sha256": "01487ccc4fc96558cfff24efaf3c3eae422e94af6f1e9265e16f5d9d5351734d"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c",
+      "bytes": 23547,
+      "sha256": "800951c7e0f9bab7b5eae92287c665dca42a7905e5f62bd7a150a9586f3d8916"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h",
+      "bytes": 3385,
+      "sha256": "8c4903901d0fe2231ad3bbdb6785d87eef9e84826a1d6bddeff7d5cb9d0fcb26"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c",
+      "bytes": 12596,
+      "sha256": "2fa356719a71861cadc5434b59650566cc85c3eeca3aa2cd06d935639da5c8dc"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h",
+      "bytes": 3741,
+      "sha256": "96a59a07e7e1f194f96c4f8ea1fe0d93ccb2636311612e3977445e9b05c4d2c1"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/keyboard/lv_keyboard.c",
+      "bytes": 16031,
+      "sha256": "8b49b3c48aec70ea4d5de05921b8acaaea3a57327a32d1174fde919647bbf121"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/keyboard/lv_keyboard.h",
+      "bytes": 5159,
+      "sha256": "fc63985a37a611065d51fc523b688aafe5a725acddaf195c7980fb53108e7947"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/led/lv_led.c",
+      "bytes": 6934,
+      "sha256": "7a7c2ce1a47f647e844525507e911f833715c54e46188d77b4d54fda862745ec"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/led/lv_led.h",
+      "bytes": 2316,
+      "sha256": "d4394e6cdca8ad884fa6e965969482bb5954977ce92657a0e79f31dfd13b2640"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/list/lv_list.c",
+      "bytes": 2758,
+      "sha256": "88f6a9ba599a29e8b4ae854876f307974059769b40508679825d0b1278d0a144"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/list/lv_list.h",
+      "bytes": 1021,
+      "sha256": "bc4d9ab84c9b1326775461e68ce575c1a4c1199ec4eed2e44ff5d25d228d696a"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/lv_widgets.h",
+      "bytes": 1124,
+      "sha256": "c43f5f1e085f572b7c11f2f9a061e5fc1a19614e82f7999469d7b4f1e5005634"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/menu/lv_menu.c",
+      "bytes": 24430,
+      "sha256": "1d9bdf9be01093315a9efd19e79fb7f6f695b3c32d0d63a9083f8044bac3ff88"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/menu/lv_menu.h",
+      "bytes": 6451,
+      "sha256": "4a54f55e99ddd59ff5e22a0c997cc30723f0fe2911d2f538450eb72b49f7c94f"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/meter/lv_meter.c",
+      "bytes": 26678,
+      "sha256": "c1e493542fa922b6fdeed2995f94ea5a937427d03bba66e7ab3c909a9f3dc0d1"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/meter/lv_meter.h",
+      "bytes": 8577,
+      "sha256": "9213d18a94094fec00183c1df3d2a5a0145d333b1f28a5ac19313c2d3c69af41"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/msgbox/lv_msgbox.c",
+      "bytes": 6452,
+      "sha256": "be0737bf57c68f41419faa313b2eb0e4ca26fe9256aeb3ca20d82d292445e64e"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/msgbox/lv_msgbox.h",
+      "bytes": 2376,
+      "sha256": "a50dda137cbcd84b7a34d86fa00a84c0a9b85afc17c553cf6472dc2310715528"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/span/lv_span.c",
+      "bytes": 34219,
+      "sha256": "4fc9da9c70c9bde0350c9f4ce6328958b8726815e789d80db5f82aafcb549716"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/span/lv_span.h",
+      "bytes": 6594,
+      "sha256": "b487760c1d7f03817dc3195a8e075b74cacd70362d43e5d625b6cae6ab8b18d8"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/spinbox/lv_spinbox.c",
+      "bytes": 14781,
+      "sha256": "0109c88f9f53467d7364eb3fa4c903690ed345438aa527fc3acdd5e810b9b0c4"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/spinbox/lv_spinbox.h",
+      "bytes": 4702,
+      "sha256": "803320448674253779bfb5930f81f9289bfbe41d00572e0724ca8054ceb7c659"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/spinner/lv_spinner.c",
+      "bytes": 2423,
+      "sha256": "b8942ce40323417b972b6c2413eae4395144b115d79efff3f30df14257f4c40e"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/spinner/lv_spinner.h",
+      "bytes": 860,
+      "sha256": "978fa12fa473abc96456de30bcf3564adf9fad691fea1d86a8ec0d044c9a1930"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/tabview/lv_tabview.c",
+      "bytes": 10702,
+      "sha256": "7ba4b4cc25b074d35240693c3926e701ecf299d0a8045176d5e23d841188e6bd"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/tabview/lv_tabview.h",
+      "bytes": 1249,
+      "sha256": "aeb30ab101f0fd0bdbb48472054d1cd4c7fbfbfa6bbf83d5c3066348fc708919"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/tileview/lv_tileview.c",
+      "bytes": 5875,
+      "sha256": "4308638c69852ab22f7a5e18537e79014add33ae905c941039e9649f067ac47d"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/tileview/lv_tileview.h",
+      "bytes": 1471,
+      "sha256": "d8d5a711989a89b0faa07f574f45180b3f9dfe0460b9ceafe6ece66f86cb3554"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/win/lv_win.c",
+      "bytes": 2723,
+      "sha256": "9c4225fdc7d1a9e3d79381f36438e6777722bedcd6859be00bd55d45f0ca6a22"
+    },
+    {
+      "path": "components/lvgl/src/extra/widgets/win/lv_win.h",
+      "bytes": 928,
+      "sha256": "142ec2ade120cf74cd3acb39cc7d7f3136b31845282f88bb8e23a793ca75cccb"
+    },
+    {
+      "path": "components/lvgl/src/font/korean.ttf",
+      "bytes": 3371440,
+      "sha256": "bc842cc04c1718ef4e7da648c43efbed53b95ec4952c4b43b8146c7b1ea7cecf"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font.c",
+      "bytes": 3549,
+      "sha256": "5289eb2923c4f7a947b2d8a9fb7a7398f9acd01ebbd2297e048cb1dd39d2a20e"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font.h",
+      "bytes": 6690,
+      "sha256": "1c29529613fc27d8b72d21016b1298ff828ea098069319beb60cb3c6ed90a982"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font.mk",
+      "bytes": 1144,
+      "sha256": "350ff0e74e814cc6a12759f94741fa8aad50629e72ad8d9707c156f4d67acfd1"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c",
+      "bytes": 288087,
+      "sha256": "e998f7695fb85d6a6e69f76a3bb441419a6228b620f283ba28f45ae9b47574c8"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_fmt_txt.c",
+      "bytes": 18353,
+      "sha256": "310ec9757ce6e5196a9246b4aa7d8e6a0209c89dc8c07c34f6209efdc7443a72"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_fmt_txt.h",
+      "bytes": 7829,
+      "sha256": "da8a92d80c1aec21330efb5cbc8b2ca7576436fb7bb5c139ce6d3bbe8879d4e5"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_loader.c",
+      "bytes": 21365,
+      "sha256": "6d4f12094fa8cf93971e58f69ce4d11e90071c45cd5293c127e3bcbbbd222b09"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_loader.h",
+      "bytes": 620,
+      "sha256": "96fa281420d31e2ffcf04218311716cb1139e41b0bf75c3c930e183fb93f4362"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_10.c",
+      "bytes": 63254,
+      "sha256": "25be76110812574b73f90139453aad191e60694218b984371b4035a58068f237"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_12.c",
+      "bytes": 76309,
+      "sha256": "557b0fed8300968e7c936119abc7e0243fcf8f991a20c9981eaf25496f0a8403"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_12_subpx.c",
+      "bytes": 170393,
+      "sha256": "29d4a35dccb3f8f066c26f715b830a0b111e2ca8e4c2501aa73217ceb4680679"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_14.c",
+      "bytes": 89585,
+      "sha256": "cb0e6923dd76cceecdb655135f0d2f85e5a978571226149640bf30135bce8d28"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_16.c",
+      "bytes": 103265,
+      "sha256": "ff16a58b4a20150ed4b606b84e2a17aa7c1e5b2717e811cd616ce416de9fa858"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_18.c",
+      "bytes": 122486,
+      "sha256": "c04fce7a9bfb23f7a5a5d2efade30aac9c3d07c8f6153637f8914e6f33d29bc5"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_20.c",
+      "bytes": 139236,
+      "sha256": "1bc2011c66d2c4e1bdff90e5d1489f7155e2b8eaaf47a7578f53ea854e8afeac"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_22.c",
+      "bytes": 161327,
+      "sha256": "1389038eacafd11e2675442c9222164a585ead72f24caa87b8eaeba464bbd5fc"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_24.c",
+      "bytes": 181148,
+      "sha256": "fe8888e35e750a15114438987b895f18903263db855129b6946e7b86e1f28a69"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_26.c",
+      "bytes": 206779,
+      "sha256": "a25fc90d597e3ed6d8de2c98d49f6f363dcf858f5181986f07835a257c55ce62"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_28.c",
+      "bytes": 233169,
+      "sha256": "c963a5d3f55ed415b2d991f8ea4766797f98692f9253db3d079caf34bc1a661e"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_28_compressed.c",
+      "bytes": 145238,
+      "sha256": "33f2ce495d6b0a7a514f2e519d093d758360a7116eb27f657a3b3509acf6c902"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_30.c",
+      "bytes": 261314,
+      "sha256": "de638aefbe31d64aaa8d73fceb35cd503eb0932fcb5b930d3600a0c2de5f505f"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_32.c",
+      "bytes": 284922,
+      "sha256": "bb3d1ba49129110c838e5b558f63d68fa704e4cef872a734964f05b270c44b49"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_34.c",
+      "bytes": 323644,
+      "sha256": "be1d5853edc528d6ce4a75bf469d3b3fb6126cfdd2273b6204a389e1c82cda86"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_36.c",
+      "bytes": 354709,
+      "sha256": "129425aba2279ec9fde18888857fd8d2313b34673a093acaeb6ece99c997f409"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_38.c",
+      "bytes": 390454,
+      "sha256": "51ad5bd74f98f80bcc67be17fb5521182a73041cd8cf8b402dd74b3464de0c5d"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_40.c",
+      "bytes": 431821,
+      "sha256": "6b3217c7553777accc08cf647113f928cedec4e69921d3ebafd26433bde3c9f5"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_42.c",
+      "bytes": 472549,
+      "sha256": "9f8f8029c27c07dd4d663d3889b37af4701930106993e02769cb91ca1a037dc7"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_44.c",
+      "bytes": 511428,
+      "sha256": "0d6907dc214a138582014c256b1cfc14dc0bde4a28e98c755a4bd09c5538b408"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_46.c",
+      "bytes": 557768,
+      "sha256": "1c950d740a6b8210256c5fecfbbaa69038ca905db1e7fa6c15ac9a262de3f7ce"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_48.c",
+      "bytes": 591426,
+      "sha256": "d0611a239c482f48d024dfa3436606a7c1d0a3da2f5bd1b864a1f70d76c59e1a"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_montserrat_8.c",
+      "bytes": 53060,
+      "sha256": "dbd4759b18fe7f4ebf6d40ccca5bbd1b7eb87d006656757706812ad688ae7470"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_simsun_16_cjk.c",
+      "bytes": 1085210,
+      "sha256": "3201cd38346858e018546b800f80219f7d3b3c7baed0c1f119c6d0ff129f9dde"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_unscii_16.c",
+      "bytes": 24505,
+      "sha256": "09b133b9a1404bd7b3a3ce7d7d512dac116acc60bd701a52207e6bd03ae90282"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_font_unscii_8.c",
+      "bytes": 16653,
+      "sha256": "0f5a9b6131ffed26f42099ced657cc3f619ea66e2f958ca54673f97e0e71cf0e"
+    },
+    {
+      "path": "components/lvgl/src/font/lv_symbol_def.h",
+      "bytes": 9428,
+      "sha256": "d10acb9c207210e0a08ecac816f77b8d55ab43ea9a0c5e3f08a15a93b969a204"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal.h",
+      "bytes": 1003,
+      "sha256": "231945a3c4ba8a6b94960d993a50912f39efe5ae6e892bfe2671f180fc021462"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal.mk",
+      "bytes": 229,
+      "sha256": "eff6f3bf7bea05c20deace70258cd579752961353d6456ff2aa18f61b1268e50"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_disp.c",
+      "bytes": 23424,
+      "sha256": "042607aab514f55fc69e54bb6c02187ead284cd8bb13e686fe11635c7b14c0d5"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_disp.h",
+      "bytes": 13843,
+      "sha256": "b7bb5a3906a0a9c35a96f146d6dc58291c91d70876e1f575e5259eaa5545c2b5"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_indev.c",
+      "bytes": 5856,
+      "sha256": "1cacaaf4933e0777ef8ef71578dc6680b4f7bea129cd3823224da99d609ac99d"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_indev.h",
+      "bytes": 7754,
+      "sha256": "5a36aaef7b6be5f8f4f70fd8ccfcd47334780e5f122c320bb938cb81e1b7eedc"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_tick.c",
+      "bytes": 2373,
+      "sha256": "45dc1fc8486561994d4e7e09a06faeede0edb576788bc32b8908ae0dcd6daec3"
+    },
+    {
+      "path": "components/lvgl/src/hal/lv_hal_tick.h",
+      "bytes": 1353,
+      "sha256": "9b8de58e1af3899a34745d986da35805501e6e3790deeafef0a2f02bd234ebbc"
+    },
+    {
+      "path": "components/lvgl/src/lv_api_map.h",
+      "bytes": 1934,
+      "sha256": "86e47b572ccdaa61fa01c1dba4366caedcf11f85244ca946055b90f56ddc22a8"
+    },
+    {
+      "path": "components/lvgl/src/lv_conf_internal.h",
+      "bytes": 77526,
+      "sha256": "87bd94e9f27939b1feee45b2a5f022654f96b9394d53cd1833f2f3d438e7ca5f"
+    },
+    {
+      "path": "components/lvgl/src/lv_conf_kconfig.h",
+      "bytes": 6908,
+      "sha256": "d7419d46f8a45156f7cc3fc3bf3bf7c399de98e3b78003e84d49443913b7c15c"
+    },
+    {
+      "path": "components/lvgl/src/lvgl.h",
+      "bytes": 599,
+      "sha256": "68f18aa6f024c7aa88d32061fee5e620dbcee527e251454db34acd9438517465"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_anim.c",
+      "bytes": 13493,
+      "sha256": "55e18ea1f25429cd178cd7a8366cc860d871440d515892da58f6ce72a2c67bf2"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_anim.h",
+      "bytes": 16039,
+      "sha256": "7335cc0563f191bcf07f6a5211c4ed65cf6102c6062e1d175088fe1453e87b4d"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_anim_timeline.c",
+      "bytes": 4752,
+      "sha256": "b32a4817ed58834373d8b1f4da6710d8156702e95b6a3121e2b793074d93fbc5"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_anim_timeline.h",
+      "bytes": 2615,
+      "sha256": "4efd064cc64bd1b49a697719e6804250b93f22f45b2f8afb0e9ca76b7176a5f6"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_area.c",
+      "bytes": 17619,
+      "sha256": "0bd17180b88ef4eb4645fc024f80492d7439490841f6ab32bb206d984c1e7949"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_area.h",
+      "bytes": 8775,
+      "sha256": "19c72dba56ea8665c1d357913073f3f1052b455ff0a493f76cc45c9a7fdc36e8"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_assert.h",
+      "bytes": 2017,
+      "sha256": "db8794dc8de027f256895d25b900cc920e92552d5f073b47111aadcac2015e52"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_async.c",
+      "bytes": 2261,
+      "sha256": "7d10fbeb87cb8918a6db488675f5ececb570794ee8dfc7e1bdc2e0e91aecf552"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_async.h",
+      "bytes": 1336,
+      "sha256": "fd2de00ca9b113d487ba291fa0870c2f9cc09017c0c5431e7f99c70664b0883f"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_bidi.c",
+      "bytes": 23002,
+      "sha256": "a6f2dceda498358fe9cb797d4647b41b80d9ab0162113e656f822f029487d7ca"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_bidi.h",
+      "bytes": 4904,
+      "sha256": "c128be75cf39087136a65e6fc8ac64b0fc599e095460c47b8dc63d6fe25fb439"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_color.c",
+      "bytes": 13496,
+      "sha256": "e49eeebc2e3e85d5b48e44772a5c9adcdf4f69472ae0014b207cb614775c55ec"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_color.h",
+      "bytes": 23549,
+      "sha256": "c7604889ffb54c8b08ba73dd4275d532d2d68710af4f4e73facbf282ed5cfb3d"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_fs.c",
+      "bytes": 14032,
+      "sha256": "d6df7c889ce372f8396b601eb919cf372973e1a508f71ddbd5d812c9f10caba9"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_fs.h",
+      "bytes": 8347,
+      "sha256": "8bfd04a93f2f360adb50702588931555006ac78095d5c74c32bd865ab0709d07"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_gc.c",
+      "bytes": 866,
+      "sha256": "61f35daaec0a2770c978e8dd35028f040693b569c6d3418b8cefa4a2716fa82d"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_gc.h",
+      "bytes": 3793,
+      "sha256": "f1b5419a1fac85d533f44c85de7a87ed1bdcd5df4223f2d4c2f04dae6a6a8879"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_ll.c",
+      "bytes": 11419,
+      "sha256": "0b958b85b44e176075ebb164e22546a61003ef5f3587cea20face78a563b37fe"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_ll.h",
+      "bytes": 4162,
+      "sha256": "22465ed3ceb42a354278c576cc22162232ef93448efbf5f22542284b1e77d135"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_log.c",
+      "bytes": 3833,
+      "sha256": "e2ff38631c20cb63a05353d8e254bfc2ab273dd921c392f00cdaa7fb06935c5b"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_log.h",
+      "bytes": 4437,
+      "sha256": "db295695e48285757a18ce9ec8c96b84ec022a9e85ab9121f7fb1a19f2f836ae"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_lru.c",
+      "bytes": 9579,
+      "sha256": "abeca26f2878a913183b3b48b6af8d18f4837332da64418dc29c3d32188823cc"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_lru.h",
+      "bytes": 1852,
+      "sha256": "126ae1ce3c2784f948bc1126a1705bfac16e875cd9642d68a8039b8108b3d7fc"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_math.c",
+      "bytes": 8261,
+      "sha256": "73c06546e127e3340de267334f81f02980f6c3ca81d78d2a42786009c35bd879"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_math.h",
+      "bytes": 4129,
+      "sha256": "309870dacdd2761f8aea36b521a3cab829a80db4cb2c49aae15ba3fa8a645362"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_mem.c",
+      "bytes": 13917,
+      "sha256": "29b6d6405315b0d1f04ade465cbc535f4859ef75e8a585d0435e45efc9c26e16"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_mem.h",
+      "bytes": 5540,
+      "sha256": "6df61307e0420cc075cc524c116526b040d079bebf24f0a81777706972463d41"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_misc.mk",
+      "bytes": 574,
+      "sha256": "e0243baba11ab40a1bbd4446751d469b8668a7018eae41a24ef00713c553906b"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_printf.c",
+      "bytes": 30252,
+      "sha256": "9c282c81e9fcee59d90a3a7fee3381a08b251ca95f42d3c77e6f01612ffd8ad1"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_printf.h",
+      "bytes": 3627,
+      "sha256": "639b6dc6903230106561819099e4dd064a405768ff92fb6ecc9d3837c1596d36"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_style.c",
+      "bytes": 18448,
+      "sha256": "e6f0ab02ef84d1429cb9d74396a9a57ade168f0740b2075bbffdd48e0898392f"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_style.h",
+      "bytes": 21084,
+      "sha256": "7ac2200f5e5580adac724e55e58cb266f15ade5bc2cea9f3ab7d744765e970dd"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_style_gen.c",
+      "bytes": 16163,
+      "sha256": "337d987f4287c99fda6b24b50eba6e7461933b6597da699b230b14fa11b13e18"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_style_gen.h",
+      "bytes": 16693,
+      "sha256": "7af1f66cac668af2c55affec59bbe2b85baef2f295b41b00e724d3afd51df6ab"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_templ.c",
+      "bytes": 717,
+      "sha256": "40d1b3dab81753f66ebca0b6d0b3065bc92d317c3c54e1809628d666dbeff767"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_templ.h",
+      "bytes": 509,
+      "sha256": "7cc6e2a787852952c13d4d42b1e9b3967bcac6c27341390a58cf470e868c30a4"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_timer.c",
+      "bytes": 9593,
+      "sha256": "06ff14356e1a74fc8bd5e542de142038040fe32f45eef16d01ad9f3d16e86be4"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_timer.h",
+      "bytes": 4546,
+      "sha256": "0d9d672b4d13580dd2dc125243cc1f00ca50ef29bfefe72b2a7c8684a561091f"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_tlsf.c",
+      "bytes": 37893,
+      "sha256": "4b72857304ac14686234d89c656b4eac5333094f327c618782c62f73dee4857e"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_tlsf.h",
+      "bytes": 3676,
+      "sha256": "e59c01b34c9d02ceb74c86b37239f8bf98d0ec62695f290513f0164502dc1202"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_txt.c",
+      "bytes": 28629,
+      "sha256": "54188ad584a8d3e6ebf00e256849b765696f40641ab3b071764435f903e2b4d5"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_txt.h",
+      "bytes": 8992,
+      "sha256": "367f1bc02e662c011a56b7d0dc524b98a37ec2badb0d44c01a02a8f86a05d295"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_txt_ap.c",
+      "bytes": 10026,
+      "sha256": "d43b6d8d47f5ad8240e87045ecc12317542eb4014259ccddd06463d19dd8b268"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_txt_ap.h",
+      "bytes": 933,
+      "sha256": "2e90f30ddbaba0aa765b456873671044714590518fbfcce373ce672f4cdf147c"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_types.h",
+      "bytes": 2260,
+      "sha256": "0fd14eb21df4be282371536348d559a1fc3d3586775fba807d9aa66798a96b20"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_utils.c",
+      "bytes": 1879,
+      "sha256": "bf0bcebe789d0fea9107705ea1a346329d676c8bb232c4161654e529dc03285a"
+    },
+    {
+      "path": "components/lvgl/src/misc/lv_utils.h",
+      "bytes": 1360,
+      "sha256": "92024a8c5825d28ff315bd23e8a7c3a28fafb229a869e28578756c0915a22b9b"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_arc.c",
+      "bytes": 34363,
+      "sha256": "8887bbf1b4eadb5ba1b5c53d74a2562ddcba950240832cdb7194b1c4bab50824"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_arc.h",
+      "bytes": 6890,
+      "sha256": "05415a87787fa95d89ef7b631e3c18f168d4689a387d57be627efe2ca369e74a"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_bar.c",
+      "bytes": 20347,
+      "sha256": "5a90a4d350d3f1cfcb52a7e61f61c71e7b879329d5f32d19391efa464f982c2f"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_bar.h",
+      "bytes": 4011,
+      "sha256": "3297f04da3682d3d4577dbcb2ea1bca3b699542e76bbc73e1e1965faee730a05"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_btn.c",
+      "bytes": 1526,
+      "sha256": "3d805612ef083f4733bf3fc9bc40afea6c10673c5ada10352c040173c26033f0"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_btn.h",
+      "bytes": 909,
+      "sha256": "b6a3563dd46ad6d8ba81bf2c00dccee7693dd18f0e62811e19bbff04f1566e9c"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_btnmatrix.c",
+      "bytes": 39769,
+      "sha256": "6b3ea957dda95f811524f03b3011e5972518dff713000fc5a87eb286b01bc2f8"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_btnmatrix.h",
+      "bytes": 9026,
+      "sha256": "1437ae0a18ead188456b6511347a4410d0eb3621e4cb5497fc6de1fc69242c61"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_canvas.c",
+      "bytes": 25025,
+      "sha256": "e2574e348c3667d1b542bfc291c360779aaeeb5f54771d64a48e7463dc93550d"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_canvas.h",
+      "bytes": 9907,
+      "sha256": "108cb03178696b2a83b942db07bc4a25f743e26b45a1253134e52089d7032624"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_checkbox.c",
+      "bytes": 8564,
+      "sha256": "cd6b1c5108810673527d675bbd1f757d1e925d965b2c53d2933dc116c40c688e"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_checkbox.h",
+      "bytes": 2150,
+      "sha256": "fc9003bdaa0ad8da8d6fc4bbe44df2f797bf5b3176b5c002b11fd44af4b596a4"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_dropdown.c",
+      "bytes": 37513,
+      "sha256": "6848bf076c57c612cd48219c86ff3718d3b16e14c54a9008d88e5ee226cfd79d"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_dropdown.h",
+      "bytes": 8318,
+      "sha256": "627f7d9d24b18190689145224c3f88e835cc26312f93bc5511e332b4c7a48bbe"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_img.c",
+      "bytes": 22347,
+      "sha256": "d751dbcccf152f37641ba0c8bec4acb0ce4e42ae51d49ab723176b0b661c63e3"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_img.h",
+      "bytes": 6880,
+      "sha256": "433d6306c794a887d20d6b417a747fb4e1b48d4725b7664903cdfef4c97a3a0d"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_label.c",
+      "bytes": 43463,
+      "sha256": "4c20b087af77eafd1c05015d15682c75cbc4d9f087eafe1cc3585c28e953c76e"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_label.h",
+      "bytes": 8431,
+      "sha256": "d1b9f7de0aab644a9094ef3ee79b337c4d5a1c1955cf34bdfa48e36368d07771"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_line.c",
+      "bytes": 5229,
+      "sha256": "6ddf85a82dbbbdf972d906aa030b4e4ba6975166c756cb267cf00205e822e4c9"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_line.h",
+      "bytes": 2274,
+      "sha256": "3fc369690b2427aa322641827316d430e6e8518ac19a24a1bb3d4f184ea5c593"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_objx_templ.c",
+      "bytes": 3300,
+      "sha256": "5fa7e5a2f45ea7234a2307110cd7a556e64231dce953326895e8256adc32f719"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_objx_templ.h",
+      "bytes": 1539,
+      "sha256": "11bf2ea2a0d45890eb19efb6d88704454b2c7d8d8219e56e491dabdad1883354"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_roller.c",
+      "bytes": 28142,
+      "sha256": "434bf3b231c234a83032cb9ee1f37fc178b8ba923a5512e9c394799f343c2742"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_roller.h",
+      "bytes": 3589,
+      "sha256": "de2d909381bdccdf36c19bfb6751683e038c7500afd01e5bd074c53f25400b06"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_slider.c",
+      "bytes": 17584,
+      "sha256": "715ffe14f71800b5413b44d987b2bebbffd41bce7bba8d7dd114512b63860cdd"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_slider.h",
+      "bytes": 5112,
+      "sha256": "3a53be57428dd579f7442f4b64c333d508f3a38bbe0cdc9496c35ca11820fd98"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_switch.c",
+      "bytes": 8747,
+      "sha256": "cd65c2709aaeab4bbf205efe6ecab02cdea07b230dd9d580776c6c8081f8c8e1"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_switch.h",
+      "bytes": 1044,
+      "sha256": "e22ce149f0134f1320d1b5c6ff56ddeb9d36fd403b9555b4ba22586535ff03a3"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_table.c",
+      "bytes": 37665,
+      "sha256": "77dfe77571178748bee5a5d480295d10355ae905fafc7d1d294f8f3fd925dad5"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_table.h",
+      "bytes": 7117,
+      "sha256": "3a0009894e242107b3af894cc9fba1fcaa4814e2fe3371d43d337854d0e0304d"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_textarea.c",
+      "bytes": 41737,
+      "sha256": "f7a22e88e3d4b2154493277423f8c223039889677923541b930b04235af22972"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_textarea.h",
+      "bytes": 11397,
+      "sha256": "03b4cb7ee8afffadf2428c80939a14dae834ccaa80d5d8bb641d456220962b94"
+    },
+    {
+      "path": "components/lvgl/src/widgets/lv_widgets.mk",
+      "bytes": 479,
+      "sha256": "fa85ec38fbaf3211726c150ddcc0f997781fe555f16209a0f4a66a2736365af5"
+    },
+    {
+      "path": "components/sdgoods_board/CMakeLists.txt",
+      "bytes": 2111,
+      "sha256": "df22dfe59c195a1dad9acacef34a0b602f07f2bafc2b412423661e7c34624214"
+    },
+    {
+      "path": "components/sdgoods_board/Kconfig",
+      "bytes": 531,
+      "sha256": "0a4a00ba86e7434b3f696fd7617cd6309dc3893096226eab930d4ed2b54cacff"
+    },
+    {
+      "path": "components/sdgoods_board/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "components/sdgoods_board/fonts/OFL.txt",
+      "bytes": 5306,
+      "sha256": "136f54c8e581b878be030aa833e11a85e4354460693e602357c8b9df63215fe9"
+    },
+    {
+      "path": "components/sdgoods_board/fonts/README.md",
+      "bytes": 1210,
+      "sha256": "89caa3dfbf3b6a92436fce5dfd0f27f0e40ec5f326181f7fc10e4336fa618aed"
+    },
+    {
+      "path": "components/sdgoods_board/fonts/si_yuan_black_icon_14.c",
+      "bytes": 98429,
+      "sha256": "94cf0fcac6cdf25db6f53a08a636261bb56333ab6ac8fe979b1aa8a775eef7a4"
+    },
+    {
+      "path": "components/sdgoods_board/fonts/si_yuan_black_icon_16.c",
+      "bytes": 115777,
+      "sha256": "7b95e251432f9b1aa1ae2ce4500e1086969d35056e49df8cb1ffc2474e9a20fc"
+    },
+    {
+      "path": "components/sdgoods_board/idf_component.yml",
+      "bytes": 51,
+      "sha256": "0d07e02a951f40860d28c137e2c591b79bb476e6462ca3822e786654f210c8b5"
+    },
+    {
+      "path": "components/sdgoods_board/include/board_pins.h",
+      "bytes": 2359,
+      "sha256": "994492a59d66986cebcad083d5506bc8a397b49c1b2ef3cac8ff9a4f17bf3a66"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_app_shell.h",
+      "bytes": 2441,
+      "sha256": "8ea3ec4ef361acbbd317b9c9abef54a3c14f10e4e4a1d24741da8a1661d9b037"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_audio.h",
+      "bytes": 2083,
+      "sha256": "1eedcca59fff6283e47ee29225fc1877e61cdc4b7248c24a1d0320182233c2e9"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_board.h",
+      "bytes": 3013,
+      "sha256": "65fa6a022e8631d86787676a77c70c2e6e2dd9e42db8a2bd33a7c1c2850be912"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_boot_skip.h",
+      "bytes": 1566,
+      "sha256": "6d0cc121df45abbfb7eaa58a7cff4229aeaaf88a9e2e5ea6ca97fad99fed93bd"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_caps.h",
+      "bytes": 2086,
+      "sha256": "f9c71adc7489c5cade1b66d28ec71e1a44a6852d2794a2871823ae3efff3d00f"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_console.h",
+      "bytes": 1882,
+      "sha256": "7856b52ee82f7902210e2526f76caafa9b17485c2e3a6cdce239bec190a978b6"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_gesture.h",
+      "bytes": 3593,
+      "sha256": "2224bba7567a1a61cc96c57c817da25d4ec6829ccc278d214147f30c62a0a33a"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_hooks.h",
+      "bytes": 6647,
+      "sha256": "9fb52dbabb910d3b6bb0446590dc2bec4221785d6ba30f3c871a59c4a5a3d54f"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_hw_info.h",
+      "bytes": 871,
+      "sha256": "995e52c44118c90222654b414725e04d4ff66d1e400dd5578bb9e735b7308753"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_i18n.h",
+      "bytes": 2890,
+      "sha256": "16773b67d914d7d2147ceb57946730242647159ed9a14618a22da9b0698639fd"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_input.h",
+      "bytes": 4110,
+      "sha256": "df32cbf81b0b9b6abf386084c2a688cfa837c9a93cf5782e831dd271408cdd46"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_jpeg.h",
+      "bytes": 1461,
+      "sha256": "a12b08592509bbd253d48665817c9f017ae5de229559f636308a1c88cb8f024f"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_lcd.h",
+      "bytes": 12239,
+      "sha256": "524bc62134990e6b817be1bd26bead41feeec64846cf1429ec72f3cd671c81f0"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_lvgl.h",
+      "bytes": 8097,
+      "sha256": "cbbed5c247ee5a53c7db3a161aa0116372d508937328ae1633528af8e0cc6235"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_nvs.h",
+      "bytes": 1876,
+      "sha256": "7a0ca2cdc2abb956e6a76716560940b7ed550dba5e55438d5a9948202959d83d"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_power.h",
+      "bytes": 5825,
+      "sha256": "9881c6b4c6cf65b6c0d7465e79492350f99d20b5fd07cabf770b308e87dddc1b"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_screenshot.h",
+      "bytes": 2971,
+      "sha256": "b8fdb9d9095f3cf33083baa1f76ce5b4f785f219b8a5b10e3ed0fb57876ed8a3"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_swipe_back.h",
+      "bytes": 1035,
+      "sha256": "fb64d029a5c28ccd3118c9c293c3790187dad343a306fe3321267d33b6296ebd"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_swipe_up.h",
+      "bytes": 1159,
+      "sha256": "a92ccfeb1f74ed40ce3211d38e8d6e9b56befdc301e00c92f2d72cf65a8b8586"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_tap.h",
+      "bytes": 12809,
+      "sha256": "ee2b8ba4e7ad6fb74bacc1850637290adf40b91478ef99658b6dd8175e7af989"
+    },
+    {
+      "path": "components/sdgoods_board/include/sdgoods_ui.h",
+      "bytes": 5059,
+      "sha256": "ce087cbcf261521dfda3e1ed127a6bafdb73a3525293aaf37cdf642069f87292"
+    },
+    {
+      "path": "components/sdgoods_board/lcd/esp_lcd_st77916/esp_lcd_st77916.c",
+      "bytes": 7396,
+      "sha256": "39732e551f83c4516bb6c44d417f3da64a8f70b065a1241b989e230484426098"
+    },
+    {
+      "path": "components/sdgoods_board/lcd/esp_lcd_st77916/esp_lcd_st77916.h",
+      "bytes": 1513,
+      "sha256": "9cb2975e308baf397ed68b6f3dd726940c810346a863d22889f0d19d2f83c7bb"
+    },
+    {
+      "path": "components/sdgoods_board/lcd/sdgoods_lcd.c",
+      "bytes": 43627,
+      "sha256": "19dc2b65e30c4cf8715b886f120082002a924d6c81edee8b266752059fb2385a"
+    },
+    {
+      "path": "components/sdgoods_board/lcd/st77916_vendor_init.inc",
+      "bytes": 7007,
+      "sha256": "dc68629ebac12bad38eeb320082ecd78f65ac9427750be5304959f30495ffc34"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_app_shell.c",
+      "bytes": 20150,
+      "sha256": "5d2cb0972c4a910f611737bc4e084fd76af6c60da25bb4eb9d21c59c9a72478f"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_audio.c",
+      "bytes": 23339,
+      "sha256": "3d3b9c0c9276b65a2894698cb13106e60aec8f3404b4e4c19ac45f42934ce9c5"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_boot_skip.c",
+      "bytes": 2067,
+      "sha256": "d789ae99433fe15b34d5b093a1f0bc2823497bf0365f0ee7a7d24ba454917c1d"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_caps.c",
+      "bytes": 1730,
+      "sha256": "f6ecfef05eb8745c040e48b52b5038f362e443bafc56c3e657451b130df8bbb3"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_console.c",
+      "bytes": 33279,
+      "sha256": "7738435182f189279e6fa3262b5ed9f142d12227438d5b8cf104ed5e9e0d7f03"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_gesture.c",
+      "bytes": 1385,
+      "sha256": "5ed4290d5bcaa1e00ea7a9d86362f575a9328123f29597c61fa09d97b1abca13"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_hooks.c",
+      "bytes": 3022,
+      "sha256": "76840e64e425cbb50bf0c42e173c6966adafa1b4d7a8efcbf3e47c8a200adbd0"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_hw_info.c",
+      "bytes": 6181,
+      "sha256": "caba827a4998427dee00f7f436da275a478cd83ba1421939ec27b9e9dace0063"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_i18n.c",
+      "bytes": 2968,
+      "sha256": "5850ee9e35502ebcb7fd163e8eeccaabd1f7d8c72cd1f8b5e7e1a638096e9961"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_input.c",
+      "bytes": 20864,
+      "sha256": "d95f994b463577d17d08d51162c1ada7d69927b1bb6a6bcf00613859fb2738f2"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_jpeg.cpp",
+      "bytes": 1797,
+      "sha256": "c2e2a4308c0da6adb98a0f9d4f165a669c2b6e79138f1696db0cac9032e46702"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_lvgl.c",
+      "bytes": 51087,
+      "sha256": "5ec726e30c33f36639032a6ffed886a6f9309fee58ff7a295f37c03a5ffb957a"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_nvs.c",
+      "bytes": 1406,
+      "sha256": "fcdb62c40fa714138f18b8d4645cfba6e594ff23df47bea5f9a3b165182d5e56"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_power.c",
+      "bytes": 11464,
+      "sha256": "be96fdd3ba9fb5747ba748bac0f6c8cb6e32478685d80938387352928046d875"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_screenshot.c",
+      "bytes": 13792,
+      "sha256": "d7c4488c92f8a9f200107fcf69e2ef345568ee60fcad44c7b10d29fae63f6f68"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_swipe_back.c",
+      "bytes": 4354,
+      "sha256": "60469df382b03180db73c6f18caeb0109d4879c08ba403eff4cb322fdf174a1e"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_swipe_up.c",
+      "bytes": 7403,
+      "sha256": "9e0e2016730092ff0929f7b8dbc27547e5451b00f2b6a1dddbe11f421ea4644b"
+    },
+    {
+      "path": "components/sdgoods_board/src/sdgoods_tap.c",
+      "bytes": 14106,
+      "sha256": "63acb5f0d5f9a2e2c8c09c5cfacc20b7ed6cbec103b8358145409efa7ce19902"
+    },
+    {
+      "path": "components/sdgoods_launcher/CMakeLists.txt",
+      "bytes": 3920,
+      "sha256": "525acb52d7f14583538896303f15e412828f6eae717913d6627098d30b84c1fe"
+    },
+    {
+      "path": "components/sdgoods_launcher/Kconfig",
+      "bytes": 896,
+      "sha256": "3bd581317c94de955b93d6427a26841afb6b0ef350415b27e592cb98b84efa5f"
+    },
+    {
+      "path": "components/sdgoods_launcher/include/sdgoods_app_sdk.h",
+      "bytes": 6292,
+      "sha256": "9b661d0093d9f513d5ddc714dc472aed4be3b05f5806f4dc7b9082263415e591"
+    },
+    {
+      "path": "components/sdgoods_launcher/include/sdgoods_cc.h",
+      "bytes": 5831,
+      "sha256": "8cc289ae0a02b3110c369e929115875a614105d1daee788f6c97276f49a71b8d"
+    },
+    {
+      "path": "components/sdgoods_launcher/include/sdgoods_device_mode.h",
+      "bytes": 6336,
+      "sha256": "3c94b7cc14431c93441129bae11da7a3b0301f0b45410fdbf480a3e7e0fd22f1"
+    },
+    {
+      "path": "components/sdgoods_launcher/include/sdgoods_launcher.h",
+      "bytes": 10506,
+      "sha256": "826699b4c9ecfdc2b5356700733ecaea9e9f4b12d03cd7ad45e9b055d26f97f8"
+    },
+    {
+      "path": "components/sdgoods_launcher/include/sdgoods_slot_cover.h",
+      "bytes": 12967,
+      "sha256": "cfcccdc093f50981fa0e9f84b51d69aa8a1b35ac2555db66ab5d360068eaab57"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/app_sdk.c",
+      "bytes": 11576,
+      "sha256": "876558d1f3e313503906c7c8577aae9f6bc6c8962526a64c189d7bc7a6b8ba39"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/device_mode.c",
+      "bytes": 7949,
+      "sha256": "379473a4c2a4ec7bc7daf317631a0a4fb3da8cd9e9d78670c9cba9082754b54e"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/launcher.c",
+      "bytes": 2938,
+      "sha256": "cd31a05374dad6e24c4bd799661a74a580b6e2a096e35da3617794a02ff19acb"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/sdgoods_cc.c",
+      "bytes": 94400,
+      "sha256": "3c3ce17ce7a8742744a4d6b23862d6da2774c7a5b4480f12547b6e50c24e7b5e"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/sdgoods_launcher_int.h",
+      "bytes": 7259,
+      "sha256": "ac4efae78ad8986716b162b70930787de1d992513c58e6688b7e1614cddd5212"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/slot_cover.c",
+      "bytes": 15398,
+      "sha256": "a09b62b47279fb75d450701c41705e7de292f001ab7a7bb948be0ea214277a99"
+    },
+    {
+      "path": "components/sdgoods_launcher/src/slot_manifest.c",
+      "bytes": 34387,
+      "sha256": "c192f09e9be4c63d41399a3c50aa0e52d098a05f0aa8f9a1c392c124fd96dd1b"
+    },
+    {
+      "path": "components/sdgoods_launcher/tools/gen_app_info.py",
+      "bytes": 2127,
+      "sha256": "4df1fc43fe2ae7328af679ab4d703fac93794dda7f66683f17bc8dad87e27e93"
+    },
+    {
+      "path": "main/CMakeLists.txt",
+      "bytes": 2830,
+      "sha256": "07e4c92c6429d96c464263ad8fa95e52d8111c737525ddf75c96c32e06e51109"
+    },
+    {
+      "path": "main/app_data_store.c",
+      "bytes": 8497,
+      "sha256": "e98f7281731a4d004e5fc4b389b8dd85c5edd920b15a61a04e1f26c9e70a4284"
+    },
+    {
+      "path": "main/app_data_store.h",
+      "bytes": 1925,
+      "sha256": "caf7256e467bc510087e17056758c18762c08a2d1a6bdc46e6bce14ab4e8b786"
+    },
+    {
+      "path": "main/apps/app_template.c",
+      "bytes": 10571,
+      "sha256": "935ebebf8113c5e1cf030277952eebccda529d3b9f0cbab8d400673618f38aba"
+    },
+    {
+      "path": "main/apps/app_template.h",
+      "bytes": 1366,
+      "sha256": "7a0f8fb5ce034bc77a7b2f1de7d7a6efd021ca1d8d889df61363f7ff5d9bbb36"
+    },
+    {
+      "path": "main/apps/apps_registry.c",
+      "bytes": 4340,
+      "sha256": "d5e14810e1f100ac7a4bd9b2d451557d1e3d729873cd3c8e58395a3651e73464"
+    },
+    {
+      "path": "main/apps/apps_registry.h",
+      "bytes": 2802,
+      "sha256": "adda3b0eb8a8833dc644a37bbd1c080c8c95eed92bdc6fc2a15a666a2a85234d"
+    },
+    {
+      "path": "main/apps/ui_helloapp.c",
+      "bytes": 5509,
+      "sha256": "aca5a58972836e7995afcd605b138b4805801a3a56577a396f5b5f2ae1550dad"
+    },
+    {
+      "path": "main/apps/ui_helloapp.h",
+      "bytes": 840,
+      "sha256": "40fc0d32961ec9551d92598b05764bedf06109f9345a0328e9df2a4f9d840dde"
+    },
+    {
+      "path": "main/gen_build_version.cmake",
+      "bytes": 2297,
+      "sha256": "7ec007f4de7abc4c829295b3814306d682edbc80e07e201f28d6d6337b6c7b33"
+    },
+    {
+      "path": "main/idf_component.yml",
+      "bytes": 31,
+      "sha256": "3e9865cc32752bd911d5302d713030e8ab3bbf0e24d1980380457c5fc3ada8b8"
+    },
+    {
+      "path": "main/main.c",
+      "bytes": 8090,
+      "sha256": "5efbe481193d6f90934f8ca8ca3c1cb013421451d094b29d77cfb92da9863ee9"
+    },
+    {
+      "path": "main/patches/README.md",
+      "bytes": 4927,
+      "sha256": "c508ea962fe8fa5d188c736c58a162da9f97d6d45c414c0f74bea48d460c001a"
+    },
+    {
+      "path": "main/patches/apply_lvgl_patches.py",
+      "bytes": 609,
+      "sha256": "b9b3b135f8f21333ebea131d9efd8e94c14042a69bfaae2ecdb38af7539966ee"
+    },
+    {
+      "path": "main/patches/lvgl-8.3.11-gif-psram/gifdec.c",
+      "bytes": 22043,
+      "sha256": "5c9efef7f650147414012b8f95d16d55375c0375294d161d8805d6ad5f490479"
+    },
+    {
+      "path": "main/patches/lvgl-8.3.11-gif-psram/gifdec.h",
+      "bytes": 1636,
+      "sha256": "7d2a997c55650a7b6b65f11dcfcd3be0695c959cd45aebdb4749199fa442f4d0"
+    },
+    {
+      "path": "main/patches/lvgl-8.3.11-gif-psram/lv_gif.c",
+      "bytes": 4703,
+      "sha256": "0fb045292e8b74b64be4b2e27c36ac215926c20f4bccb6400c91b12544f30785"
+    },
+    {
+      "path": "platform/partitions.csv",
+      "bytes": 3069,
+      "sha256": "f13017bc73aca65e063dd497cd6b9ff55358bb4b8d42901e61c60a75ffc7932e"
+    },
+    {
+      "path": "sdkconfig.defaults",
+      "bytes": 2650,
+      "sha256": "9613d738947218723aa7923328890b3ec8a295deeb3c171c1466dfba9bf23212"
+    },
+    {
+      "path": "version.txt",
+      "bytes": 6,
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-battery/components/sugarat_battery/README.md
+/sdgoods-battery-monitor:
+  en: 42154984e54e39dc
+  zh: 4dd69b793c293080
+/sdgoods-battery-monitor/readings-and-events:
+  en: 471b30869549c537
+  zh: 5659aa9b3555aa20
+/sdgoods-battery-monitor/accuracy:
+  en: 3601df103fd3b78f
+  zh: c8a8fe5b9c553588
