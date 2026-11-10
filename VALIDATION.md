@@ -20,6 +20,10 @@
 
 `pnpm run build:artifacts`、其后的 `pnpm run build:check`、`pnpm run test:docs` 和 `pnpm run doc-sync` 通过。`pnpm run lint` 未通过，报错位于本次资源包目录之外，未修改那些文件。本目录没有新增 TypeScript 运行时代码。
 
+## GitHub 发布验收
+
+2026-11-10：资源上传到公开仓库 `suoyousheng-bot/sugarat-sdgoods` 后，使用不带身份凭据的 GitHub 源码 ZIP 下载进行验收。下载副本的全部资源校验通过，Watch 主题及 Pixel 依赖可初始化为独立固件工程。公开入口固定为 `v0.1.0`；复制文案指向该版本的 AGENTS.md。
+
 ## 未执行的验证
 
-未执行串口发现、芯片检测、备份、烧录、字节验证或真机功能验收。未执行 Windows/Linux 的全新环境安装，未下载完整 SDK，也未在真实 GitHub 发布地址进行下载验收。公开地址由发布者确定后，按 [发布说明](references/publishing.md) 完成首次下载与交接验证。
+未执行串口发现、芯片检测、备份、烧录、字节验证或真机功能验收。未执行 Windows/Linux 的全新环境安装，也未下载完整 SDK。后续版本按 [发布说明](references/publishing.md) 重新验证公开下载及完整性。
