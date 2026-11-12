@@ -1,19 +1,25 @@
 # Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
 # section, a hash of its English and Chinese blocks outside code blocks and generated regions.
 # After editing either side, bring the other along and re-record with:
-#   pnpm run verify-translation-pairing --write firmware-plays/sugarat-launcher/README.md
+#   pnpm run verify-translation-pairing --write README.md
 /:
-  en: 4ce0206150b03311
-  zh: dd32e917329b21ba
+  en: 31155b881d629f8f
+  zh: 55fce571865fce5a
 /sugarat-launcher:
-  en: da7dc7bc950b3624
-  zh: c519474931042ee9
+  en: 445e9a67dd112a5a
+  zh: af40480d0e30b384
 /sugarat-launcher/build:
-  en: 881b26accc7e4bda
-  zh: fec7aad6fc61bc2f
+  en: e0f561a4bb1f5833
+  zh: bf0b836a65f1c089
+/sugarat-launcher/flash-and-test:
+  en: fcd080422c2ed85e
+  zh: 3b399d08da1b328e
+/sugarat-launcher/change-the-launcher:
+  en: 3b7b22ddef4be572
+  zh: ea03075178e65147
 /sugarat-launcher/installation-and-compatibility:
-  en: bd4265ad5193ad2e
-  zh: ebd8524b6e48ad33
+  en: dd913c102b504469
+  zh: 70d5ecb72fc590ca
 /sugarat-launcher/source-and-licenses:
-  en: df6632837374967b
-  zh: ace0a3eb48dd471b
+  en: 94bada5df5ba29bd
+  zh: f9972699b079bd7b

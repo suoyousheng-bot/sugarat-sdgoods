@@ -1,0 +1,10 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write hardware-kits/sugarat-sdgoods/assets/components/sdgoods-wifi-ui/components/sugarat_wifi_ui/README.md
+/sdgoods-wi-fi-setup-ui:
+  en: 2f292507e7e20b61
+  zh: 31741a2cccd5d04f
+/sdgoods-wi-fi-setup-ui/success-callback-and-application-screens:
+  en: 09339bf31950e3fb
+  zh: c7efb348ea123845
