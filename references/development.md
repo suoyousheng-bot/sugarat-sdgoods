@@ -33,6 +33,19 @@ Watch 对应 `components/sugarat_watch/include/sugarat_watch.h` 和 `examples/sw
 
 原始模板的注释和说明保留上游工具及平台名称；这些平台工具没有随本包分发。本包操作入口是 `scripts/kit.py`，不调用 Sugarat `hardware_*` 工具或上游市场脚本。完整基础工程仍保留 LICENSE、NOTICE、LICENSING.md 和 TRADEMARK.md。
 
+## 单一应用镜像
+
+一个应用只交付一个 ESP-IDF 应用镜像 `build/<project-name>.bin`。社区发布、启动器在线安装和电脑一键烧录都按这个约定处理。
+
+- 引导程序、分区表和 otadata 是平台通用文件，由一键烧录工具和启动器提供。不要修改 `platform/partitions.csv` 和引导程序配置，也不要让应用依赖新增分区。
+- 不要增加需要单独烧写的 bin，例如 SPIFFS、FAT 或 LittleFS 镜像，以及字体、模型、音频和资源包 bin。启动器按镜像大小给每个应用分配一段连续空间，只写入这一个镜像，其他 bin 没有安装位置。
+- 资源编进应用镜像（C 数组、`EMBED_FILES` 或 `EMBED_TXTFILES`），或在首次运行时下载到 `sdgoods_appdata_begin(<app_id>, ...)` 返回的应用数据目录。该目录位于共享的 16 MiB appdata 分区，按 app_id 隔离，安装和替换应用都会保留。函数返回 `ESP_ERR_NOT_FOUND` 表示设备没有 appdata 分区，应用改用 NVS，或在不保存数据时也能运行。
+- 小配置先调用 `sdgoods_nvs_ensure()`，再打开应用自己的 NVS 命名空间。NVS 由所有应用共用，不调用 `nvs_flash_init()` 或 `nvs_flash_erase()`，不读写其他应用的命名空间。
+- 单应用烧录时镜像最大 0xFE0000 字节。启动器安装占用 `向上取整(镜像大小 + 56 KiB, 64 KiB)`，所有已安装应用共用约 10 MiB；镜像越大，同时能安装的应用越少，大资源优先放应用数据目录。
+- `esp_app_desc` 的项目名是应用身份，发布后保持不变。版本号与 `play.json` 一致，每次发布使用新的版本号。
+- 启动器通过重启切换应用，运行时全部内存归当前应用。保留应用外壳的退出路径，由它调用 `sdgoods_return_to_launcher()`；应用不写 otadata、分区表或其他应用的空间。
+- 每个应用都要能被启动器安装运行。启动器把镜像写进自己选定位置的 ota_N 槽并重启进入，应用不假定运行在出厂区、0x10000 地址或某个分区标签，不调用 `esp_ota_set_boot_partition` 或 OTA 更新接口。保留平台控制中心：`sdgoods_device_is_managed_app()` 为真时它显示返回启动器的 Exit，否则显示 Power。
+
 ## 编译
 
 激活 [匹配环境](environment.md)，在新工程目录运行：
@@ -41,6 +54,6 @@ Watch 对应 `components/sugarat_watch/include/sugarat_watch.h` 和 `examples/sw
 idf.py build
 ```
 
-新工程通过 `sdkconfig.defaults` 声明 `esp32s3`。已有工程若目标不同，先解决目标和配置冲突，不对其盲目运行会重置配置的命令。构建目录默认是 `build`；应用产物是 `<project-name>.bin`，同时包含启动、分区和烧录参数。编译失败时保留诊断，停止烧录。
+新工程通过 `sdkconfig.defaults` 声明 `esp32s3`。已有工程若目标不同，先解决目标和配置冲突，不对其盲目运行会重置配置的命令。构建目录默认是 `build`；应用产物是 `<project-name>.bin`，构建目录中的引导程序、分区表和烧录参数供本机烧录使用，发布时只交付应用镜像。编译失败时保留诊断，停止烧录。
 
 固件构建不等于预览或真机运行。新增应用完成后按用户要求选择后续操作，设备操作见 [部署说明](deployment.md)。

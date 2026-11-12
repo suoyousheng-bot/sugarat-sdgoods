@@ -46,7 +46,7 @@ Give your preferred Agent this kit's GitHub entry link to develop firmware for t
 <a id="give-this-kit-to-an-agent"></a>
 ## Give this kit to an Agent
 
-Copy [COPY_TO_AGENT.txt](COPY_TO_AGENT.txt) into your preferred Agent, then describe the application you want. The sentence points to the fixed [v0.2.0 Agent entry](https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.2.0/AGENTS.md); the complete [v0.2.0 source ZIP](https://github.com/suoyousheng-bot/sugarat-sdgoods/archive/refs/tags/v0.2.0.zip) contains the matching kit. The receiving Agent reads [AGENTS.md](AGENTS.md) and [SKILL.md](SKILL.md), then downloads that version. A supported Skill installer must retain the whole directory, including assets and scripts.
+Copy [COPY_TO_AGENT.txt](COPY_TO_AGENT.txt) into your preferred Agent, then describe the application you want. The sentence points to the fixed [v0.2.1 Agent entry](https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.2.1/AGENTS.md); the complete [v0.2.1 source ZIP](https://github.com/suoyousheng-bot/sugarat-sdgoods/archive/refs/tags/v0.2.1.zip) contains the matching kit. The receiving Agent reads [AGENTS.md](AGENTS.md) and [SKILL.md](SKILL.md), then downloads that version. A supported Skill installer must retain the whole directory, including assets and scripts.
 
 Generate the sentence for an actual publication destination with `python3 scripts/kit.py prompt --repo <repository-url> --ref <release-tag-or-commit> --task <application-request>`. This command formats text; it does not publish or check repository access. The output can be copied by a product clipboard action.
 
@@ -195,7 +195,7 @@ A source play is a complete application you can copy and modify. Sugarat Radio i
 | Startup observed | Passed |
 | Full device acceptance | Not yet recorded |
 
-Run `python3 scripts/kit.py plays --id sugarat-radio` to locate the complete radio application. [plays.json](plays.json) binds its stable ID, version and hardware to the source directory. After verification, read the play guide, build README and validation report there, then copy the complete directory into a new project before modifying it. Generate a fixed-version handoff with `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.0 --task "Customize the radio"`. The kit contains source, not a firmware download; inspect actual partitions before any device write.
+Run `python3 scripts/kit.py plays --id sugarat-radio` to locate the complete radio application. [plays.json](plays.json) binds its stable ID, version and hardware to the source directory. After verification, read the play guide, build README and validation report there, then copy the complete directory into a new project before modifying it. Generate a fixed-version handoff with `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.1 --task "Customize the radio"`. The kit contains source, not a firmware download; inspect actual partitions before any device write.
 
 <img src="media/readme/stage-save.svg" width="100%" alt="Stage 07: Save point">
 
@@ -211,7 +211,7 @@ Compilation, written-byte verification, startup and physical acceptance are sepa
 <a id="publishing"></a>
 ## Publishing
 
-The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with source plays in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
+The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
 
 ## Dev Note
 

@@ -46,7 +46,7 @@ description: "使用独立的硬件资料、源码模板、UI 主题和 Agent Sk
 <a id="give-this-kit-to-an-agent"></a>
 ## 交给其他 Agent
 
-复制 [COPY_TO_AGENT.txt](COPY_TO_AGENT.txt) 给常用 Agent，再描述想做的应用。文案指向固定的 [v0.2.0 Agent 入口](https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.2.0/AGENTS.md)；同版本完整资源包可从 [v0.2.0 源码 ZIP](https://github.com/suoyousheng-bot/sugarat-sdgoods/archive/refs/tags/v0.2.0.zip) 获取。接收方 Agent 先读 [AGENTS.md](AGENTS.md) 和 [SKILL.md](SKILL.md)，再下载该版本资源。支持 Skill 安装的工具必须保留整个目录，包括资源和脚本。
+复制 [COPY_TO_AGENT.txt](COPY_TO_AGENT.txt) 给常用 Agent，再描述想做的应用。文案指向固定的 [v0.2.1 Agent 入口](https://github.com/suoyousheng-bot/sugarat-sdgoods/blob/v0.2.1/AGENTS.md)；同版本完整资源包可从 [v0.2.1 源码 ZIP](https://github.com/suoyousheng-bot/sugarat-sdgoods/archive/refs/tags/v0.2.1.zip) 获取。接收方 Agent 先读 [AGENTS.md](AGENTS.md) 和 [SKILL.md](SKILL.md)，再下载该版本资源。支持 Skill 安装的工具必须保留整个目录，包括资源和脚本。
 
 可用 `python3 scripts/kit.py prompt --repo <repository-url> --ref <release-tag-or-commit> --task <application-request>` 为实际发布地址生成一句话。此命令只生成文字，不发布仓库，也不检查访问权限；产品的复制按钮可以直接复制其输出。
 
@@ -195,7 +195,7 @@ Watch 和 Game 主题的函数名、枚举、图标名和参数顺序相同，�
 | 启动观察 | 通过 |
 | 完整真机验收 | 尚未记录 |
 
-运行 `python3 scripts/kit.py plays --id sugarat-radio` 定位完整电台应用。[plays.json](plays.json) 将稳定 ID、版本和硬件绑定到源码目录。校验通过后，阅读目录中的玩法指南、构建 README 和验证报告，将完整目录复制到新工程后再修改。用 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.0 --task "Customize the radio"` 生成固定版本交接文案。资源包包含源码，不是固件下载；写入设备前需检查实际分区。
+运行 `python3 scripts/kit.py plays --id sugarat-radio` 定位完整电台应用。[plays.json](plays.json) 将稳定 ID、版本和硬件绑定到源码目录。校验通过后，阅读目录中的玩法指南、构建 README 和验证报告，将完整目录复制到新工程后再修改。用 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.1 --task "Customize the radio"` 生成固定版本交接文案。资源包包含源码，不是固件下载；写入设备前需检查实际分区。
 
 <img src="media/readme/stage-save.svg" width="100%" alt="第 07 关：存档点">
 
@@ -211,7 +211,7 @@ Watch 和 Game 主题的函数名、枚举、图标名和参数顺序相同，�
 <a id="publishing"></a>
 ## 发布
 
-公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.2.0` 包含完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
+公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
 
 ## 开发备注
 
