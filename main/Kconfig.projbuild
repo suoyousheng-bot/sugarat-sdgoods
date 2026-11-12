@@ -1,0 +1,27 @@
+menu "Sugarat Launcher"
+
+    config LAUNCHER_COMMUNITY_URL
+        string "Community service base URL"
+        default "http://3.144.1.190:9004"
+        help
+          Base URL of the Sugarat play community service, without a trailing slash.
+          The launcher reads public play details and download tickets from it.
+
+    config LAUNCHER_PRODUCT_ID
+        int "Community product ID of this device"
+        default 1
+        help
+          Plays whose published version targets another product are shown as incompatible.
+
+    config LAUNCHER_HARDWARE_REVISION_ID
+        int "Community hardware revision ID of this device"
+        default 1
+
+    config LAUNCHER_SERIAL_TEST_INPUT
+        bool "Serial taps, swipes and screenshots for on-device UI checks"
+        default y
+        help
+          Starts the board serial console with screenshot capture and accepts the synthetic
+          touch commands documented in main/launcher_console.c.
+
+endmenu
