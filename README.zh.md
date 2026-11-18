@@ -206,7 +206,7 @@ Sugarat 玩法社区中提供「做同款」的官方玩法，完整源码都在
 | ID | 社区玩法 | 源码版本 | 社区版本 | 附件 |
 | --- | --- | --- | --- | --- |
 | `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
-| `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
+| `pomodoro-alarm` | Pomodoro Alarm | 1.1.0 | 1.1.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.4/pomodoro-alarm.tar.gz) |
 | `squad-talk` | Squad Talk | 0.1.3 | 0.1.3 | [squad-talk.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/squad-talk.tar.gz) |
 | `sugarat-beat` | Sugarat Beat | 0.1.3 | 0.1.3 | [sugarat-beat.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.2/sugarat-beat.tar.gz) |
 | `sugarat-bird` | Pocket Bird | 0.1.0 | 0.1.0 | [sugarat-bird.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-bird.tar.gz) |
@@ -235,7 +235,7 @@ Pocket Companion 和 Round Race 的源码比社区镜像更新，其余源码与
 <a id="publishing"></a>
 ## 发布
 
-公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.3` 加入 Sugarat Voice Recorder，`v0.3.2` 加入 Sugarat Beat，`v0.3.1` 加入 Lunch Shuffle，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
+公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.4` 更新番茄闹钟全屏进度环，`v0.3.3` 加入 Sugarat Voice Recorder，`v0.3.2` 加入 Sugarat Beat，`v0.3.1` 加入 Lunch Shuffle，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
 
 ## 开发备注
 

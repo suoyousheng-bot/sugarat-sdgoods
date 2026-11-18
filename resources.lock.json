@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "kitVersion": "0.3.3",
+  "kitVersion": "0.3.4",
   "productId": "sdgoods-esp32s3-round",
   "snapshotDate": "2026-11-18",
   "board": "boards/sdgoods-esp32s3-round.json",

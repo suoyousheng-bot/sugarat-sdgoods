@@ -1,7 +1,7 @@
 {
   "id": "pomodoro-alarm",
   "name": "Pomodoro Alarm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": 1,
   "target": "esp32s3",
   "productId": "sdgoods-esp32s3-round",
@@ -23,9 +23,9 @@
     "playId": 34,
     "productKey": "pomodoro_alarm",
     "title": "Pomodoro Alarm",
-    "publishedVersion": "1.0.0",
-    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.0/plays/pomodoro-alarm",
-    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz"
+    "publishedVersion": "1.1.0",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.4/plays/pomodoro-alarm",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.4/pomodoro-alarm.tar.gz"
   },
   "sharedComponents": {
     "jpegenc": "shared/components/jpegenc",

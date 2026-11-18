@@ -8,7 +8,7 @@
       "manifest": "plays/lz-3d/play.json"
     },
     "pomodoro-alarm": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "productId": "sdgoods-esp32s3-round",
       "sourceDirectory": "plays/pomodoro-alarm",
       "manifest": "plays/pomodoro-alarm/play.json"

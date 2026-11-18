@@ -184,9 +184,11 @@ static void render(pomodoro_alarm_t *app)
 
     lv_obj_clean(app->content);
 
-    app->ring = sw_ring(app->content, 300, 100, tone);
-    lv_obj_set_style_arc_width(app->ring, 6, LV_PART_MAIN);
-    lv_obj_set_style_arc_width(app->ring, 6, LV_PART_INDICATOR);
+    /* Keep two pixels of clearance from the circular panel edge. */
+    const lv_coord_t ring_diameter = LV_MIN(LCD_WIDTH, LCD_HEIGHT) - 4;
+    app->ring = sw_ring(app->content, ring_diameter, 100, tone);
+    lv_obj_set_style_arc_width(app->ring, 10, LV_PART_MAIN);
+    lv_obj_set_style_arc_width(app->ring, 10, LV_PART_INDICATOR);
     lv_obj_center(app->ring);
     lv_obj_clear_flag(app->ring, LV_OBJ_FLAG_CLICKABLE);
 
