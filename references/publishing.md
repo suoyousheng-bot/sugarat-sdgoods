@@ -1,6 +1,6 @@
 # 将资源包发布为 GitHub 仓库
 
-本页面向发布者。公开资源仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，固定版本为 `v0.3.1`。发布分支或其他仓库时，把 `sugarat-sdgoods` 目录的完整内容作为仓库根目录；不要上传父工程、SDK 安装目录或个人设备备份。目录内的相对链接和脚本无需父仓库。
+本页面向发布者。公开资源仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，固定版本为 `v0.3.2`。发布分支或其他仓库时，把 `sugarat-sdgoods` 目录的完整内容作为仓库根目录；不要上传父工程、SDK 安装目录或个人设备备份。目录内的相对链接和脚本无需父仓库。
 
 ## 发布内容
 

@@ -1,0 +1,7 @@
+/build*/
+/sdkconfig
+/sdkconfig.old
+/managed_components/
+/kinetic-circuit.wav
+/.idf-env.log
+/.idf-build.log

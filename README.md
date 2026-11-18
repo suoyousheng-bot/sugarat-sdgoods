@@ -208,6 +208,7 @@ In this repository each component is stored once. Plays reference shared copies 
 | `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
 | `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
 | `squad-talk` | Squad Talk | 0.1.3 | 0.1.3 | [squad-talk.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/squad-talk.tar.gz) |
+| `sugarat-beat` | Sugarat Beat | 0.1.3 | 0.1.3 | [sugarat-beat.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.2/sugarat-beat.tar.gz) |
 | `sugarat-bird` | Pocket Bird | 0.1.0 | 0.1.0 | [sugarat-bird.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-bird.tar.gz) |
 | `sugarat-card` | Sugarat Social Card | 0.1.2 | 0.1.2 | [sugarat-card.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-card.tar.gz) |
 | `sugarat-cover` | Sugarat Cover | 0.1.4 | 0.1.4 | [sugarat-cover.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-cover.tar.gz) |
@@ -233,7 +234,7 @@ Compilation, written-byte verification, startup and physical acceptance are sepa
 <a id="publishing"></a>
 ## Publishing
 
-The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with Lunch Shuffle added in `v0.3.1`, community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
+The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with Sugarat Beat added in `v0.3.2`, Lunch Shuffle in `v0.3.1`, community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
 
 ## Dev Note
 

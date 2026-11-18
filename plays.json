@@ -19,6 +19,12 @@
       "sourceDirectory": "plays/squad-talk",
       "manifest": "plays/squad-talk/play.json"
     },
+    "sugarat-beat": {
+      "version": "0.1.3",
+      "productId": "sdgoods-esp32s3-round",
+      "sourceDirectory": "plays/sugarat-beat",
+      "manifest": "plays/sugarat-beat/play.json"
+    },
     "sugarat-bird": {
       "version": "0.1.0",
       "productId": "sdgoods-esp32s3-round",

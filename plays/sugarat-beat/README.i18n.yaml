@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-beat/README.md
+/:
+  en: 5614a177fb8daaed
+  zh: ca3276db32659df6
+/sugarat-beat:
+  en: d3a0940a4643f726
+  zh: bc316f387e9ec4e1
+/sugarat-beat/summary:
+  en: 1b8d229bc453cc92
+  zh: 1b88c720c497bfd4
+/sugarat-beat/contents:
+  en: ee81c19741dfb0de
+  zh: 088ccdf9e4d38e1c
+/sugarat-beat/play:
+  en: e54a3d4c3bba8ba9
+  zh: eea84ce3e8aef33f
+/sugarat-beat/build:
+  en: cc710a5876378eb4
+  zh: a1fdf20c798661ef
+/sugarat-beat/verification:
+  en: b71f4f951af4e2b2
+  zh: 1695747917a2e275
