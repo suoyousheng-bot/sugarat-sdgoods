@@ -203,7 +203,7 @@ Sugarat 玩法社区中提供「做同款」的官方玩法，完整源码都在
 
 本仓库中每个组件只存一份。玩法通过 `plays/<id>/kit-components.cmake` 引用 `shared/components/` 或 `assets/components/` 中的共享副本，独立导出时不包含该文件；玩法目录只保留自己修改过的组件。
 
-| ID | 社区玩法 | 源码版本 | 社区版本 | 附件（v0.3.0） |
+| ID | 社区玩法 | 源码版本 | 社区版本 | 附件 |
 | --- | --- | --- | --- | --- |
 | `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
 | `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
@@ -212,6 +212,7 @@ Sugarat 玩法社区中提供「做同款」的官方玩法，完整源码都在
 | `sugarat-card` | Sugarat Social Card | 0.1.2 | 0.1.2 | [sugarat-card.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-card.tar.gz) |
 | `sugarat-cover` | Sugarat Cover | 0.1.4 | 0.1.4 | [sugarat-cover.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-cover.tar.gz) |
 | `sugarat-fluid` | Magic Bottle | 0.2.1 | 0.2.1 | [sugarat-fluid.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-fluid.tar.gz) |
+| `sugarat-lunch` | Lunch Shuffle | 0.1.6 | 0.1.6 | [sugarat-lunch.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.1/sugarat-lunch.tar.gz) |
 | `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
 | `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
 | `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
@@ -232,7 +233,7 @@ Pocket Companion 和 Round Race 的源码比社区镜像更新，其余源码与
 <a id="publishing"></a>
 ## 发布
 
-公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
+公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.1` 加入 Lunch Shuffle，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
 
 ## 开发备注
 

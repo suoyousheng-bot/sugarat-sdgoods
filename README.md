@@ -203,7 +203,7 @@ Every official play in the Sugarat community that offers **Make your own** has i
 
 In this repository each component is stored once. Plays reference shared copies in `shared/components/` or `assets/components/` through `plays/<id>/kit-components.cmake`, which the standalone export omits; a play keeps only the components it changed.
 
-| ID | Community play | Source version | Community version | Attachment (v0.3.0) |
+| ID | Community play | Source version | Community version | Attachment |
 | --- | --- | --- | --- | --- |
 | `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
 | `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
@@ -212,6 +212,7 @@ In this repository each component is stored once. Plays reference shared copies 
 | `sugarat-card` | Sugarat Social Card | 0.1.2 | 0.1.2 | [sugarat-card.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-card.tar.gz) |
 | `sugarat-cover` | Sugarat Cover | 0.1.4 | 0.1.4 | [sugarat-cover.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-cover.tar.gz) |
 | `sugarat-fluid` | Magic Bottle | 0.2.1 | 0.2.1 | [sugarat-fluid.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-fluid.tar.gz) |
+| `sugarat-lunch` | Lunch Shuffle | 0.1.6 | 0.1.6 | [sugarat-lunch.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.1/sugarat-lunch.tar.gz) |
 | `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
 | `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
 | `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
@@ -232,7 +233,7 @@ Compilation, written-byte verification, startup and physical acceptance are sepa
 <a id="publishing"></a>
 ## Publishing
 
-The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
+The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with Lunch Shuffle added in `v0.3.1`, community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
 
 ## Dev Note
 

@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-lunch/components/sugarat_imu/README.md
+/sdgoods-imu:
+  en: 5f9ad49a013e1914
+  zh: e0428215b337eac5
+/sdgoods-imu/readings-and-events:
+  en: d476d202638a2015
+  zh: 907ff483130d3e17
+/sdgoods-imu/shared-i2c-bus:
+  en: d94b47ad39bdf80e
+  zh: de0ee608a1cbbf64
+/sdgoods-imu/verification-limits:
+  en: fe41d09a0fd6c393
+  zh: 0486ea4a28ebb50f

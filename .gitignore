@@ -10,3 +10,13 @@ managed_components/
 firmware-backups/
 *.bin
 !plays/lz-3d/main/bootanim/bootanim.bin
+!plays/sugarat-lunch/main/food/steak.bin
+!plays/sugarat-lunch/main/food/rice_bowl.bin
+!plays/sugarat-lunch/main/food/salad_bowl.bin
+!plays/sugarat-lunch/main/food/pizza_slice.bin
+!plays/sugarat-lunch/main/food/pasta_plate.bin
+!plays/sugarat-lunch/main/food/grilled_chicken_breast.bin
+!plays/sugarat-lunch/main/food/sandwich.bin
+!plays/sugarat-lunch/main/food/burger.bin
+!plays/sugarat-lunch/main/food/soup_bowl.bin
+!plays/sugarat-lunch/main/food/noodle_bowl.bin

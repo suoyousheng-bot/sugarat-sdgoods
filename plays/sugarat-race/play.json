@@ -33,6 +33,7 @@
     "lvgl": "shared/components/lvgl",
     "sdgoods_launcher": "shared/components/sdgoods_launcher",
     "sugarat_frame": "assets/components/sdgoods-frame-stream/components/sugarat_frame",
+    "sugarat_game": "shared/components/sugarat_game",
     "sugarat_pixel": "assets/components/sdgoods-pixel-characters/components/sugarat_pixel"
   }
 }

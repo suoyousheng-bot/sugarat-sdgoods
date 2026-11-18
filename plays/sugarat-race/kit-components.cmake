@@ -5,4 +5,5 @@ list(APPEND EXTRA_COMPONENT_DIRS
     "${CMAKE_CURRENT_LIST_DIR}/../../shared/components/lvgl"
     "${CMAKE_CURRENT_LIST_DIR}/../../shared/components/sdgoods_launcher"
     "${CMAKE_CURRENT_LIST_DIR}/../../assets/components/sdgoods-frame-stream/components/sugarat_frame"
+    "${CMAKE_CURRENT_LIST_DIR}/../../shared/components/sugarat_game"
     "${CMAKE_CURRENT_LIST_DIR}/../../assets/components/sdgoods-pixel-characters/components/sugarat_pixel")

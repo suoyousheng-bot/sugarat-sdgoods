@@ -43,6 +43,12 @@
       "sourceDirectory": "plays/sugarat-fluid",
       "manifest": "plays/sugarat-fluid/play.json"
     },
+    "sugarat-lunch": {
+      "version": "0.1.6",
+      "productId": "sdgoods-esp32s3-round",
+      "sourceDirectory": "plays/sugarat-lunch",
+      "manifest": "plays/sugarat-lunch/play.json"
+    },
     "sugarat-pet": {
       "version": "0.2.2",
       "productId": "sdgoods-esp32s3-round",
