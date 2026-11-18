@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/squad-talk/components/sugarat_pixel/README.md
+/sdgoods-pixel-characters:
+  en: 87415c05b4de2d25
+  zh: c638874c06eb656e
+/sdgoods-pixel-characters/showing-a-character:
+  en: e969bab37a0caa61
+  zh: 71d6b64dd5eab5f2
+/sdgoods-pixel-characters/characters-and-moods:
+  en: 0a03af019c06b00c
+  zh: fd0b2a2a3483147c
+/sdgoods-pixel-characters/memory-and-changes:
+  en: e66492a00da65a12
+  zh: 39f85b4650167910

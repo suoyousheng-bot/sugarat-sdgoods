@@ -1,0 +1,54 @@
+{
+  "id": "sugarat-fluid",
+  "name": "Sugarat Magic Bottle",
+  "version": "0.2.1",
+  "stage": 1,
+  "target": "esp32s3",
+  "productId": "sdgoods-esp32s3-round",
+  "entry": "main/main.c",
+  "display": {
+    "width": 360,
+    "height": 360,
+    "touch": "single"
+  },
+  "launcher": {
+    "applicationOnly": true,
+    "deviceVerified": false
+  },
+  "licenses": [
+    "Apache-2.0",
+    "MIT",
+    "OFL-1.1"
+  ],
+  "defaultLanguage": "en",
+  "playGuide": "PLAY.md",
+  "license": "Apache-2.0",
+  "validation": {
+    "report": "VALIDATION.md",
+    "record": "validation.json"
+  },
+  "build": {
+    "sdkVersion": "5.5.4",
+    "projectName": "sugarat_fluid",
+    "command": "idf.py -C plays/sugarat-fluid -B /tmp/sugarat-fluid-build build",
+    "partitionTable": "platform/partitions.csv",
+    "minimumFlashBytes": 33554432
+  },
+  "community": {
+    "playId": 26,
+    "productKey": "sugarat_fluid",
+    "title": "Magic Bottle",
+    "publishedVersion": "0.2.1",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.0/plays/sugarat-fluid",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-fluid.tar.gz"
+  },
+  "sharedComponents": {
+    "jpegenc": "shared/components/jpegenc",
+    "lvgl": "shared/components/lvgl",
+    "sdgoods_board": "shared/components/sdgoods_board",
+    "sdgoods_launcher": "shared/components/sdgoods_launcher",
+    "sugarat_frame": "assets/components/sdgoods-frame-stream/components/sugarat_frame",
+    "sugarat_imu": "assets/components/sdgoods-imu/components/sugarat_imu",
+    "sugarat_pixel": "assets/components/sdgoods-pixel-characters/components/sugarat_pixel"
+  }
+}

@@ -1,0 +1,212 @@
+[home]
+Sugarat
+小林
+硬件开发者 · Deotaland
+邮箱 · lin@example.org
+主页 · example.org/lin
+[drawer]
+Sugarat
+小林
+硬件开发者 · Deotaland
+邮箱 · lin@example.org
+主页 · example.org/lin
+名片码
+
+交换
+
+编辑
+
+名片夹
+English
+[drawer-en]
+Sugarat
+小林
+硬件开发者 · Deotaland
+Email · lin@example.org
+Web · example.org/lin
+QR code
+
+Exchange
+
+Edit
+
+Contacts
+中文
+[qr]
+我的名片码
+扫码保存联系人
+[nearby-empty]
+交换名片
+
+等待附近设备
+双方都打开交换页面
+[nearby]
+交换名片
+阿宁
+附近 1 台 · 第 1 台
+下一台
+选择对方
+[verify]
+确认交换
+阿宁
+826 419
+请核对双方屏幕上的数字
+取消
+确认交换
+[waiting]
+确认交换
+阿宁
+826 419
+等待对方核对并确认
+取消
+已确认
+[success]
+交换成功
+阿宁
+双方名片已保存
+查看名片夹
+[edit-wifi]
+连接手机
+1  打开手机 Wi-Fi 设置
+Wi-Fi: Sugarat-DEMO
+无需密码，直接连接
+提示无互联网时保持连接
+使用密码
+[edit-password]
+连接手机
+1  打开手机 Wi-Fi 设置
+Wi-Fi: Sugarat-DEMO
+密码：12345678
+提示无互联网时保持连接
+移除密码
+[edit-url]
+手机编辑
+2  用手机相机扫码打开
+http://192.168.4.1
+[edit-disconnected]
+连接手机
+1  打开手机 Wi-Fi 设置
+Wi-Fi: Sugarat-DEMO
+无需密码，直接连接
+提示无互联网时保持连接
+使用密码
+[contacts-empty]
+名片夹 0 / 0
+还没有收到名片
+[contacts]
+名片夹 1 / 1
+阿宁
+硬件开发者 · Deotaland
+邮箱 · lin@example.org
+主页 · example.org/lin
+左右滑动切换名片
+[notice]
+暂时无法继续
+编辑热点已到期，请重新打开
+从左侧向右滑返回
+[zh-page-0]
+Sugarat
+小林
+硬件开发者 · Deotaland
+邮箱 · lin@example.org
+主页 · example.org/lin
+编辑热点已到期，请重新打开
+[zh-page-1]
+我的名片码
+扫码保存联系人
+[zh-page-2]
+交换名片
+阿宁
+附近 1 台 · 第 1 台
+下一台
+选择对方
+[zh-page-3]
+交换成功
+阿宁
+双方名片已保存
+查看名片夹
+[zh-page-4]
+连接手机
+1  打开手机 Wi-Fi 设置
+Wi-Fi: Sugarat-DEMO
+无需密码，直接连接
+提示无互联网时保持连接
+使用密码
+编辑热点已到期，请重新打开
+[zh-page-5]
+名片夹 1 / 1
+阿宁
+硬件开发者 · Deotaland
+邮箱 · lin@example.org
+主页 · example.org/lin
+左右滑动切换名片
+[zh-page-6]
+暂时无法继续
+编辑热点已到期，请重新打开
+从左侧向右滑返回
+[en-page-0]
+Sugarat
+小林
+硬件开发者 · Deotaland
+Email · lin@example.org
+Web · example.org/lin
+Hotspot expired. Open Edit again.
+[en-page-1]
+My card QR
+Scan to save contact
+[en-page-2]
+Exchange cards
+阿宁
+1 nearby · Badge 1
+Next
+Select
+[en-page-3]
+Cards exchanged
+阿宁
+Both cards saved.
+View contacts
+[en-page-4]
+Connect phone
+1  Open phone Wi-Fi settings
+Wi-Fi: Sugarat-DEMO
+No password needed
+No internet? Stay connected.
+Use password
+Hotspot expired. Open Edit again.
+[en-page-5]
+Contacts 1 / 1
+阿宁
+硬件开发者 · Deotaland
+Email · lin@example.org
+Web · example.org/lin
+Swipe to browse contacts
+[en-page-6]
+Unable to continue
+Hotspot expired. Open Edit again.
+Swipe right from the left edge
+[long-fields-start]
+Sugarat
+喜欢开源硬件与电子设计的开发者
+嵌入式系统与智能硬件开发工程师 · Deotaland Hardware Research Lab
+邮箱 · a-long-public-contact-address@example.org
+主页 · example.org/hardware/projects/social-card-profile
+[community-cover-en]
+Sugarat
+Alex
+Maker · Deotaland
+Email · alex@example.org
+Web · example.org/alex
+[community-drawer-en]
+Sugarat
+Alex
+Maker · Deotaland
+Email · alex@example.org
+Web · example.org/alex
+QR code
+
+Exchange
+
+Edit
+
+Contacts
+中文

@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "application": "squad-talk",
+  "version": "0.1.3",
+  "target": "esp32s3",
+  "kitVersion": "0.2.1",
+  "espIdf": "5.5.4",
+  "lvgl": "8.3.11",
+  "firmware": {
+    "path": "/tmp/squad-talk-build/squad_talk.bin",
+    "bytes": 1284032,
+    "sha256": "7d3c1d92b686107cbba09552a0938e5291c2d2a035e00bf1a7223ba33364bfb1",
+    "buildPassed": true,
+    "buildLog": "/tmp/squad-talk-swipe-build.log"
+  },
+  "host": {
+    "command": "python3 plays/squad-talk/tests/check_host.py --output /tmp/squad-talk-swipe",
+    "passed": true,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "simulatedAlternatingTurns": 200,
+    "uiStates": 8,
+    "preview": "media/preview-en.png",
+    "scope": "Real codec/session/UI sources with simulated radio delivery and board services. Both swipe directions, one step per release, 01/08 wrapping, short/diagonal/top-edge rejection, speech/swipe isolation, ellipse-safe touch/labels and fewer than 4000 pixels per audio-level redraw.",
+    "log": "/tmp/squad-talk-swipe-host.log"
+  },
+  "repository": {
+    "build": true,
+    "buildLog": "/tmp/squad-talk-swipe-repository-build.log",
+    "testDocs": true,
+    "testDocsLog": "/tmp/squad-talk-swipe-test-docs.log",
+    "docSync": {
+      "passed": false,
+      "log": "/tmp/squad-talk-swipe-doc-sync.log",
+      "unrelatedFailures": [
+        "Cordis inspect/client catalogs stale",
+        "Sugarat account signature type-link classification"
+      ]
+    },
+    "lint": {
+      "passed": false,
+      "log": "/tmp/squad-talk-swipe-lint.log",
+      "scope": "Existing TypeScript diagnostics outside this firmware project."
+    }
+  },
+  "device": {
+    "backup": "skipped_by_explicit_user_instruction",
+    "connected": {
+      "mac": "<device>",
+      "port": "/dev/cu.usbmodem1101",
+      "version": "0.1.3",
+      "flashBytes": 33554432,
+      "applicationOffset": "0x10000",
+      "partitionTableMatchedBuild": true,
+      "partitionEvidence": "/tmp/squad-talk-swipe-device-partitions.json",
+      "flashed": true,
+      "bytesVerified": true,
+      "verification": "esptool Hash of data verified",
+      "flashLog": "/tmp/squad-talk-swipe-flash.log",
+      "startupVerified": true,
+      "startupEvidence": "/tmp/squad-talk-swipe-final-startup.log",
+      "audioInitialized": true,
+      "espNowInitialized": true,
+      "displayFramebufferVerified": true,
+      "displayEvidence": "/tmp/squad-talk-swipe-device-ch01.jpg",
+      "syntheticSwipeVerified": true,
+      "syntheticSwipeEvidence": "/tmp/squad-talk-swipe-device-gesture.log",
+      "syntheticSwipeScope": "Built-in BSP synthetic right swipe changes channel 01 to 08; final reboot restores 01. Synthetic input bypasses the physical touch panel.",
+      "physicalTouchVerified": false
+    },
+    "dualDeviceAudioVerified": false,
+    "rangeVerified": false,
+    "launcherInstallationVerified": false,
+    "scope": "Both known badges updated to 0.1.3 with byte verification and startup checks; the second badge discovers its peer on CH 01. Synthetic right-swipe tests pass on both badges. Physical swipe feel, dual-device voice and launcher paths require separate acceptance. Prior 0.1.2 dual-device audio evidence remains under releases.",
+    "additionalDevices": {
+      "<device>": {
+        "mac": "<device>",
+        "port": "/dev/cu.usbmodem1101",
+        "version": "0.1.3",
+        "sha256": "7d3c1d92b686107cbba09552a0938e5291c2d2a035e00bf1a7223ba33364bfb1",
+        "applicationOffset": "0x10000",
+        "backup": "skipped_by_explicit_user_instruction",
+        "partitionTableMatchedBuild": true,
+        "replacedApplication": "sugarat_pet",
+        "bytesVerified": true,
+        "flashLog": "/tmp/squad-talk-swipe-second-flash.log",
+        "startupVerified": true,
+        "startupEvidence": "/tmp/squad-talk-swipe-second-final-startup.log",
+        "displayFramebufferVerified": true,
+        "displayEvidence": "/tmp/squad-talk-swipe-second-device-ch01.jpg",
+        "syntheticSwipeVerified": true,
+        "physicalTouchVerified": false,
+        "peerLinkObserved": true,
+        "dualDeviceAudioVerified": false,
+        "finalChannel": 1
+      }
+    }
+  },
+  "previousRelease": {
+    "version": "0.1.0",
+    "firmware": {
+      "path": "/tmp/squad-talk-build/squad_talk.bin",
+      "bytes": 1416928,
+      "sha256": "e0442b1c53abf256a23fbbf79272efc42b145a0b4af102fd660f9c9fb2a55c10",
+      "buildPassed": true
+    },
+    "device": {
+      "backup": "skipped_by_explicit_user_instruction",
+      "first": {
+        "mac": "<device>",
+        "flashBytes": 33554432,
+        "applicationOffset": "0x10000",
+        "partitionTableMatchedBuild": true,
+        "flashed": true,
+        "bytesVerified": true,
+        "verification": "esptool Hash of data verified",
+        "startupVerified": true,
+        "startupEvidence": "/tmp/squad-talk-startup-first.log",
+        "audioInitialized": true,
+        "espNowInitialized": true,
+        "displayVerified": true
+      },
+      "second": {
+        "mac": "<device>",
+        "flashBytes": 33554432,
+        "applicationOffset": "0x20000",
+        "layout": "existing dual OTA; current ota_0 selected by valid sequence 1 and confirmed by original startup log",
+        "originalApplication": "cyb_2",
+        "flashed": true,
+        "bytesVerified": true,
+        "verification": "esptool Hash of data verified",
+        "startupVerified": true,
+        "startupEvidence": "/tmp/squad-talk-startup-second.log",
+        "audioInitialized": true,
+        "espNowInitialized": true,
+        "displayVerified": true
+      },
+      "dualDeviceAudioVerified": true,
+      "rangeVerified": false,
+      "launcherInstallationVerified": false,
+      "dualDeviceLinkObserved": true,
+      "dualDeviceAudioEvidence": {
+        "evidence": "/tmp/squad-talk-startup-second.log",
+        "receiverPlaybackMs": 4192,
+        "receiverUnderruns": 0,
+        "transmitAndReceiveStatesObserved": true,
+        "audibleQualityConfirmedByUser": true,
+        "userConfirmation": "Both directions and hold/release operation reported normal; user requested a visual redesign without characters and with a larger fingerprint touch target."
+      }
+    }
+  },
+  "releases": {
+    "0.1.1": {
+      "firmware": {
+        "path": "/tmp/squad-talk-build/squad_talk.bin",
+        "bytes": 1282928,
+        "sha256": "32c37d2293f5c6b414821d06f647c78d61a13bd0b959879d338f3cfe5fe68d84",
+        "buildPassed": true,
+        "buildLog": "/tmp/squad-talk-ui-v2-build.log"
+      },
+      "device": {
+        "backup": "skipped_by_explicit_user_instruction",
+        "first": {
+          "mac": "<device>",
+          "version": "0.1.2",
+          "applicationOffset": "0x10000",
+          "flashed": true,
+          "bytesVerified": true,
+          "verification": "esptool Hash of data verified",
+          "flashLog": "/tmp/squad-talk-continuity-flash-first.log",
+          "startupVerified": true,
+          "startupEvidence": "/tmp/squad-talk-continuity-after-first.log",
+          "audioInitialized": true,
+          "espNowInitialized": true,
+          "displayVerified": false,
+          "touchObserved": null
+        },
+        "second": {
+          "mac": "<device>",
+          "version": "0.1.1",
+          "applicationOffset": "0x20000",
+          "flashed": true,
+          "bytesVerified": true,
+          "verification": "esptool Hash of data verified",
+          "flashLog": "/tmp/squad-talk-ui-v2-flash-second.log",
+          "startupVerified": true,
+          "displayVerified": true,
+          "startupEvidence": "/tmp/squad-talk-ui-v2-startup-second.log",
+          "audioInitialized": true,
+          "espNowInitialized": true,
+          "displayEvidence": "/tmp/squad-talk-ui-v2-device-second.jpg",
+          "displayScope": "Device framebuffer JPEG captured over the built-in serial screenshot command; optical appearance is not measured.",
+          "touchObserved": {
+            "channel": 3,
+            "peerFound": true,
+            "requestTransmitReleaseObserved": true,
+            "states": [
+              0,
+              1,
+              2,
+              3,
+              1
+            ]
+          }
+        },
+        "dualDeviceAudioVerified": false,
+        "rangeVerified": false,
+        "scope": "Audio continuity repair in progress; 0.1.2 receiver tested with 0.1.1 sender still receives only 4–8 blocks/s and underruns. Both endpoints require validation.",
+        "dualDeviceLinkObserved": true
+      }
+    },
+    "0.1.2": {
+      "firmware": {
+        "path": "/tmp/squad-talk-build/squad_talk.bin",
+        "bytes": 1283504,
+        "sha256": "7efe356ebc4dcd0151041c62377aa0f5038768e65a6dde065eb57ebc863b9c69",
+        "buildPassed": true,
+        "buildLog": "/tmp/squad-talk-continuity-build.log"
+      },
+      "host": {
+        "command": "python3 plays/squad-talk/tests/check_host.py --output /tmp/squad-talk",
+        "passed": true,
+        "sanitizers": [
+          "address",
+          "undefined"
+        ],
+        "simulatedAlternatingTurns": 200,
+        "preview": "media/preview-en.png",
+        "scope": "Real codec/session/UI sources; simulated delivery and device services. Includes 200 alternating turns, circle-safe text, pointer behavior and audio-level redraw budget below 4000 pixels.",
+        "log": "/tmp/squad-talk-continuity-host.log"
+      },
+      "repository": {
+        "build": true,
+        "testDocs": true,
+        "docSync": {
+          "passed": false,
+          "unrelatedFailures": [
+            "Sugarat account type-link classification",
+            "Cordis inspect/client catalogs stale",
+            "Skill plugin package list stale"
+          ]
+        },
+        "lint": {
+          "passed": false,
+          "scope": "Reported TypeScript issues outside this firmware project; see /tmp/squad-talk-lint.log"
+        }
+      },
+      "device": {
+        "backup": "skipped_by_explicit_user_instruction",
+        "first": {
+          "mac": "<device>",
+          "version": "0.1.2",
+          "applicationOffset": "0x10000",
+          "flashed": true,
+          "bytesVerified": true,
+          "verification": "esptool Hash of data verified",
+          "flashLog": "/tmp/squad-talk-continuity-flash-first.log",
+          "startupVerified": true,
+          "startupEvidence": "/tmp/squad-talk-continuity-after-first.log",
+          "audioInitialized": true,
+          "espNowInitialized": true,
+          "displayVerified": false,
+          "touchObserved": null
+        },
+        "second": {
+          "mac": "<device>",
+          "version": "0.1.2",
+          "applicationOffset": "0x20000",
+          "flashed": true,
+          "bytesVerified": true,
+          "verification": "esptool Hash of data verified",
+          "flashLog": "/tmp/squad-talk-continuity-flash-second.log",
+          "startupVerified": true,
+          "displayVerified": false,
+          "startupEvidence": "/tmp/squad-talk-continuity-after-both.log",
+          "audioInitialized": true,
+          "espNowInitialized": true
+        },
+        "dualDeviceAudioVerified": true,
+        "rangeVerified": false,
+        "scope": "Both badges flashed 0.1.2, hash checked and startup verified. User confirms both directions now play complete, continuous speech. No physical range test.",
+        "dualDeviceLinkObserved": true,
+        "dualDeviceAudioEvidence": {
+          "log": "/tmp/squad-talk-continuity-after-both.log",
+          "userConfirmation": "Both directions now normal; complete and continuous playback.",
+          "rxBlocksPerSecond": [
+            63,
+            62,
+            63,
+            62,
+            62,
+            62
+          ],
+          "txBlocksPerSecond": [
+            62,
+            62
+          ],
+          "replyUnderruns": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "lost": 0,
+          "queueDrops": 0
+        }
+      }
+    }
+  },
+  "continuity": {
+    "report": "User reports choppy/incomplete speech, rather than static noise.",
+    "before": {
+      "log": "/tmp/squad-talk-crackle-before.log",
+      "version": "0.1.1",
+      "replyMsPlayed": 288,
+      "underruns": 12
+    },
+    "receiverUpdatedOnly": {
+      "log": "/tmp/squad-talk-continuity-after-first.log",
+      "receiverVersion": "0.1.2",
+      "senderVersion": "0.1.1",
+      "rxBlocksIn5Seconds": 34,
+      "lost": 0,
+      "queueDrops": 0,
+      "maxLoopGapMs": 18,
+      "underruns": 25,
+      "audibleContinuityConfirmedByUser": false
+    },
+    "bothUpdated": {
+      "log": "/tmp/squad-talk-continuity-after-both.log",
+      "version": "0.1.2",
+      "steadyRxBlocksPerSecond": "62–63",
+      "steadyTxBlocksPerSecond": 62,
+      "replyUnderruns": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "lost": 0,
+      "queueDrops": 0,
+      "audibleContinuityConfirmedByUser": true
+    }
+  },
+  "community": {
+    "productId": 29,
+    "productKey": "squad_talk",
+    "firmwareId": 32,
+    "downloadCode": "100030",
+    "version": "0.1.3",
+    "versionCode": 103,
+    "coverUrl": "https://pub-e9213ff7ca1945e29da8264df7d7b5df.r2.dev/bot/products/covers/official/e141098f-b07f-405b-afe4-450107b37d17.jpg",
+    "isOfficial": true,
+    "isPublic": true,
+    "reviewStatus": "approved",
+    "isPublished": true,
+    "sha256": "7d3c1d92b686107cbba09552a0938e5291c2d2a035e00bf1a7223ba33364bfb1",
+    "verificationLog": "/tmp/squad-talk-swipe-community-after.log",
+    "publishLog": "/tmp/squad-talk-swipe-community-publish.log",
+    "skill": "sugarat-submit-play"
+  }
+}

@@ -1,0 +1,56 @@
+Magic Bottle
+Tilt to flow · Shake to splash
+Tap: color · Swipe right: menu
+Magic Bottle
+Tap bottle: color · Hold: reset
+Color
+Fill 40%
+Reset bottle
+Play with friend
+Back
+Waiting for friend
+Room 1234
+Ask your friend to join
+New solo bottle
+Back
+Finding rooms
+Keep both devices nearby
+New solo bottle
+Back
+Room found
+Room 1234
+Check your friend's screen
+Join this room
+Next room
+New solo bottle
+Back
+Waiting for host
+You: 0000
+Ask your friend to accept
+New solo bottle
+Back
+Join request
+Friend 5678
+Accept to share this bottle
+Accept friend
+New solo bottle
+Back
+Bottles connected
+Fill 40% · Top edge is the mouth
+Upright: catch · Mouth down: pour
+New solo bottle
+Back
+Transfer stopped
+Keep nearby; upright to retry
+Solo starts a new bottle
+New solo bottle
+Back
+Two bottles
+One hosts, the other joins
+Host room
+Find friend
+Back
+Radio unavailable
+Return to Solo and retry
+New solo bottle
+Back

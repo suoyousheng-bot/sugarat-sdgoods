@@ -31,6 +31,6 @@ Validation date: 2026-11-10. Level: LV2 plus verified device write and startup. 
 
 ## Artifacts and remaining acceptance
 
-Build artifacts are in `.thinkready/sugarat-radio/build-firmware`; rendered PNGs and the overview are in `.thinkready/sugarat-radio/host`. These directories are local build output. The [README](README.md) contains reproducible commands. Network and audio fixtures do not contact live stations or decode real broadcast audio. UI fixtures do not access real Wi-Fi or credentials.
+Build artifacts are in `/tmp/sugarat-radio-build`; rendered PNGs and the overview are in `/tmp/sugarat-radio-host`. These directories are local build output. The [README](README.md) contains reproducible commands. Network and audio fixtures do not contact live stations or decode real broadcast audio. UI fixtures do not access real Wi-Fi or credentials.
 
 LV3 remains pending: both provisioning paths, actual US network reachability, MP3/AAC sound, physical touch, sleep, power and sustained playback. The actual partition table differs from the factory build template, so deployment preserved the table, factory and all persistent data and used the existing 5 MiB OTA0 slot instead; only that application and the 8 KiB boot selector were written. The hosted curated list URL is unconfigured; station publication review remains separate from source development. This report covers development and device evidence; community firmware publication is not included.

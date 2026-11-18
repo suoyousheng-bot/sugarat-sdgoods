@@ -9,3 +9,4 @@ sdkconfig.old
 managed_components/
 firmware-backups/
 *.bin
+!plays/lz-3d/main/bootanim/bootanim.bin

@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-race/README.md
+/:
+  en: f1bee31c77b41add
+  zh: 49dbd297b7b443fc
+/sugarat-round-race:
+  en: 0308c358afbaaf90
+  zh: f737a056c93de4be
+/sugarat-round-race/summary:
+  en: bd81ecde30bbd7f6
+  zh: 505ae9754221f90e
+/sugarat-round-race/contents:
+  en: f0c3a0a0271d117e
+  zh: a8787aead9c4aeea
+/sugarat-round-race/play:
+  en: b84c648be0ce1d25
+  zh: ddd1cd080e3e046c
+/sugarat-round-race/build-and-check:
+  en: 32ea86532baf8218
+  zh: f23a9355b877cdf3
+/sugarat-round-race/maps-and-rendering:
+  en: ba3e442d5dcba058
+  zh: 1bf749c37a29e93b
+/sugarat-round-race/device-installation:
+  en: f70227736bf360cb
+  zh: fcfed863b6fa69c6

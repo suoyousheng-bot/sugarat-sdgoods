@@ -1,0 +1,53 @@
+{
+  "id": "sugarat-pet",
+  "name": "Sugarat Pocket Companion",
+  "version": "0.2.2",
+  "stage": 1,
+  "target": "esp32s3",
+  "productId": "sdgoods-esp32s3-round",
+  "entry": "main/main.c",
+  "display": {
+    "width": 360,
+    "height": 360,
+    "touch": "single"
+  },
+  "launcher": {
+    "applicationOnly": true,
+    "deviceVerified": false
+  },
+  "defaultLanguage": "en",
+  "licenses": [
+    "Apache-2.0",
+    "MIT",
+    "OFL-1.1"
+  ],
+  "playGuide": "PLAY.md",
+  "license": "Apache-2.0",
+  "validation": {
+    "report": "VALIDATION.md",
+    "record": "validation.json"
+  },
+  "build": {
+    "sdkVersion": "5.5.4",
+    "projectName": "sugarat_pet",
+    "command": "idf.py -C plays/sugarat-pet -B /tmp/sugarat-pet-build build",
+    "partitionTable": "platform/partitions.csv",
+    "minimumFlashBytes": 33554432
+  },
+  "community": {
+    "playId": 27,
+    "productKey": "sugarat_pet",
+    "title": "Pocket Companion",
+    "publishedVersion": "0.1.0",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.0/plays/sugarat-pet",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz"
+  },
+  "sharedComponents": {
+    "jpegenc": "shared/components/jpegenc",
+    "lvgl": "shared/components/lvgl",
+    "sdgoods_board": "shared/components/sdgoods_board",
+    "sdgoods_launcher": "shared/components/sdgoods_launcher",
+    "sugarat_pixel": "assets/components/sdgoods-pixel-characters/components/sugarat_pixel",
+    "sugarat_watch": "assets/components/sdgoods-ui-watch/components/sugarat_watch"
+  }
+}

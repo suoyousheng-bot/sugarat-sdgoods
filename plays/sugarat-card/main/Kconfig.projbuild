@@ -1,0 +1,10 @@
+menu "Sugarat social card"
+config CARD_WIFI_CHANNEL
+    int "Shared ESP-NOW and editor Wi-Fi channel"
+    range 1 11
+    default 1
+config CARD_EDIT_SECONDS
+    int "Temporary editing access-point lifetime in seconds"
+    range 60 900
+    default 300
+endmenu

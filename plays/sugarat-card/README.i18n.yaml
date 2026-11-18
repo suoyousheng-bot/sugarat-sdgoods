@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-card/README.md
+/:
+  en: ee3595bcddeb7108
+  zh: 8b51d79677d195c2
+/sugarat-social-card:
+  en: 869103cad3667dd7
+  zh: 64a23de5ced891d4
+/sugarat-social-card/summary:
+  en: dd1a757c3719eb78
+  zh: 26d34f68d185005e
+/sugarat-social-card/contents:
+  en: 8760c8f489428a36
+  zh: d47f41dc8c8035c7
+/sugarat-social-card/controls:
+  en: 2160ca049d993d0f
+  zh: e85f0d0f7a3905b8
+/sugarat-social-card/phone-editing:
+  en: 2342ecdd0bb3b88f
+  zh: b57f07cfea84dacc
+/sugarat-social-card/device-exchange:
+  en: afed95a56f04a870
+  zh: c4973bbb9f719df7
+/sugarat-social-card/saving:
+  en: b394669b4d652ab6
+  zh: 2ad4e048a9e2c917
+/sugarat-social-card/build-and-checks:
+  en: 54cc7bccca30a7c4
+  zh: a660c8939308d697
+/sugarat-social-card/limits-and-sources:
+  en: e819dbdfcf657e04
+  zh: b6179704ff05c319

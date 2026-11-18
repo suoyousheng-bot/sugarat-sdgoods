@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "kitVersion": "0.2.1",
+  "build": "passed",
+  "hostPhysicsProtocol": "passed",
+  "frozenReferencePixels": "6-of-6-exact",
+  "deviceWrite": "passed-hash-verified",
+  "deviceStartup": "passed-serial-log-solo-race-and-marble",
+  "physicalAcceptance": "pending",
+  "twoDeviceRadio": "not-tested-one-device-connected",
+  "launcherInstallation": "not-tested"
+}

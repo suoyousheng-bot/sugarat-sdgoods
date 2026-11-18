@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "kitVersion": "0.2.1",
+  "kitVersion": "0.3.0",
   "productId": "sdgoods-esp32s3-round",
-  "snapshotDate": "2026-11-10",
+  "snapshotDate": "2026-11-18",
   "board": "boards/sdgoods-esp32s3-round.json",
   "template": {
     "archive": "assets/templates/sdgoods-esp32s3-basic-v1.tar.gz",

@@ -1,0 +1,8 @@
+menu "Sugarat Cover"
+config COVER_CHANNEL
+    int "Nearby sharing Wi-Fi channel"
+    range 1 11
+    default 6
+    help
+        All participating badges must use the same 2.4 GHz channel.
+endmenu

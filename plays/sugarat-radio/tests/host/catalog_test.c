@@ -19,7 +19,7 @@ static char queried[512];
 const char bundled_stations[] __asm__("_binary_stations_us_json_start") = BUNDLED_STATIONS;
 
 esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t *config) {
-    assert(!strcmp(config->user_agent,"SugaratRadio/0.1.0"));
+    assert(!strcmp(config->user_agent,"SugaratRadio/0.1.1"));
     assert(!strstr(config->url,"ip-api") && !strstr(config->url,"ipwho"));
     bool hosted=strstr(config->url,"curated.test") != NULL;
     fixture=(struct catalog_http){.response=hosted?curated:browser,.complete=!hosted||!truncate_curated};

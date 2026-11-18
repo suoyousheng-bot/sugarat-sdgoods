@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-15",
+  "version": "0.2.2",
+  "releaseStage": "engineering-preview",
+  "defaultLanguage": "en",
+  "sdk": "ESP-IDF 5.5.4",
+  "lvgl": "8.3.11",
+  "application": {
+    "projectName": "sugarat_pet",
+    "filename": "Sugarat-Pocket-Companion-v0.2.2-en.bin",
+    "bytes": 2919024,
+    "sha256": "7cf1ea569cc482350c8a602e29b480cb9ef7c4c80a02429e811197a192ef18b3",
+    "imageFormatVerified": true,
+    "applicationOnly": true,
+    "partitionTableChanged": false
+  },
+  "art": {
+    "families": 6,
+    "sourceAtlases": 6,
+    "compiledFrames": 96,
+    "frameSize": [
+      96,
+      96
+    ],
+    "clips": [
+      "idle",
+      "blink",
+      "feed",
+      "happy"
+    ],
+    "framesPerClip": 4,
+    "sleep": "closed-eye frame with breathing",
+    "birth": "moving egg and happy reveal",
+    "growth": "same artwork scaled",
+    "inheritedTraits": 10,
+    "expressedTraits": [
+      "body width",
+      "color",
+      "forehead marking",
+      "animation tempo"
+    ],
+    "sourceDigestsVerified": true,
+    "rleRoundTripsVerified": true
+  },
+  "host": {
+    "sanitizers": [
+      "AddressSanitizer",
+      "UndefinedBehaviorSanitizer"
+    ],
+    "careAndGrowth": true,
+    "legacySaveReader": true,
+    "actualApplicationV1Migration": true,
+    "legacyNvsBytesPreserved": true,
+    "actualApplicationSaveAndExit": true,
+    "realFileStoreSyncAndReadback": true,
+    "corruptSlotRecovery": true,
+    "unknownVersionWriteProtection": true,
+    "familySelectionAndEggTimers": true,
+    "twoEndpointRecoveryScenarios": 44,
+    "simulatedDatagramMedium": true,
+    "realNativeCrypto": "OpenSSL 3",
+    "firstMeetingRequiresBothCodeConfirmations": true,
+    "knownFriendReauthentication": true,
+    "wrongFriendKeyRejected": true,
+    "lossReorderingReplayTampering": true,
+    "saveFailureBeforeAndAfterWrite": true,
+    "noDuplicateEggAfterReboot": true,
+    "siblingVisibleDifferenceSamples": 256,
+    "eggPlansAgreeAcrossParentOrderAndAge": true,
+    "compactNvsFailuresAndRecovery": true,
+    "compactCapacityProtection": true
+  },
+  "ui": {
+    "source": "actual LVGL view, application gestures and BSP guarded taps",
+    "mainScreen": "large animated IP with tap or upward-drag shortcut",
+    "trayIcons": [
+      "feed",
+      "play",
+      "sleep/wake",
+      "stats",
+      "family",
+      "meet"
+    ],
+    "upwardSwipe": true,
+    "downwardDismissal": true,
+    "outsideTapDismissal": true,
+    "heldIconPress": true,
+    "slideOverIconRejectsAction": true,
+    "roundSafeTextAndGlyphs": true,
+    "lvglHeapBytes": 65536,
+    "repeatedDisposal": true,
+    "textSnapshot": true,
+    "previewFiles": [
+      "overview.png",
+      "characters.png",
+      "animated-family.gif",
+      "controls-swipe.gif"
+    ],
+    "lowerSwipeOriginsTested": 18,
+    "fingerTracking": true,
+    "frozenBackgroundDuringMotionAndOpenTray": true,
+    "tapShortcut": true,
+    "buttonSize": [
+      72,
+      64
+    ],
+    "buttonGap": [
+      10,
+      10
+    ],
+    "gapTapDoesNothing": true,
+    "familyNavigation": "bounded horizontal swipe; no Next button",
+    "starterSwipe": true,
+    "backTouchSize": [
+      72,
+      72
+    ],
+    "selectTouchSize": [
+      152,
+      56
+    ],
+    "browseDoesNotActivate": true,
+    "backDoesNotActivate": true,
+    "selectActivates": true,
+    "memberAndTrayAnimationDisposal": true
+  },
+  "firmware": {
+    "compiled": true,
+    "mbedTlsBackendCompiled": true,
+    "espNowDriverCompiled": true,
+    "referencePartitionSizeCheck": true,
+    "realRadioInteroperabilityVerified": false,
+    "mainSourceDigest": "b4afc919d80b1bbd31dd7e3e9a239d9730bd65a5483f386e87752d939ff45e94",
+    "sourceDigestMethod": "SHA256 of sorted main relative paths followed by each file content"
+  },
+  "repository": {
+    "buildArtifacts": true,
+    "buildCheck": true,
+    "readmePairing": true,
+    "testDocs": {
+      "passed": 21,
+      "failed": 0
+    }
+  },
+  "device": {
+    "accessedForThisVersion": false,
+    "writtenForThisVersion": false,
+    "dualDeviceRadioVerified": false,
+    "physicalTouchVerified": false,
+    "physicalFrameRateMeasured": false,
+    "launcherAndPowerLossAcceptance": false
+  },
+  "remaining": [
+    "Independent growth artwork and layered eyes/ears/mouth are not included.",
+    "Dedicated sad/birth clips, sound, archival and a separate friend album are not included.",
+    "Radio range, device pairing, battery use, physical touch and power-loss behavior require two-device acceptance.",
+    "Physical touch responsiveness and frame rate for the new drawer/member gestures remain unverified; this version has not been flashed."
+  ],
+  "commandsRun": [
+    "python3 plays/sugarat-pet/tools/check_host.py --output /tmp/sugarat-pet-v022-preview",
+    "idf.py -C plays/sugarat-pet -B /tmp/sugarat-pet-build build",
+    "python -m esptool --chip esp32s3 image_info /tmp/sugarat-pet-build/sugarat_pet.bin",
+    "pnpm run build:artifacts",
+    "pnpm run build:check",
+    "pnpm run verify-translation-pairing --write plays/sugarat-pet/README.md",
+    "pnpm run test:docs"
+  ],
+  "storage": {
+    "preferred": "appdata when available and no existing compact family",
+    "withoutFilesystem": "private compact NVS",
+    "maxNvsRecordBytes": 3072,
+    "testedFullFamilyRecordBytes": 2675,
+    "reservedAvailableNvsEntries": 128,
+    "oldNvsRecordsPreserved": true,
+    "automaticFormatting": false
+  },
+  "evidence": {
+    "hostLog": "/tmp/sugarat-pet-v022-check-host.log",
+    "firmwareLog": "/tmp/sugarat-pet-v022-firmware-build.log",
+    "imageInfoLog": "/tmp/sugarat-pet-v022-image-info.log",
+    "nativePreview": "/tmp/sugarat-pet-v022-preview/overview.png",
+    "actualDeviceAccess": false
+  }
+}

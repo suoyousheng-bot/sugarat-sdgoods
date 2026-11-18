@@ -24,7 +24,7 @@
 
 /** Start the standalone radio. Network, LVGL and I2S each have one owner. */
 void app_main(void) {
-    ESP_LOGI("Sugarat Radio", "Sugarat Radio 0.1.0 by Deotaland, build %s", BUILD_VERSION_STR);
+    ESP_LOGI("Sugarat Radio", "Sugarat Radio 0.1.1 by Deotaland, build %s", BUILD_VERSION_STR);
     ESP_ERROR_CHECK(nvs_flash_init());
     gpio_config_t power = {
         .pin_bit_mask = 1ULL << BOARD_BAT_CONTROL_GPIO,
@@ -51,5 +51,6 @@ void app_main(void) {
     else wifi_prov_show(NULL);
     lv_refr_now(NULL);
     sdgoods_lcd_set_backlight(60);
+    ESP_LOGI("Sugarat Radio", "SUGARAT_READY sugarat-radio 0.1.1");
     sdgoods_lvgl_loop();
 }

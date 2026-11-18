@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-fluid/README.md
+/:
+  en: 9726d671d2565c62
+  zh: 6ed32bb4d0ffc5ab
+/sugarat-magic-bottle:
+  en: aad840989937f184
+  zh: c082246d8e8dbb38
+/sugarat-magic-bottle/summary:
+  en: 60ae9791551c322b
+  zh: 10feb92a17f83715
+/sugarat-magic-bottle/contents:
+  en: 7489fa6b2e99ab41
+  zh: a70dd61bfd5bfa2c
+/sugarat-magic-bottle/play:
+  en: c5eb3f0dbb84afdc
+  zh: 503537fd490b0e01
+/sugarat-magic-bottle/build:
+  en: bb153884ae5b5dc3
+  zh: ad65a1aec9b35f4e
+/sugarat-magic-bottle/host-checks:
+  en: b50326fadd1a6a0a
+  zh: 70a017117a73a8e6
+/sugarat-magic-bottle/device-and-launcher:
+  en: 6ddb97b10774e17e
+  zh: a3e6b00f7fcb3483
+/sugarat-magic-bottle/sources-and-customization:
+  en: 7b9b0680ccb227ca
+  zh: c572b8f0a1082e23

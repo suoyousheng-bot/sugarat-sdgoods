@@ -187,7 +187,7 @@ Watch 和 Game 主题的函数名、枚举、图标名和参数顺序相同，�
 
 <p align="center"><img src="media/readme/radio-overview.png" width="100%" alt="Sugarat Radio 页面：Wi-Fi 配网、首页、设置、区域选择、猫咪 DJ 皮肤和错误状态"></p>
 
-| 结果 | Sugarat Radio 0.1.0 |
+| 结果 | Sugarat Radio 0.1.1 |
 | --- | --- |
 | 桌面预览 | 通过 |
 | 固件编译（ESP-IDF 5.5.4） | 通过 |
@@ -195,7 +195,28 @@ Watch 和 Game 主题的函数名、枚举、图标名和参数顺序相同，�
 | 启动观察 | 通过 |
 | 完整真机验收 | 尚未记录 |
 
-运行 `python3 scripts/kit.py plays --id sugarat-radio` 定位完整电台应用。[plays.json](plays.json) 将稳定 ID、版本和硬件绑定到源码目录。校验通过后，阅读目录中的玩法指南、构建 README 和验证报告，将完整目录复制到新工程后再修改。用 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.1 --task "Customize the radio"` 生成固定版本交接文案。资源包包含源码，不是固件下载；写入设备前需检查实际分区。
+运行 `python3 scripts/kit.py plays --id sugarat-radio` 定位完整电台应用。[plays.json](plays.json) 将稳定 ID、版本和硬件绑定到源码目录。校验通过后，阅读目录中的玩法指南、构建 README 和验证报告，将完整目录复制到新工程后再修改。用 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.3.0 --task "Customize the radio"` 生成固定版本交接文案。资源包包含源码，不是固件下载；写入设备前需检查实际分区。
+
+### 社区玩法源码
+
+Sugarat 玩法社区中提供「做同款」的官方玩法，完整源码都在这里；每个版本的 Release 为每个玩法附带一个独立工程包。社区详情页链接到固定 tag 下的 `plays/<id>`。做同款时只需下载对应玩法的附件：其中包含该玩法以及它用到的全部组件和库（包括 LVGL），无需再下载其他内容。在仓库检出中运行 `python3 scripts/kit.py export-play --id <id> --directory <新目录>` 可得到相同工程。
+
+本仓库中每个组件只存一份。玩法通过 `plays/<id>/kit-components.cmake` 引用 `shared/components/` 或 `assets/components/` 中的共享副本，独立导出时不包含该文件；玩法目录只保留自己修改过的组件。
+
+| ID | 社区玩法 | 源码版本 | 社区版本 | 附件（v0.3.0） |
+| --- | --- | --- | --- | --- |
+| `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
+| `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
+| `squad-talk` | Squad Talk | 0.1.3 | 0.1.3 | [squad-talk.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/squad-talk.tar.gz) |
+| `sugarat-bird` | Pocket Bird | 0.1.0 | 0.1.0 | [sugarat-bird.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-bird.tar.gz) |
+| `sugarat-card` | Sugarat Social Card | 0.1.2 | 0.1.2 | [sugarat-card.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-card.tar.gz) |
+| `sugarat-cover` | Sugarat Cover | 0.1.4 | 0.1.4 | [sugarat-cover.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-cover.tar.gz) |
+| `sugarat-fluid` | Magic Bottle | 0.2.1 | 0.2.1 | [sugarat-fluid.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-fluid.tar.gz) |
+| `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
+| `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
+| `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
+
+Pocket Companion 和 Round Race 的源码比社区镜像更新，其余源码与已发布版本一致。
 
 <img src="media/readme/stage-save.svg" width="100%" alt="第 07 关：存档点">
 
@@ -211,7 +232,7 @@ Watch 和 Game 主题的函数名、枚举、图标名和参数顺序相同，�
 <a id="publishing"></a>
 ## 发布
 
-公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
+公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
 
 ## 开发备注
 

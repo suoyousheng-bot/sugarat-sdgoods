@@ -1,0 +1,23 @@
+{
+  "status": "specified-not-implemented",
+  "logicalScreen": [360, 360],
+  "modeSelection": {
+    "horizontalSwipe": "switch-between-racing-and-marble",
+    "primaryTarget": {"x": 95, "y": 247, "width": 170, "height": 64},
+    "tapPrimaryTarget": "open-selected-mode"
+  },
+  "preparation": {
+    "order": ["choose-mode", "choose-map", "calibrate-comfortable-hold", "both-ready", "shared-countdown"],
+    "primaryTargetMinimum": [160, 64]
+  },
+  "gameplay": {
+    "racingInput": "tilt-left-right-with-automatic-acceleration",
+    "marbleInput": "tilt-in-two-axes-relative-to-calibrated-hold",
+    "horizontalSwipeSwitchesModes": false,
+    "longPress": "open-large-target-menu",
+    "longPressMilliseconds": 800,
+    "multiplayerMenu": "opening-a-menu-does-not-unilaterally-pause-the-other-player; any-shared-pause-needs-a-confirmed-protocol"
+  },
+  "results": {"primaryAction": "rematch", "primaryTargetMinimum": [160, 64]},
+  "hardwareAcceptance": "pending"
+}

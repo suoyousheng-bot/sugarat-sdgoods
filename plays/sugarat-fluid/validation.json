@@ -1,0 +1,300 @@
+{
+  "date": "2026-11-15",
+  "version": "0.2.1",
+  "sdk": "ESP-IDF 5.5.4",
+  "lvgl": "8.3.11",
+  "application": {
+    "bytes": 1918016,
+    "sha256": "4c696c517b01f2ae8f2113cbe335637d6197ce7048da952b9e79630f1eca2764",
+    "target": "esp32s3",
+    "applicationOnly": true
+  },
+  "host": {
+    "sanitizers": [
+      "AddressSanitizer",
+      "UndefinedBehaviorSanitizer"
+    ],
+    "motionSteps": 2400,
+    "emptyAndFullBottles": true,
+    "circularContainment": true,
+    "gravityResponse": true,
+    "frameHandoff": true,
+    "bidirectionalEmptying": true,
+    "mixedIngredientConservation": true,
+    "lossyAcknowledgements": true,
+    "reorderedPackets": true,
+    "invalidPacketsRejected": true,
+    "staleRoomRejected": true,
+    "reconnectRequiresUpright": true,
+    "invitationExpiry": true,
+    "pauseStopsTransfer": true,
+    "uiTextSnapshot": true,
+    "menuGlyphsAndSafeBounds": true,
+    "command": "python3 plays/sugarat-fluid/tests/check_host.py --output /tmp/sugarat-fluid-host"
+  },
+  "radioBuild": {
+    "channel": 6,
+    "staticRxBuffers": 4,
+    "rxBlockAckWindow": 6,
+    "preferPsram": true,
+    "wifiIramOptimization": false
+  },
+  "device": {
+    "write": true,
+    "startupObserved": true,
+    "version": "0.2.1",
+    "mode": "standalone",
+    "backup": "skipped-at-explicit-user-request",
+    "writeHashVerified": true,
+    "independentReadbackVerified": false,
+    "motionAvailable": true,
+    "bootCaptureSeconds": 18,
+    "unexpectedResetObserved": false,
+    "physicalAcceptance": "Devices <device> and <device> have verified 0.2.1 application writes, boot, active IMU and 30/s direct presentation. Touch targets, gauge legibility, pour cues and the two-device stream await user acceptance.",
+    "bootedDevices": 2
+  },
+  "launcher": {
+    "sdkIntegrated": true,
+    "applicationOnly": true,
+    "installationAndReturnVerified": false
+  },
+  "repository": {
+    "buildArtifacts": true,
+    "buildCheck": true,
+    "testDocs": {
+      "passed": 21,
+      "failed": 0
+    },
+    "docSync": {
+      "passed": 38,
+      "failed": 5,
+      "failureScope": "Other directories: Cordis/client catalogs, documentation type links and plugin package list."
+    },
+    "lint": {
+      "passed": false,
+      "failureScope": "TypeScript diagnostics outside plays/sugarat-fluid; see /tmp/sugarat-fluid-lint.log."
+    }
+  },
+  "limitations": [
+    "Both devices flashed with verified application writes and observed boots; two-device ESP-NOW transfer, physical gesture acceptance, linked frame rate, radio memory headroom and battery life remain unverified.",
+    "Players position devices manually; relative spatial alignment is not measured.",
+    "Liquid is ephemeral. New solo bottle, application exit and restart end session quantities; only the solo color preference is saved.",
+    "Pairing is address/room scoped, without cryptographic authentication or application data encryption.",
+    "Launcher installation, Exit and multi-application coexistence require hardware verification."
+  ],
+  "previousValidation": {
+    "date": "2026-11-14",
+    "version": "0.1.2",
+    "sdk": "ESP-IDF 5.5.4",
+    "lvgl": "8.3.11",
+    "application": {
+      "bytes": 1420864,
+      "sha256": "ecd9ac7374605f668c1788a88e998cf4ce76cd6c31e3ff41fb7c039db1ce27f4"
+    },
+    "host": {
+      "sanitizers": [
+        "AddressSanitizer",
+        "UndefinedBehaviorSanitizer"
+      ],
+      "motionSteps": 2400,
+      "circularContainment": true,
+      "gravityResponse": true,
+      "renderedThemes": 4,
+      "uiTextSnapshot": true,
+      "particleCount": 480,
+      "frameHandoff": true,
+      "earlySlotReservationNegativeControl": true,
+      "displayedGlyphs": true
+    },
+    "device": {
+      "target": "esp32s3",
+      "flashBytes": 33554432,
+      "psramBytes": 8388608,
+      "mode": "standalone",
+      "backup": "skipped-at-user-request",
+      "write": true,
+      "writeHashVerified": true,
+      "independentReadbackVerified": true,
+      "startupObserved": true,
+      "physicalAcceptance": "English UI pending user acceptance; v0.1.1 pacing accepted by user",
+      "syntheticInputChecks": {
+        "themeTap": true,
+        "controlCenterOpen": true,
+        "returnToBottle": true
+      }
+    },
+    "launcher": {
+      "sdkIntegrated": true,
+      "applicationOnly": true,
+      "installationAndReturnVerified": false
+    },
+    "repository": {
+      "buildArtifacts": true,
+      "buildCheck": true,
+      "scopedDocPairs": 9,
+      "testDocs": {
+        "passed": 20,
+        "failed": 1,
+        "failureScope": "Concurrent sugarat-pet documentation pairs; Magic Bottle named pair passes."
+      }
+    },
+    "limitations": [
+      "Standalone firmware tested; launcher installation, Exit and coexistence await device validation.",
+      "Physical tilt direction, touch feel, battery life and sustained operation await user acceptance."
+    ],
+    "defaultLanguage": "en",
+    "performance": {
+      "measuredVersion": "0.1.1",
+      "workload": "Normal on-device motion/render path, same SDGoods ESP32-S3, 480 particles and unchanged physics; 30-second captures; physical orientation was not forced; no model or network work.",
+      "baseline": {
+        "windows": [
+          {
+            "fps": 25.4,
+            "meanSendMs": 14.9,
+            "maxSendMs": 18.4,
+            "maxGapMs": 236.0
+          },
+          {
+            "fps": 26.1,
+            "meanSendMs": 14.9,
+            "maxSendMs": 18.1,
+            "maxGapMs": 200.3
+          },
+          {
+            "fps": 23.1,
+            "meanSendMs": 15.2,
+            "maxSendMs": 18.3,
+            "maxGapMs": 238.0
+          },
+          {
+            "fps": 19.4,
+            "meanSendMs": 15.1,
+            "maxSendMs": 18.8,
+            "maxGapMs": 236.0
+          },
+          {
+            "fps": 22.2,
+            "meanSendMs": 15.1,
+            "maxSendMs": 18.3,
+            "maxGapMs": 208.0
+          },
+          {
+            "fps": 23.1,
+            "meanSendMs": 15.2,
+            "maxSendMs": 18.3,
+            "maxGapMs": 200.4
+          }
+        ],
+        "medianFps": 23.1,
+        "worstGapMs": 238.0,
+        "steadyFreeMemorySamples": [
+          [
+            55720,
+            31744,
+            6620456
+          ],
+          [
+            55720,
+            31744,
+            6620456
+          ],
+          [
+            55720,
+            31744,
+            6620456
+          ],
+          [
+            55720,
+            31744,
+            6620456
+          ],
+          [
+            55720,
+            31744,
+            6620456
+          ],
+          [
+            55720,
+            31744,
+            6620456
+          ]
+        ]
+      },
+      "candidate": {
+        "windows": [
+          {
+            "fps": 30.0,
+            "meanSendMs": 14.9,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.0
+          },
+          {
+            "fps": 30.0,
+            "meanSendMs": 15.1,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.1
+          },
+          {
+            "fps": 30.0,
+            "meanSendMs": 14.9,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.1
+          },
+          {
+            "fps": 30.0,
+            "meanSendMs": 14.9,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.1
+          },
+          {
+            "fps": 30.1,
+            "meanSendMs": 15.1,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.1
+          },
+          {
+            "fps": 30.0,
+            "meanSendMs": 15.0,
+            "maxSendMs": 18.2,
+            "maxGapMs": 42.1
+          }
+        ],
+        "medianFps": 30.0,
+        "worstGapMs": 42.1,
+        "steadyFreeMemorySamples": [
+          [
+            55712,
+            31744,
+            6358156
+          ],
+          [
+            55712,
+            31744,
+            6358156
+          ],
+          [
+            55712,
+            31744,
+            6358156
+          ],
+          [
+            55712,
+            31744,
+            6358156
+          ],
+          [
+            55712,
+            31744,
+            6358156
+          ],
+          [
+            55712,
+            31744,
+            6358156
+          ]
+        ]
+      },
+      "additionalPixelBufferBytes": 259200
+    }
+  }
+}

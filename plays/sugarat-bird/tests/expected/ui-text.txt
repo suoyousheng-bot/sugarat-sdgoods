@@ -1,0 +1,40 @@
+[ready]
+POCKET BIRD
+0
+Best 0
+Ready?
+Tap to flap
+Play
+[playing]
+POCKET BIRD
+0
+Best 0
+[paused]
+POCKET BIRD
+0
+Best 0
+Paused
+Tap Resume
+Resume
+[over]
+POCKET BIRD
+0
+Best 0
+Game Over
+Score 0
+Try again
+[save-error]
+POCKET BIRD
+0
+Best 0
+Ready?
+Tap to flap
+Play
+Best not saved
+[high-score]
+POCKET BIRD
+9999
+Best 9999
+Game Over
+Score 9999
+Try again

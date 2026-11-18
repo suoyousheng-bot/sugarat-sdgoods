@@ -112,7 +112,7 @@ static char *http_get_buf(const char *url, int *out_len)
     esp_http_client_config_t cfg = {
         .url = url,
         .method = HTTP_METHOD_GET,
-        .user_agent = "SugaratRadio/0.1.0",
+        .user_agent = "SugaratRadio/0.1.1",
         .timeout_ms = 10000,
         .buffer_size = 4096,
         .crt_bundle_attach = esp_crt_bundle_attach,

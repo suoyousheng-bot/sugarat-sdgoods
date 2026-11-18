@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "playId": "sugarat-card",
+  "version": "0.1.2",
+  "productId": "sdgoods-esp32s3-round",
+  "artifact": {
+    "projectName": "sugarat_card",
+    "filename": "Sugarat-Social-Card-v0.1.2.bin",
+    "bytes": 8601264,
+    "sha256": "d89f65e1e6d1dd20dcd2c45281d6461313d4b5bf6e0e148516b0a6fef2c9a307",
+    "applicationOnly": true,
+    "imageFormatVerified": true,
+    "partitionTableChanged": false,
+    "applicationPartitionBytes": 16646144,
+    "launcherAllocationBytes": 8716288
+  },
+  "source": {
+    "kitVersion": "0.2.1",
+    "espIdf": "5.5.4",
+    "lvgl": "8.3.11",
+    "mainDigest": "d294c6f3e75416307ba0446f86ad74c7dcf9e991599a1407d764489cfc03f38b",
+    "mainDigestMethod": "SHA256 of sorted main-relative POSIX path UTF-8 bytes followed by each file bytes",
+    "fontDigest": "f6106c9f601562706204f1ab6993e3e583ffdf940aa8ebb61815257a11bda558",
+    "fontDigestMethod": "SHA256 of sorted font filenames followed by each file bytes"
+  },
+  "host": {
+    "passed": true,
+    "sanitizers": [
+      "AddressSanitizer",
+      "UndefinedBehaviorSanitizer"
+    ],
+    "twoEndpointScenarios": 9,
+    "recordAndVcardValidation": true,
+    "actualFileStoreSyncAndReadback": true,
+    "corruptAndUnknownVersionWriteProtection": true,
+    "writeFailureBeforeAndAfterEffect": true,
+    "oneSidedConsentBlocksProfileTransfer": true,
+    "lossReorderingReplayTampering": true,
+    "failedRemoteSaveDoesNotReportSuccess": true,
+    "firmwareHttpHandlers": true,
+    "stableLocalizedErrorCodes": true,
+    "independentLanguageNvsAdapter": true,
+    "languageAbsentInvalidAndWriteFailures": true
+  },
+  "ui": {
+    "actualLvglRendering": true,
+    "namePixels": 28,
+    "metadataPixels": 16,
+    "combinedRoleAndCompany": true,
+    "centeredContactAndLink": true,
+    "longFieldsScrollVerifiedByFrameDifference": true,
+    "drawerActions": [
+      "vCard QR",
+      "exchange",
+      "phone edit",
+      "received cards",
+      "language"
+    ],
+    "iconTouchSize": [
+      96,
+      64
+    ],
+    "iconGap": [
+      24,
+      8
+    ],
+    "languageTouchSize": [
+      104,
+      40
+    ],
+    "lowerSwipeOriginsTested": 18,
+    "iconEdgeTapsTested": 20,
+    "fingerTracking": true,
+    "slideOverIconRejectsAction": true,
+    "outsideAndDownDismissal": true,
+    "leftEdgeSwipeBack": true,
+    "noBackButtons": true,
+    "boundedReceivedCardSwipes": true,
+    "pauseAndRepeatedDisposal": true,
+    "languages": [
+      "zh-CN",
+      "en"
+    ],
+    "defaultLanguage": "en",
+    "textSnapshot": "tests/expected/ui-text.txt",
+    "lvglPoolBytes": 65536,
+    "observedLvglUsedBytes": 22352,
+    "basicCjkFontPixels": [
+      16,
+      28
+    ],
+    "textBitmapBitsPerPixel": 2,
+    "englishCoverRendered": true
+  },
+  "browser": {
+    "passed": true,
+    "actualEditorHtml": true,
+    "nativeCParserAndFileStore": true,
+    "languages": [
+      "zh-CN",
+      "en"
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "narrowViewport": [
+      320,
+      720
+    ],
+    "noAutofocus": true,
+    "languageTogglePreservesInputAndErrorState": true,
+    "languageSurvivesRefreshViaUrl": true,
+    "invalidUrlAndByteLimitRejection": true,
+    "unconfirmedSaveDoesNotReportSuccess": true,
+    "missingExpiredAndChangedTokenHandling": true,
+    "saveIndependentlyReloaded": true,
+    "independentConcurrentRunsPassed": 0,
+    "privateEphemeralLoopbackPort": true,
+    "privateTemporaryStore": true,
+    "serverAndBrowserCleanupAwaited": true,
+    "espIdfWifiDriverEmulated": false,
+    "englishDefaultUnderChinesePhoneLocale": true
+  },
+  "firmware": {
+    "compiled": true,
+    "mbedTlsBackendCompiled": true,
+    "espNowCompiled": true,
+    "httpEditorCompiled": true
+  },
+  "repository": {
+    "buildArtifacts": true,
+    "buildCheck": true,
+    "readmePairing": true,
+    "testDocs": {
+      "passed": false,
+      "passedGates": 20,
+      "failedGates": [
+        "translation pairing"
+      ],
+      "newFirmwarePathsInErrors": false
+    },
+    "docSync": {
+      "passed": false,
+      "passedGates": 37,
+      "failedGates": [
+        "doc graphs",
+        "cordis catalog",
+        "Cordis inspect catalog",
+        "translation pairing",
+        "client catalog",
+        "skill plugin package list"
+      ],
+      "newFirmwarePathsInErrors": false
+    },
+    "lint": {
+      "passed": false,
+      "newFirmwarePathsInErrors": false
+    }
+  },
+  "device": {
+    "accessed": false,
+    "written": false,
+    "bootObserved": false,
+    "physicalTouchVerified": false,
+    "twoDeviceRadioVerified": false,
+    "phoneHotspotVerified": false,
+    "qrScanningVerified": false,
+    "batteryAndFrameRateMeasured": false,
+    "launcherInstallationVerified": false
+  },
+  "remaining": [
+    "Version 0.1.2 hardware startup and physical touch",
+    "Phone Wi-Fi association and QR scanning",
+    "Two-device RF exchange, range and power use",
+    "Managed launcher installation, Exit and shared-storage behavior",
+    "Serial diagnostics and software restart behavior"
+  ],
+  "evidence": {
+    "nativeChecks": "/tmp/sugarat-card-v0.1.2/checks/run-84o0wcyf",
+    "lastUiCheck": "/tmp/sugarat-card-v0.1.2/ui-check.log",
+    "browserChecks": [
+      "/tmp/sugarat-card-v0.1.2/browser"
+    ],
+    "firmwareBuildLog": "/tmp/sugarat-card-v0.1.2/firmware-build.log",
+    "repositoryBuildLog": "/tmp/sugarat-card-v0.1.2/repository-build.log",
+    "repositoryLogs": "/tmp/sugarat-card-v0.1.2",
+    "previousValidation": "/tmp/sugarat-card-v0.1.2/previous-validation.json",
+    "communityDryRun": "/tmp/sugarat-card-v0.1.2/community-dry-run.json",
+    "communityPublish": "/tmp/sugarat-card-v0.1.2/community-publish.json",
+    "communityVerification": "/tmp/sugarat-card-v0.1.2/community-plays-after.txt",
+    "lastLanguageCheck": "/tmp/sugarat-card-v0.1.2/language-build.log"
+  },
+  "commandsRun": [
+    "python3 plays/sugarat-card/tools/prepare_assets.py --font-dir /tmp/sugarat-card-lvgl/scripts/built_in_font",
+    "python3 plays/sugarat-card/tools/check_host.py --output /tmp/sugarat-card-v0.1.2/checks",
+    "python3 plays/sugarat-card/tools/check_editor.py --build /tmp/sugarat-card-v0.1.2/checks/run-84o0wcyf/build --output /tmp/sugarat-card-v0.1.2/browser",
+    "pnpm run build",
+    "pnpm run verify-translation-pairing plays/sugarat-card/README.md",
+    "pnpm run test:docs",
+    "pnpm run doc-sync",
+    "pnpm run lint"
+  ],
+  "previousDeviceVerification": {
+    "version": "0.1.1",
+    "device": {
+      "accessed": true,
+      "written": true,
+      "bootObserved": true,
+      "physicalTouchVerified": false,
+      "twoDeviceRadioVerified": false,
+      "phoneHotspotVerified": false,
+      "qrScanningVerified": false,
+      "batteryAndFrameRateMeasured": false,
+      "launcherInstallationVerified": false,
+      "writeHashVerified": true,
+      "independentVerifyFlashPassed": true,
+      "completeBackupVerified": true,
+      "port": "/dev/cu.usbmodem1101",
+      "mac": "<device>",
+      "installationMode": "standalone",
+      "deviceFramesCaptured": false,
+      "startupStatus": "User confirmed normal screen after USB reconnect. Subsequent serial capability and screenshot requests returned no data; automatic startup capture and software restart remain unverified.",
+      "bootObservationSource": "User confirmed normal screen after USB reconnect",
+      "displayConfirmedByUser": true,
+      "startupReadyMarkerVerified": false,
+      "serialDiagnosticsAvailable": false,
+      "softwareRestartVerified": false
+    },
+    "evidence": "/tmp/sugarat-card-v0.1.1/device-r5hpj9tg/deployment.json"
+  },
+  "community": {
+    "productId": 33,
+    "productKey": "sugarat_card",
+    "firmwareId": 42,
+    "downloadCode": "100040",
+    "version": "0.1.2",
+    "versionCode": 102,
+    "coverUrl": "https://pub-e9213ff7ca1945e29da8264df7d7b5df.r2.dev/bot/products/covers/official/d3300986-9d67-4bbe-873f-2971009209d6.jpg",
+    "isOfficial": true,
+    "isPublic": true,
+    "reviewStatus": "approved",
+    "isPublished": true,
+    "sha256": "d89f65e1e6d1dd20dcd2c45281d6461313d4b5bf6e0e148516b0a6fef2c9a307",
+    "skill": "sugarat-submit-play",
+    "defaultLanguage": "en",
+    "coverLanguage": "en",
+    "listingLanguage": "en",
+    "listingReadbackVerified": true
+  }
+}

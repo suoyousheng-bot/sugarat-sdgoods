@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/V4C38/esp32-fluidbox",
+  "revision": "21d7516d143da25bab9176257131d01a66a2573d",
+  "files": [
+    "fluidbox/main/sim.c",
+    "fluidbox/main/sim.h"
+  ],
+  "license": "MIT",
+  "modifiedBy": "Deotaland"
+}

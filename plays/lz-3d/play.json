@@ -1,0 +1,36 @@
+{
+  "id": "lz-3d",
+  "name": "lz Real-Time 3D Character",
+  "version": "1.0.0",
+  "stage": 1,
+  "target": "esp32s3",
+  "productId": "sdgoods-esp32s3-round",
+  "entry": "main/main.c",
+  "playGuide": "PLAY.md",
+  "license": "Apache-2.0",
+  "defaultLanguage": "en",
+  "validation": {
+    "report": "VALIDATION.md"
+  },
+  "build": {
+    "sdkVersion": "5.5.4",
+    "projectName": "lz_3d",
+    "command": "idf.py -C plays/lz-3d -B /tmp/lz-3d-build build",
+    "partitionTable": "platform/partitions.csv",
+    "minimumFlashBytes": 33554432
+  },
+  "community": {
+    "playId": 22,
+    "productKey": "sugarat-play-3",
+    "title": "lz Real-Time 3D Character",
+    "publishedVersion": "1.0.0",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.0/plays/lz-3d",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz"
+  },
+  "sharedComponents": {
+    "jpegenc": "shared/components/jpegenc",
+    "lvgl": "shared/components/lvgl",
+    "sdgoods_launcher": "shared/components/sdgoods_launcher",
+    "sugarat_frame": "assets/components/sdgoods-frame-stream/components/sugarat_frame"
+  }
+}

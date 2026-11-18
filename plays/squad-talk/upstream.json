@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/atomic14/esp32-walkie-talkie",
+  "commit": "bd357bc50032e08e7017bd9b59e01fd23bcedef1",
+  "inspected": [
+    "src/Application.cpp",
+    "lib/transport/src/EspNowTransport.cpp",
+    "lib/transport/src/Transport.cpp"
+  ],
+  "reuse": "ESP-NOW initialization, direct peer audio and PTT flow reference; ported to the bundled ESP-IDF BSP. The session protocol and independent IMA blocks are application-owned.",
+  "kitVersion": "0.2.1",
+  "font": {
+    "repository": "https://github.com/google/fonts/tree/main/ofl/nunito",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/Nunito%5Bwght%5D.ttf",
+    "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+    "license": "SIL OFL 1.1",
+    "weight": 1000
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "tris": 796,
+  "positions": 458,
+  "render_vertices": 689,
+  "objects": [
+    {
+      "name": "low",
+      "tris": 368,
+      "open_edges": 12
+    },
+    {
+      "name": "low.001",
+      "tris": 62,
+      "open_edges": 38
+    },
+    {
+      "name": "low.002",
+      "tris": 202,
+      "open_edges": 12
+    },
+    {
+      "name": "low.003",
+      "tris": 164,
+      "open_edges": 50
+    }
+  ],
+  "anims": [
+    {
+      "name": "idle",
+      "frames": 59,
+      "loop": true
+    },
+    {
+      "name": "hello",
+      "frames": 120,
+      "loop": false
+    },
+    {
+      "name": "listen",
+      "frames": 120,
+      "loop": false
+    },
+    {
+      "name": "talk",
+      "frames": 120,
+      "loop": false
+    }
+  ],
+  "fps": 24,
+  "radius": 1.0813782921792665,
+  "center": [
+    -0.0011456012725830078,
+    0.0038743913173675537,
+    0.9980719089508057
+  ],
+  "texture": 256,
+  "position_bytes": 1151412
+}

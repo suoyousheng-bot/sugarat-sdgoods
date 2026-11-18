@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-cover/README.md
+/:
+  en: e802b156f63bce59
+  zh: 33c661032b80d099
+/sugarat-cover:
+  en: 039a9b647f509aa0
+  zh: a2b842d2fe81ee68
+/sugarat-cover/summary:
+  en: ce9b4aa9c1d9f42d
+  zh: d7c833ddaadcdef9
+/sugarat-cover/table-of-contents:
+  en: 6f1358b0b150d626
+  zh: 7ae55531f878b36e
+/sugarat-cover/controls:
+  en: fe4f50b279f8c362
+  zh: 250af440ce0ea0b2
+/sugarat-cover/phone-management:
+  en: 76fe82cc7829a71a
+  zh: ab4adbef01140f25
+/sugarat-cover/nearby-sharing:
+  en: f4210f8af9c86ded
+  zh: e823680d443fd35f
+/sugarat-cover/storage-and-failures:
+  en: 1f733816e4c9960e
+  zh: ef4e7d028258763e
+/sugarat-cover/build-and-verification:
+  en: 3f1fe294e6a6efa8
+  zh: c77f0b6d09d2d829
+/sugarat-cover/sources-and-limitations:
+  en: 278a5f99ffcf8a3f
+  zh: d724d4d42b5e479d
+/sugarat-cover/dev-note:
+  en: b75c8458928b72b9
+  zh: 003ba4e17b4b5269

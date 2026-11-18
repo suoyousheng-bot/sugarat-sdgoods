@@ -19,7 +19,7 @@ Sugarat 电台基于 Apache-2.0 的 [sdgoods-radio](https://github.com/YeatsLiao
 <a id="build"></a>
 ## 构建
 
-在 资源包根目录执行以下命令前，激活带 ESP32-S3 工具链的 ESP-IDF 5.5.4。组件管理器使用已提交的锁文件，解析 LVGL 8.3.11 和 Espressif audio codec 2.5.0，无需连接 USB 设备。
+在资源包根目录执行以下命令前，激活带 ESP32-S3 工具链的 ESP-IDF 5.5.4。LVGL 8.3.11 来自资源包的共享组件（独立 Release 附件中位于 `components/lvgl`），Espressif audio codec 2.5.0 的 ESP32-S3 版本位于 `components/esp_audio_codec`，构建过程无需下载。无需连接 USB 设备。
 
 ```sh
 idf.py -C plays/sugarat-radio -B /tmp/sugarat-radio-build build

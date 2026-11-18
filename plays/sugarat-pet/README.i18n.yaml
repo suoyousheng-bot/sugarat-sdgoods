@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-pet/README.md
+/:
+  en: 6ea25ed3bb37d588
+  zh: 94bf1e66418ab513
+/sugarat-pocket-companion:
+  en: 96bd1e7adeed848b
+  zh: 34736c775226a179
+/sugarat-pocket-companion/summary:
+  en: 2d92fc5836865f49
+  zh: 41a5f6eee3db7617
+/sugarat-pocket-companion/contents:
+  en: 1095772403db19ab
+  zh: 5fb98fb79f5b5bde
+/sugarat-pocket-companion/controls:
+  en: f1da1fef05554b50
+  zh: a4a9fcae3fcab5dd
+/sugarat-pocket-companion/build:
+  en: 4721ec075ea798de
+  zh: 8a58c92eb21868ff
+/sugarat-pocket-companion/host-checks:
+  en: 72a00d664ddbc049
+  zh: db2a9e55a1c941bc
+/sugarat-pocket-companion/saving-and-time:
+  en: b4a98618c189a2b4
+  zh: b6baeb84489b3f1e
+/sugarat-pocket-companion/nearby-pairing:
+  en: e063f5c1d46bca44
+  zh: c2d30fd379934170
+/sugarat-pocket-companion/sources-and-limits:
+  en: 23b0c9904f46f206
+  zh: 648d6cccb705f435

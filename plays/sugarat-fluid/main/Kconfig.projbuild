@@ -1,0 +1,6 @@
+menu "Sugarat Magic Bottle"
+config BOTTLE_RADIO_CHANNEL
+    int "Nearby ESP-NOW channel (same on both bottles)"
+    range 1 11
+    default 6
+endmenu

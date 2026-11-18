@@ -1,0 +1,6 @@
+menu "Sugarat Racing"
+config RACE_RADIO_CHANNEL
+    int "Nearby racing radio channel"
+    range 1 11
+    default 6
+endmenu

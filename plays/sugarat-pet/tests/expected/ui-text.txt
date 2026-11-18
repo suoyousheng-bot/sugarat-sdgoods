@@ -1,0 +1,122 @@
+[home]
+Ember
+Lv. 1  /  Baby
+Hello, friend!
+
+[controls]
+Ember
+Lv. 1  /  Baby
+Hello, friend!
+Feed
+
+Play
+
+Sleep
+
+Stats
+
+Family
+
+Meet
+[feeding]
+Ember
+Lv. 1  /  Baby
+Yummy! Thank you
+
+[stats]
+Care stats
+Lv. 1  /  Baby
+
+
+Back
+Clean
+Fullness
+100
+Mood
+84
+Energy
+90
+Hygiene
+100
+Health
+100
+[sleep]
+Ember
+Lv. 1  /  Baby
+Resting and recharging
+
+[sleep-controls]
+Ember
+Lv. 1  /  Baby
+Resting and recharging
+Feed
+
+Play
+
+Wake
+
+Stats
+
+Family
+
+Meet
+[save-error]
+Ember
+Save failed - restart device
+
+
+[starter]
+First friend
+Leaf  2 / 3
+Swipe to meet your first friend
+Select
+
+[family]
+Your family
+Ember  1 / 1
+Gen 1  |  Adult
+
+Back
+Select
+
+[nearby]
+Nearby
+Choose each other on both devices
+Leaf  1 / 1
+Select each other on both devices
+
+Back
+Select
+
+[verify]
+Same friend?
+482631
+Check the code on both screens
+
+Back
+Code matches
+[linked]
+Nearby
+Connected: greet, gift and play
+Friendship: 0 / 3
+
+Back
+Greet
+Gift
+Play
+Breed egg
+[egg]
+Your new egg
+0 / 30 min together
+Staying here helps it hatch
+
+[hatch-ready]
+Your new egg
+30 / 30 min together
+Tap the egg to hatch!
+
+[hatch-result]
+Sprout
+Lv. 1  /  Baby
+
+

@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/SDGOODS/SDGOODS-ESP32S3",
+  "commit": "dae46766aa345c680691420691d3d7170f0c6372",
+  "file": "main/apps/ui_flappy.c",
+  "sha256": "b95ff2e83a4a179afa863bf1c1c6f58c5f4bda511ca6334a46e6985ef9ba8516",
+  "license": "Apache-2.0",
+  "basis": "Flight and obstacle rules; English round-screen model, presentation and persistence maintained by Deotaland.",
+  "foundation": "../../../hardware-kits/sugarat-sdgoods/assets/templates/sdgoods-esp32s3-basic-v1.json"
+}

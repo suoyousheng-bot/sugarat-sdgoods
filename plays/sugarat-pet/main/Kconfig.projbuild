@@ -1,0 +1,8 @@
+menu "Sugarat pet"
+config PET_SOCIAL_CHANNEL
+    int "ESP-NOW nearby channel"
+    range 1 11
+    default 1
+    help
+        Both nearby devices must use the same 2.4 GHz channel.
+endmenu

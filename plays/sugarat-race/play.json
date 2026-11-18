@@ -1,0 +1,38 @@
+{
+  "id": "sugarat-race",
+  "name": "Round Race",
+  "version": "1.0.0",
+  "stage": 1,
+  "target": "esp32s3",
+  "productId": "sdgoods-esp32s3-round",
+  "entry": "main/main.c",
+  "playGuide": "PLAY.md",
+  "license": "Apache-2.0",
+  "defaultLanguage": "en",
+  "validation": {
+    "report": "VALIDATION.md",
+    "record": "validation.json"
+  },
+  "build": {
+    "sdkVersion": "5.5.4",
+    "projectName": "sugarat_race",
+    "command": "idf.py -C plays/sugarat-race -B /tmp/sugarat-race-build build",
+    "partitionTable": "platform/partitions.csv",
+    "minimumFlashBytes": 33554432
+  },
+  "community": {
+    "playId": 30,
+    "productKey": "sugarat_race",
+    "title": "Round Race",
+    "publishedVersion": "0.2.1",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.0/plays/sugarat-race",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz"
+  },
+  "sharedComponents": {
+    "jpegenc": "shared/components/jpegenc",
+    "lvgl": "shared/components/lvgl",
+    "sdgoods_launcher": "shared/components/sdgoods_launcher",
+    "sugarat_frame": "assets/components/sdgoods-frame-stream/components/sugarat_frame",
+    "sugarat_pixel": "assets/components/sdgoods-pixel-characters/components/sugarat_pixel"
+  }
+}

@@ -19,9 +19,9 @@ description: 为 SDGOODS ESP32-S3 360×360 圆形徽章开发或接入 ESP-IDF �
 
 用户指定玩法或社区 ID 时，先运行 `python3 scripts/kit.py plays`，再用 `python3 scripts/kit.py plays --id <id>` 读取版本、硬件、源码目录及验证范围；玩法索引见 [plays.json](plays.json)。显示名称可以修改，ID 保持不变。不要按名称猜测源码，也不要用基础模板替换完整玩法。
 
-Sugarat 电台的 ID 为 `sugarat-radio`。校验通过后，读取该条目中的 `play.json`、`PLAY.md`、`README.md` 和 `VALIDATION.md`，将完整源码复制到新的工程目录再修改；已有工程先由用户需求决定如何接入。构建命令从资源包根目录执行。镜像历史大小及工厂分区容量只用于参考；设备的实际分区、可写容量和启动布局需要本次重新检查，不能复用历史设备的 `0x310000`。
+社区玩法详情页的源码链接形如 `…/tree/<tag>/plays/<id>`，目录名就是玩法 ID。只做同款时，下载同一 tag 的 Release 附件 `<id>.tar.gz` 即可：它是自带全部组件和 LVGL 的独立工程，无需下载整个仓库；在仓库检出中则运行 `python3 scripts/kit.py export-play --id <id> --directory <新目录>`。读取工程中的 `play.json`、`PLAY.md`、`README.md` 和 `VALIDATION.md` 后再修改，不要直接在 `plays/<id>` 中编辑，也不要单独复制该目录（共享组件不在其中）；已有工程先由用户需求决定如何接入。构建命令从资源包根目录执行。镜像历史大小及工厂分区容量只用于参考；设备的实际分区、可写容量和启动布局需要本次重新检查，不能复用历史设备的 `0x310000`。
 
-需要交给另一个 Agent 时，运行 `python3 scripts/kit.py play-prompt --id sugarat-radio --repo <repository-url> --ref <release-tag-or-commit> --task <application-request>`。仓库、版本和 ID 一起固定；使用发布 tag 或提交，不跟随 `main`。此命令只生成提示词，不执行下载、构建或设备操作。
+需要交给另一个 Agent 时，运行 `python3 scripts/kit.py play-prompt --id <id> --repo <repository-url> --ref <release-tag-or-commit> --task <application-request>`。仓库、版本和 ID 一起固定；使用发布 tag 或提交，不跟随 `main`。此命令只生成提示词，不执行下载、构建或设备操作。
 
 ## 实现与验证
 

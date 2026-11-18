@@ -1,0 +1,136 @@
+[en-cover]
+[en-actions]
+text=Sunset voyage
+target=240,60,60,60
+text=中
+text=01 / 02
+text=Swipe to change cover
+target=66,168,228,60
+text=Phone upload
+target=66,240,228,60
+text=Share a photo
+[en-phone]
+text=Connect phone
+text=1  Open phone Wi-Fi settings
+text=Wi-Fi: Sugarat-A7C4
+text=No password needed
+text=Stay connected: no internet
+target=66,240,228,60
+text=Use password
+[en-phone-password]
+text=Connect phone
+text=1  Open phone Wi-Fi settings
+text=Wi-Fi: Sugarat-A7C4
+text=Password: 12345678
+text=Stay connected: no internet
+target=66,240,228,60
+text=Remove password
+[en-page-qr]
+text=Upload cover
+text=2  Scan with phone camera
+text=http://192.168.4.1
+[en-share]
+text=Share a photo
+text=Keep both badges nearby
+target=66,168,228,60
+text=Send this photo
+target=66,240,228,60
+text=Receive photo
+[en-peers]
+text=Choose badge
+target=66,168,228,60
+text=Badge 1234
+text=Ask them to tap Receive
+[en-waiting]
+text=Ready to receive
+text=Ask them to choose you
+text=My badge A7C4
+text=Keep both badges nearby
+[en-pair]
+text=Check the code
+text=123456
+text=Same code on both badges?
+target=66,240,228,60
+text=Accept
+[en-progress]
+text=Receiving photo
+text=68%
+text=Keep both badges nearby
+[en-saved]
+text=Saved to gallery
+target=66,240,108,60
+text=Later
+target=186,240,108,60
+text=Show
+[en-error]
+text=Try again
+text=Connection timed out. Move closer and retry.
+text=Swipe right to go back
+[zh-cover]
+[zh-actions]
+text=落日航线
+target=240,60,60,60
+text=EN
+text=01 / 02
+text=左右滑动，切换封面
+target=66,168,228,60
+text=手机上传
+target=66,240,228,60
+text=交换图片
+[zh-phone]
+text=连接手机
+text=1  打开手机 Wi-Fi 设置
+text=Wi-Fi: Sugarat-A7C4
+text=无需密码，直接连接
+text=提示无互联网时保持连接
+target=66,240,228,60
+text=开启密码
+[zh-phone-password]
+text=连接手机
+text=1  打开手机 Wi-Fi 设置
+text=Wi-Fi: Sugarat-A7C4
+text=密码: 12345678
+text=提示无互联网时保持连接
+target=66,240,228,60
+text=取消密码
+[zh-page-qr]
+text=上传封面
+text=2  用手机相机扫码打开
+text=http://192.168.4.1
+[zh-share]
+text=交换图片
+text=请保持两台设备靠近
+target=66,168,228,60
+text=赠送这张
+target=66,240,228,60
+text=接收图片
+[zh-peers]
+text=选择设备
+target=66,168,228,60
+text=徽章 1234
+text=请对方进入“接收图片”
+[zh-waiting]
+text=等待赠图
+text=让对方选择这台设备
+text=我的徽章 A7C4
+text=请保持两台设备靠近
+[zh-pair]
+text=核对配对码
+text=123456
+text=两台设备的配对码相同吗
+target=66,240,228,60
+text=接收
+[zh-progress]
+text=正在接收
+text=68%
+text=请保持两台设备靠近
+[zh-saved]
+text=已存入相册
+target=66,240,108,60
+text=稍后
+target=186,240,108,60
+text=展示
+[zh-error]
+text=重试
+text=连接超时，请靠近后重试
+text=从左向右滑动返回

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "source": "Original Sugarat character concepts generated with built-in ImageGen",
+  "grid": [
+    4,
+    4
+  ],
+  "clips": [
+    "idle",
+    "blink",
+    "eat",
+    "happy"
+  ],
+  "characters": [
+    {
+      "id": 0,
+      "key": "fire",
+      "file": "fire.png",
+      "sha256": "79ad7220aa382c922bfc1856acf24b423e354e8ebcd76eb3504cbdc1d7da47f7",
+      "promptFile": "fire.prompt.txt"
+    },
+    {
+      "id": 1,
+      "key": "leaf",
+      "file": "leaf.png",
+      "sha256": "444d43e03b58f6499db674fd47c2a88c05d964296204ebc6f5ea6adda098b3f6",
+      "promptFile": "leaf.prompt.txt"
+    },
+    {
+      "id": 2,
+      "key": "cloud",
+      "file": "cloud.png",
+      "sha256": "9b78988f91328bbb264183254c32c9dd5c1834e0f0360e1be20ea20951725f48",
+      "promptFile": "cloud.prompt.txt"
+    },
+    {
+      "id": 3,
+      "key": "sprout",
+      "file": "sprout.png",
+      "sha256": "d1471517d749420e5460194f86af0f73eca0d2f311fdae8f4bd95961f04ecd1f",
+      "promptFile": "sprout.prompt.txt"
+    },
+    {
+      "id": 4,
+      "key": "embercloud",
+      "file": "embercloud.png",
+      "sha256": "91bb5e908f29a3a735ee88e30604c32a354dbf470cd3fef917d5bad1e029a630",
+      "promptFile": "embercloud.prompt.txt"
+    },
+    {
+      "id": 5,
+      "key": "leafcloud",
+      "file": "leafcloud.png",
+      "sha256": "ef74dde9b3555733bcd2914a06fc632a187455e2704ab5d3643562b8d9cb13d4",
+      "promptFile": "leafcloud.prompt.txt"
+    }
+  ],
+  "generationTool": "image_gen",
+  "compiledFrameSize": [
+    96,
+    96
+  ],
+  "palette": "31 opaque RGB565 colors plus transparency per family",
+  "growthArtwork": "Shared poses scaled for growth",
+  "expressedTraits": [
+    "body",
+    "color",
+    "pattern",
+    "personality"
+  ]
+}

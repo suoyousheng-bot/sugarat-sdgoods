@@ -3,6 +3,7 @@
 
 import argparse
 import hashlib
+import io
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -15,6 +16,8 @@ from urllib.parse import quote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# Repository-only CMake fragment that points a play at shared components; standalone exports omit it.
+SHARED_COMPONENTS_CMAKE = "kit-components.cmake"
 
 
 def json_file(path):
@@ -78,7 +81,9 @@ def verify(root):
         if not path.is_file() or digest(path.read_bytes()) != checksum:
             raise ValueError(f"Resource missing or SHA-256 mismatch: {name}")
         tracked.add(name)
-    for directory in ("assets", "plays"):
+    for directory in ("assets", "plays", "shared"):
+        if not (root / directory).is_dir():
+            continue
         for path in (root / directory).rglob("*"):
             if "__pycache__" in path.parts:
                 continue
@@ -111,6 +116,11 @@ def play_records(root, lock):
                      record["build"]["partitionTable"], "README.md", "LICENSE", "NOTICE"):
             if not child(source, name).is_file():
                 raise ValueError(f"Play file missing: {play_id}/{name}")
+        for name, location in record.get("sharedComponents", {}).items():
+            component = child(root, location)
+            if (PurePosixPath(location).name != name or not (component / "CMakeLists.txt").is_file()
+                    or (source / "components" / name).exists()):
+                raise ValueError(f"Invalid shared component for {play_id}: {name}")
         records[play_id] = {**entry, **record}
     directories = {path.name for path in (root / "plays").iterdir() if path.is_dir()}
     if directories != set(records):
@@ -127,13 +137,63 @@ def select_play(root, play_id):
     return records[play_id]
 
 
+def play_bundle_files(root, play_id):
+    """Plan a standalone project: the play folder plus its shared components under components/."""
+    record = select_play(root, play_id)
+    source = child(root, record["sourceDirectory"])
+    files = {}
+    for base, prefix in [(source, ""), *[(child(root, location), f"components/{name}/")
+                                        for name, location in sorted(record.get("sharedComponents", {}).items())]]:
+        for path in sorted(base.rglob("*")):
+            if path.is_symlink():
+                raise ValueError(f"Play symlink: {path}")
+            name = prefix + path.relative_to(base).as_posix()
+            if path.is_file() and name != SHARED_COMPONENTS_CMAKE and "__pycache__" not in path.parts:
+                if name in files:
+                    raise ValueError(f"Play source conflict: {name}")
+                files[name] = path.read_bytes()
+    return record, files
+
+
+def export_play(root, play_id, directory, archive=None):
+    """Write one self-contained play project, or a .tar.gz of it, without replacing anything."""
+    record, files = play_bundle_files(root, play_id)
+    if archive is not None:
+        target = destination_path(archive)
+        if target.exists():
+            raise ValueError(f"Archive already exists: {target}")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with tarfile.open(target, "x:gz") as output:
+            for name, data in sorted(files.items()):
+                info = tarfile.TarInfo(f"{play_id}/{name}")
+                info.size, info.mode, info.mtime = len(data), 0o644, 0
+                output.addfile(info, io.BytesIO(data))
+        return {"archive": str(target), "play": play_id, "version": record["version"], "files": len(files)}
+    target = destination_path(directory)
+    if target.exists():
+        raise ValueError(f"Destination already exists; sources preserved: {target}")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    staging = Path(tempfile.mkdtemp(prefix=f".{target.name}-", dir=target.parent))
+    try:
+        for name, data in files.items():
+            path = child(staging, name)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        staging.rename(target)
+    finally:
+        if staging.exists():
+            shutil.rmtree(staging)
+    return {"project": str(target), "play": play_id, "version": record["version"], "files": len(files),
+            "next": f"Read PLAY.md, README.md and VALIDATION.md, then build with: idf.py -C {target} build"}
+
+
 def play_prompt(root, play_id, repository, ref, task):
     """Pin a source play and its hardware checks in a pasteable development request."""
     record = select_play(root, play_id)
     request = (f"以玩法 {play_id}（{record['version']}，{record['productId']}）为基础，"
                f"先运行 python3 scripts/kit.py check 和 python3 scripts/kit.py plays --id {play_id}，"
-               f"从 {record['sourceDirectory']} 读取 play.json、PLAY.md、README.md 和 VALIDATION.md，"
-               "在新目录复制完整玩法源码后修改并构建。烧录前重新检查实际设备分区与镜像大小，"
+               f"再运行 python3 scripts/kit.py export-play --id {play_id} --directory <新目录> 导出自带共享组件的独立工程，"
+               "读取其中的 play.json、PLAY.md、README.md 和 VALIDATION.md 后修改并构建。烧录前重新检查实际设备分区与镜像大小，"
                "不得沿用其他设备的 0x310000 地址。我的需求：" + task)
     return prompt(repository, ref, request)
 
@@ -290,6 +350,11 @@ def main():
     remix.add_argument("--repo", required=True)
     remix.add_argument("--ref", required=True)
     remix.add_argument("--task", required=True)
+    export = commands.add_parser("export-play", help="Write one play as a standalone project with its shared components")
+    export.add_argument("--id", required=True)
+    target = export.add_mutually_exclusive_group(required=True)
+    target.add_argument("--directory", type=Path)
+    target.add_argument("--archive", type=Path)
     for command in ("init", "add"):
         sub = commands.add_parser(command, help="Create a new firmware project" if command == "init" else "Add source components without replacing customized files")
         sub.add_argument("--directory", type=Path, required=True)
@@ -324,6 +389,8 @@ def main():
                 result = {"id": args.id, **lock["components"][args.id]}
             else:
                 result = [{"id": key, "version": value["version"], "scope": value["scope"], "dependencies": value["dependencies"]} for key, value in lock["components"].items()]
+        elif args.command == "export-play":
+            result = export_play(ROOT, args.id, args.directory, args.archive)
         elif args.command == "init":
             result = initialize(ROOT, args.directory, args.name, args.components)
         else:

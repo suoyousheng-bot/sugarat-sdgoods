@@ -31,6 +31,6 @@ description: "Sugarat 电台的固件构建、桌面渲染和设备验收记录�
 
 ## 产物与待验收项
 
-构建产物位于 `.thinkready/sugarat-radio/build-firmware`，渲染 PNG 和总览图位于 `.thinkready/sugarat-radio/host`，均为本机构建输出。可复现命令见 [README](README.zh.md)。网络和音频替身不连接真实电台，也不解码真实广播音频；UI 替身不访问真实 Wi-Fi 或凭据。
+构建产物位于 `/tmp/sugarat-radio-build`，渲染 PNG 和总览图位于 `/tmp/sugarat-radio-host`，均为本机构建输出。可复现命令见 [README](README.zh.md)。网络和音频替身不连接真实电台，也不解码真实广播音频；UI 替身不访问真实 Wi-Fi 或凭据。
 
 LV3 待完成：两种配网方式、美国实际网络可达性、MP3/AAC 声音、物理触摸、休眠、电源和持续播放。实际分区表与 factory 构建模板不同，因此保留现有分区表、factory 和全部持久数据，使用已有的 5 MiB OTA0；本次只写入该应用区和 8 KiB 启动选择区。精选托管地址尚未配置，电台发布审阅与源码开发分别处理。本报告记录开发与设备证据，不包含社区固件发布。

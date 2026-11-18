@@ -19,7 +19,7 @@ Sugarat Radio adapts the Apache-2.0 [sdgoods-radio](https://github.com/YeatsLiao
 <a id="build"></a>
 ## Build
 
-Activate ESP-IDF 5.5.4 with the ESP32-S3 toolchain before running these commands from the resource-kit root. The component manager resolves the committed lockfile, LVGL 8.3.11 and Espressif audio codec 2.5.0. No USB device is required.
+Activate ESP-IDF 5.5.4 with the ESP32-S3 toolchain before running these commands from the resource-kit root. LVGL 8.3.11 comes from the kit's shared components (or `components/lvgl` in the standalone Release attachment) and the ESP32-S3 build of Espressif audio codec 2.5.0 is in `components/esp_audio_codec`, so the build downloads nothing. No USB device is required.
 
 ```sh
 idf.py -C plays/sugarat-radio -B /tmp/sugarat-radio-build build

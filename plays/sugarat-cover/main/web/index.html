@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Sugarat Cover</title>
+<link rel="stylesheet" href="/style.css">
+<main class="phone" id="library">
+  <header><span class="brand">Sugarat Cover</span><label><span class="sr-only" data-copy="language">Language</span><select id="language" aria-label="Language"><option value="en">English</option><option value="zh">中文</option></select></label></header>
+  <div class="badge" id="badge">Sugarat</div>
+  <h1 data-copy="headline">Carry what you love</h1><p data-copy="subtitle">Your next cover starts with a photo</p>
+  <div class="notice" role="status" id="notice" hidden></div>
+  <section class="current" id="current" hidden><img id="current-image" alt=""><div><div class="eyebrow" data-copy="showing">Now on your badge</div><div class="name" id="current-name"></div><div class="connected" data-copy="stored">Saved on your badge</div></div></section>
+  <div class="row"><h2><span data-copy="gallery">My photos</span> <span id="count"></span></h2><button class="quiet" id="manage" data-copy="manage">Manage</button></div>
+  <section class="grid" id="photos" aria-label="Photos"></section>
+  <button class="primary" id="choose" data-copy="add">＋ Upload photo</button>
+  <input type="file" id="file" accept="image/*" hidden>
+  <p class="foot" data-copy="offline">Photos stay on your badge · Works offline</p>
+</main>
+<main class="phone crop-page" id="crop-page" hidden>
+  <header class="crop-top"><button class="back" id="back" aria-label="Back">‹</button><span class="crop-title" data-copy="cropTitle">Adjust cover</span></header>
+  <div class="steps" data-copy="steps">Choose photo　 ›　 Adjust　 ›　 Upload</div>
+  <div class="crop" id="crop"><canvas id="canvas" width="360" height="360" aria-label="Cover crop preview"></canvas><div class="mask"></div></div>
+  <p class="crop-caption" data-copy="circle">The circle shows exactly what your badge displays</p>
+  <label class="slider"><span data-copy="smaller">Less</span><input type="range" min="1" max="3" value="1" step="0.01" aria-label="Zoom" id="zoom"><span data-copy="larger">More</span></label>
+  <div class="crop-controls"><button id="rotate" data-copy="rotate">Rotate 90°</button><button id="reset" data-copy="reset">Reset crop</button></div>
+  <div class="size-info"><span data-copy="preview">Round screen preview</span><span>360 × 360</span></div>
+  <button class="primary" id="upload" data-copy="upload">Upload to badge</button>
+  <p class="foot" id="upload-note" data-copy="afterUpload">Choose whether to display it after uploading</p>
+</main>
+<dialog id="photo-dialog"><img id="detail-image" alt=""><h2 id="detail-name"></h2><button class="primary" id="show-photo" data-copy="show">Set as cover</button><button class="secondary" id="delete-photo" data-copy="delete">Delete photo</button><button class="quiet" id="close-dialog" data-copy="close">Close</button></dialog>
+<script src="/app.js" defer></script>
+</html>

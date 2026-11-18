@@ -1,0 +1,10 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plays/sugarat-cover/main/patches/README.md
+/:
+  en: e4b95dd833392845
+  zh: 52cbb65d78cfd701
+/lvgl-gif-decoder-patches:
+  en: b7d082605c93a8a0
+  zh: 7d016113b971411e

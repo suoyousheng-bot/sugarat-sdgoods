@@ -187,7 +187,7 @@ A source play is a complete application you can copy and modify. Sugarat Radio i
 
 <p align="center"><img src="media/readme/radio-overview.png" width="100%" alt="Sugarat Radio pages: Wi-Fi setup, home, settings, region picker, cat DJ skin and an error state"></p>
 
-| Result | Sugarat Radio 0.1.0 |
+| Result | Sugarat Radio 0.1.1 |
 | --- | --- |
 | Desktop preview | Passed |
 | Firmware build (ESP-IDF 5.5.4) | Passed |
@@ -195,7 +195,28 @@ A source play is a complete application you can copy and modify. Sugarat Radio i
 | Startup observed | Passed |
 | Full device acceptance | Not yet recorded |
 
-Run `python3 scripts/kit.py plays --id sugarat-radio` to locate the complete radio application. [plays.json](plays.json) binds its stable ID, version and hardware to the source directory. After verification, read the play guide, build README and validation report there, then copy the complete directory into a new project before modifying it. Generate a fixed-version handoff with `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.2.1 --task "Customize the radio"`. The kit contains source, not a firmware download; inspect actual partitions before any device write.
+Run `python3 scripts/kit.py plays --id sugarat-radio` to locate the complete radio application. [plays.json](plays.json) binds its stable ID, version and hardware to the source directory. After verification, read the play guide, build README and validation report there, then copy the complete directory into a new project before modifying it. Generate a fixed-version handoff with `python3 scripts/kit.py play-prompt --id sugarat-radio --repo https://github.com/suoyousheng-bot/sugarat-sdgoods --ref v0.3.0 --task "Customize the radio"`. The kit contains source, not a firmware download; inspect actual partitions before any device write.
+
+### Community play sources
+
+Every official play in the Sugarat community that offers **Make your own** has its complete source here, and each release attaches one self-contained project per play. The community listing links to `plays/<id>` at the fixed tag. To remix a play, download only its attachment: it holds the play plus every component and library it uses, including LVGL, so nothing else is downloaded. From a checkout, `python3 scripts/kit.py export-play --id <id> --directory <new-folder>` writes the same project.
+
+In this repository each component is stored once. Plays reference shared copies in `shared/components/` or `assets/components/` through `plays/<id>/kit-components.cmake`, which the standalone export omits; a play keeps only the components it changed.
+
+| ID | Community play | Source version | Community version | Attachment (v0.3.0) |
+| --- | --- | --- | --- | --- |
+| `lz-3d` | lz Real-Time 3D Character | 1.0.0 | 1.0.0 | [lz-3d.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/lz-3d.tar.gz) |
+| `pomodoro-alarm` | Pomodoro Alarm | 1.0.0 | 1.0.0 | [pomodoro-alarm.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/pomodoro-alarm.tar.gz) |
+| `squad-talk` | Squad Talk | 0.1.3 | 0.1.3 | [squad-talk.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/squad-talk.tar.gz) |
+| `sugarat-bird` | Pocket Bird | 0.1.0 | 0.1.0 | [sugarat-bird.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-bird.tar.gz) |
+| `sugarat-card` | Sugarat Social Card | 0.1.2 | 0.1.2 | [sugarat-card.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-card.tar.gz) |
+| `sugarat-cover` | Sugarat Cover | 0.1.4 | 0.1.4 | [sugarat-cover.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-cover.tar.gz) |
+| `sugarat-fluid` | Magic Bottle | 0.2.1 | 0.2.1 | [sugarat-fluid.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-fluid.tar.gz) |
+| `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
+| `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
+| `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
+
+The Pocket Companion and Round Race sources are newer than their community images; the other sources match the published versions.
 
 <img src="media/readme/stage-save.svg" width="100%" alt="Stage 07: Save point">
 
@@ -211,7 +232,7 @@ Compilation, written-byte verification, startup and physical acceptance are sepa
 <a id="publishing"></a>
 ## Publishing
 
-The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
+The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
 
 ## Dev Note
 

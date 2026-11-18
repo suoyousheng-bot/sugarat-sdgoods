@@ -30,6 +30,25 @@ class KitTests(unittest.TestCase):
         self.assertFalse((project / "build").exists())
         self.assertTrue((project / "NOTICE").is_file())
 
+    def test_play_export_is_standalone_and_never_replaces_a_directory(self):
+        record = kit.select_play(kit.ROOT, "sugarat-bird")
+        self.assertIn("lvgl", record["sharedComponents"])
+        project = self.directory / "bird"
+        result = kit.export_play(kit.ROOT, "sugarat-bird", project)
+        self.assertEqual(result["version"], record["version"])
+        for name in record["sharedComponents"]:
+            self.assertTrue((project / "components" / name / "CMakeLists.txt").is_file())
+        self.assertFalse((project / kit.SHARED_COMPONENTS_CMAKE).exists())
+        self.assertTrue((project / "main/main.c").is_file())
+        with self.assertRaisesRegex(ValueError, "already exists"):
+            kit.export_play(kit.ROOT, "sugarat-bird", project)
+        archive = self.directory / "bird.tar.gz"
+        kit.export_play(kit.ROOT, "sugarat-bird", None, archive)
+        with tarfile.open(archive) as bundle:
+            names = bundle.getnames()
+        self.assertIn("sugarat-bird/components/lvgl/CMakeLists.txt", names)
+        self.assertTrue(all(name.startswith("sugarat-bird/") for name in names))
+
     def test_existing_project_and_unknown_selection_are_preserved(self):
         project = self.directory / "badge"
         project.mkdir()
@@ -111,7 +130,7 @@ class KitTests(unittest.TestCase):
         self.assertEqual(record["productId"], "sdgoods-esp32s3-round")
         self.assertFalse(record["validation"]["deviceVerified"])
         output = kit.play_prompt(kit.ROOT, "sugarat-radio", "https://github.com/example/badge-kit", "v0.2.0", "Change the skin")
-        for value in ("/blob/v0.2.0/AGENTS.md", "plays --id sugarat-radio", "plays/sugarat-radio", "Change the skin"):
+        for value in ("/blob/v0.2.0/AGENTS.md", "plays --id sugarat-radio", "export-play --id sugarat-radio", "Change the skin"):
             self.assertIn(value, output)
         with self.assertRaisesRegex(ValueError, "Unknown play"):
             kit.select_play(kit.ROOT, "renamed-radio")

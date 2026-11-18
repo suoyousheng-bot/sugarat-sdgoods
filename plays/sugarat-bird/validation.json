@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-14",
+  "version": "0.1.0",
+  "sdk": "ESP-IDF 5.5.4",
+  "lvgl": "8.3.11",
+  "application": {
+    "bytes": 881872,
+    "sha256": "e881275e04707097ba3bfdaadba489eb7063743e3d593b35d65c81d08ea5491f"
+  },
+  "host": {
+    "sanitizers": [
+      "AddressSanitizer",
+      "UndefinedBehaviorSanitizer"
+    ],
+    "flightTimingIndependentOfDrawRate": true,
+    "continuousPipePasses": 45,
+    "collisionAndScore": true,
+    "difficultyCap": 8,
+    "highestScorePersistenceAndFailures": true,
+    "realPointerInput": true,
+    "overlayAndSleepPause": true,
+    "explicitResume": true,
+    "heldTouchNoRepeat": true,
+    "asciiGlyphCoverage": true,
+    "roundSafeAreaThroughScore": 9999,
+    "uiTextSnapshot": true,
+    "lvglHeapBytes": 32768,
+    "freeAfterRepeatedTeardown": 23824
+  },
+  "launcher": {
+    "sdkIntegrated": true,
+    "applicationOnly": true,
+    "applicationIdentity": "sugarat_bird",
+    "installationAndReturnVerified": false
+  },
+  "device": {
+    "inspected": false,
+    "write": false,
+    "startupObserved": false,
+    "physicalAcceptance": "Not performed; user requested development without flashing."
+  },
+  "limitations": [
+    "Host rendering does not verify panel refresh, physical touch, power or NVS durability.",
+    "Launcher installation, Exit, reopening and coexistence require device acceptance."
+  ],
+  "repository": {
+    "buildArtifacts": true,
+    "buildCheck": true,
+    "testDocs": {
+      "passed": 21,
+      "failed": 0
+    },
+    "docSync": {
+      "passed": false,
+      "unresolvedOutsideThisPlay": [
+        "account type links in doc graphs/cordis catalog",
+        "stale Cordis inspect and client catalogs",
+        "plugin package list"
+      ],
+      "initialTranslationPairingFailure": "fixed; final test:docs pairing passes"
+    },
+    "lint": {
+      "passed": false,
+      "scope": "Errors in existing desktop, account, client and generated TypeScript files outside this firmware play."
+    }
+  }
+}
