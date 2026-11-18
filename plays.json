@@ -72,6 +72,12 @@
       "productId": "sdgoods-esp32s3-round",
       "sourceDirectory": "plays/sugarat-radio",
       "manifest": "plays/sugarat-radio/play.json"
+    },
+    "sugarat-recorder": {
+      "version": "0.1.4",
+      "productId": "sdgoods-esp32s3-round",
+      "sourceDirectory": "plays/sugarat-recorder",
+      "manifest": "plays/sugarat-recorder/play.json"
     }
   }
 }

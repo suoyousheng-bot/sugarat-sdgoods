@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.19)
+project(recorder_host C)
+set(CMAKE_C_STANDARD 11)
+get_filename_component(APP "${CMAKE_CURRENT_SOURCE_DIR}/../.." ABSOLUTE)
+set(LVGL "${APP}/components/lvgl")
+if(NOT IS_DIRECTORY "${LVGL}")
+    get_filename_component(LVGL "${APP}/../../shared/components/lvgl" ABSOLUTE)
+endif()
+set(BSP "${APP}/components/sdgoods_board")
+set(FONTS "${APP}/main/apps")
+file(GLOB_RECURSE LVGL_SOURCES "${LVGL}/src/*.c")
+add_library(lvgl STATIC ${LVGL_SOURCES})
+target_include_directories(lvgl SYSTEM PUBLIC "${LVGL}")
+target_include_directories(lvgl PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_definitions(lvgl PUBLIC LV_CONF_INCLUDE_SIMPLE=1 LV_LVGL_H_INCLUDE_SIMPLE=1 SNAPSHOT_DEVICE_HEAP=1 LV_FONT_MONTSERRAT_16=1)
+add_executable(recorder-host host.c "${APP}/main/apps/ui_helloapp.c"
+    "${BSP}/src/sdgoods_tap.c" "${BSP}/src/sdgoods_swipe_up.c"
+    "${FONTS}/sw_font_num_40.c" "${FONTS}/sw_font_text_28.c" "${FONTS}/sw_font_icon_28.c")
+target_include_directories(recorder-host PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${BSP}/include"
+    "${APP}/main/apps")
+target_link_libraries(recorder-host PRIVATE lvgl m)

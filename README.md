@@ -217,6 +217,7 @@ In this repository each component is stored once. Plays reference shared copies 
 | `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
 | `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
 | `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
+| `sugarat-recorder` | Sugarat Voice Recorder | 0.1.4 | 0.1.4 | [sugarat-recorder.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.3/sugarat-recorder.tar.gz) |
 
 The Pocket Companion and Round Race sources are newer than their community images; the other sources match the published versions.
 
@@ -234,7 +235,7 @@ Compilation, written-byte verification, startup and physical acceptance are sepa
 <a id="publishing"></a>
 ## Publishing
 
-The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with Sugarat Beat added in `v0.3.2`, Lunch Shuffle in `v0.3.1`, community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
+The public repository is [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods), with Sugarat Voice Recorder added in `v0.3.3`, Sugarat Beat in `v0.3.2`, Lunch Shuffle in `v0.3.1`, community play sources and per-play attachments in `v0.3.0`, launcher compatibility rules in `v0.2.1`, source plays added in `v0.2.0` and the original `v0.1.0` retained. To publish a fork, copy this entire directory as its repository root and follow [publishing](references/publishing.md) to verify files and regenerate the handoff sentence for your destination.
 
 ## Dev Note
 

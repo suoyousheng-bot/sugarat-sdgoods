@@ -1,0 +1,35 @@
+{
+  "id": "sugarat-recorder",
+  "name": "Sugarat Voice Recorder",
+  "version": "0.1.4",
+  "stage": 1,
+  "target": "esp32s3",
+  "productId": "sdgoods-esp32s3-round",
+  "entry": "main/main.c",
+  "playGuide": "PLAY.md",
+  "license": "Apache-2.0",
+  "defaultLanguage": "en",
+  "validation": {
+    "report": "VALIDATION.md"
+  },
+  "build": {
+    "sdkVersion": "5.5.4",
+    "projectName": "sugarat_recorder",
+    "command": "idf.py -C plays/sugarat-recorder -B /tmp/sugarat-recorder-build build",
+    "partitionTable": "platform/partitions.csv",
+    "minimumFlashBytes": 33554432
+  },
+  "community": {
+    "playId": 38,
+    "productKey": "sugarat_recorder",
+    "title": "Sugarat Voice Recorder",
+    "publishedVersion": "0.1.4",
+    "sourceUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/tree/v0.3.3/plays/sugarat-recorder",
+    "attachmentUrl": "https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.3/sugarat-recorder.tar.gz"
+  },
+  "sharedComponents": {
+    "jpegenc": "shared/components/jpegenc",
+    "lvgl": "shared/components/lvgl",
+    "sdgoods_launcher": "shared/components/sdgoods_launcher"
+  }
+}

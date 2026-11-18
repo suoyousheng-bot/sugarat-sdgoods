@@ -217,6 +217,7 @@ Sugarat 玩法社区中提供「做同款」的官方玩法，完整源码都在
 | `sugarat-pet` | Pocket Companion | 0.2.2 | 0.1.0 | [sugarat-pet.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-pet.tar.gz) |
 | `sugarat-race` | Round Race | 1.0.0 | 0.2.1 | [sugarat-race.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-race.tar.gz) |
 | `sugarat-radio` | Sugarat Radio · New Flow Integration Test | 0.1.1 | 0.1.1 | [sugarat-radio.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.0/sugarat-radio.tar.gz) |
+| `sugarat-recorder` | Sugarat Voice Recorder | 0.1.4 | 0.1.4 | [sugarat-recorder.tar.gz](https://github.com/suoyousheng-bot/sugarat-sdgoods/releases/download/v0.3.3/sugarat-recorder.tar.gz) |
 
 Pocket Companion 和 Round Race 的源码比社区镜像更新，其余源码与已发布版本一致。
 
@@ -234,7 +235,7 @@ Pocket Companion 和 Round Race 的源码比社区镜像更新，其余源码与
 <a id="publishing"></a>
 ## 发布
 
-公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.2` 加入 Sugarat Beat，`v0.3.1` 加入 Lunch Shuffle，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
+公开仓库为 [suoyousheng-bot/sugarat-sdgoods](https://github.com/suoyousheng-bot/sugarat-sdgoods)，`v0.3.3` 加入 Sugarat Voice Recorder，`v0.3.2` 加入 Sugarat Beat，`v0.3.1` 加入 Lunch Shuffle，`v0.3.0` 加入社区玩法源码和单玩法附件，`v0.2.1` 加入启动器兼容规则，`v0.2.0` 加入完整玩法源码，保留首个资源快照 `v0.1.0`。发布到其他仓库时，将整个目录复制为仓库根目录，按 [发布说明](references/publishing.md) 检查文件并重新生成对应地址的交接文案。
 
 ## 开发备注
 
